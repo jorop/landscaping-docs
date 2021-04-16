@@ -1,5 +1,7 @@
 # Welcome
 
+Landscaping - Unreal Engine 4 Editor Plugin
+
 ## For whom
 
 - Level designers
@@ -11,8 +13,11 @@
 
 ## Highlights
 
+- Import GIS raster and vector data to create Landscapes or Open Worlds
+- Supported file formats are GeoTiff, ASCII, HGT, Shapefile
 - No preprocessing of data necessary
-- No limit because of full tiled landscape support
+- No limit because of full tiled landscape support (World Composition)
 - Create props from every UE4 object and Marketplace content
 - Works offline without restrictions
-- Coming to the Marketplace in March 2021
+- No runtime dependencies - only pure Unreal Engine native objects are created
+- Builds for every platform (Windows, Mac, Linux, iOS, Android, XBox, PlayStation, etc.)

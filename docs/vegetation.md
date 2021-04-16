@@ -36,4 +36,4 @@ If everything is unchecked, only Landscape LODs will be created when hitting the
 
 ## Next step
 
-Before we spawn our plants and trees we can define [LOD settings](lods.md)!
+Before we spawn our plants and trees we can define [LOD Settings](lods.md)!

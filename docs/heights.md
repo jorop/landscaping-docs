@@ -5,12 +5,12 @@ Making a huge tiled landscape is as easy as making a single landscape.
 ## Choosing input files
 
 In order to create a tiled landscape, you can choose one or multiple files in the file selection dialog.  
-Depending on the [Desired Tile Size](#desired-tile-size-max), the tiles for the landscape will be created on the fly.  
+Depending on the [Max Desired Tile Size](#max-desired-tile-size), the tiles for the landscape will be created on the fly.  
 > A tiled landscape can be created from a single file or from multiple files
 
-The controlling factor is the [Desired Tile Size](#desired-tile-size-max).  
+The controlling factor is the [Max Desired Tile Size](#max-desired-tile-size).  
 There is only one thing to consider:
-> The file size of a single GeoTiff file can be 2 GB max
+> The file size of a single file can be 2 GB max
 
 ## Options
 
@@ -18,24 +18,24 @@ The Landscaping plugin allows you to set the desired tile size and if you wish t
 
 ### Use OSM Projection
 
-Wether to use OpenStreetMap/Google Maps projection or keep the original projection of the GeoTiff dataset.
+Wether to use OpenStreetMap/Google Maps projection or keep the original projection of the raster file.
 If you do not know, what this means, leave it checked. It's fine. The Landscaping plugin handles everything automatically.
 
-### Desired Tile Size (Max)
+### Max Desired Tile Size
 
-Tiles will have this width max. The unit here is kilometers (km).
+Tiles will have this width max. The unit here is meter.
 
 ## Projections
 
-Per default, OSM projection [EPSG:3857](https://epsg.io/3857) is used. If you want to keep the original projection of your GeoTiff file, uncheck `Use OSM Projection`.
+Per default, OSM projection [EPSG:3857](https://epsg.io/3857) is used. If you want to keep the original projection of your raster file, uncheck `Use OSM Projection`.
 
-> Landscaping can handle every projection and converts it automatically
+> Landscaping can handle every projection and converts it automatically. But it is highly recommended to use OSM projection. If the original raster does not use meter as unit, the result can be unsatisfying or the plugin may even crash. If you check `Use OSM Projection` everything will work fine.
 
-This means: you can import GeoTiff files with different projections and resolutions and they will be aligned properly. You do not have to worry about it.  
+This means: you can import raster files with different projections and resolutions and they will be aligned properly. You do not have to worry about it. It is even possible to import GeoTiff, ASCII and HGT files toghether.  
 
 > Landscaping can handle overlapping files
 
-This means: you can have intersecting datasets, they will be merged.
+This means: you can have intersecting datasets, they will be merged and result in a seamless landscape or worldcomposition.
 
 ## Next Steps
 
