@@ -16,6 +16,8 @@ There is only one thing to consider:
 
 The Landscaping plugin allows you to set the desired tile size and if you wish to convert to OSM projection.  
 
+![Import DTM files](_media/ue4_landscaping_dtm.jpg)
+
 ### Use OSM Projection
 
 Wether to use OpenStreetMap/Google Maps projection or keep the original projection of the raster file.
@@ -31,11 +33,12 @@ Per default, OSM projection [EPSG:3857](https://epsg.io/3857) is used. If you wa
 
 > Landscaping can handle every projection and converts it automatically. But it is highly recommended to use OSM projection. If the original raster does not use meter as unit, the result can be unsatisfying or the plugin may even crash. If you check `Use OSM Projection` everything will work fine.
 
-This means: you can import raster files with different projections and resolutions and they will be aligned properly. You do not have to worry about it. It is even possible to import GeoTiff, ASCII and HGT files toghether.  
+It is possible to import raster files with different projections and resolutions and they will be aligned properly. You do not have to worry about it. It is even possible to import GeoTiff, ASCII and HGT files toghether.  
 
 > Landscaping can handle overlapping files
 
-This means: you can have intersecting datasets, they will be merged and result in a seamless landscape or worldcomposition.
+Datasets handed over to the `Landscaping Plugin` may even intersect, they will be merged and result in a seamless landscape or World Composition.
+If you need another Projection please look into the [GIS Expert](gis-expert.md?id=projections) section of this documentation.
 
 ## Next Steps
 

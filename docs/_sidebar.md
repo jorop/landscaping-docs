@@ -13,5 +13,8 @@
 - Everything else
 
   - [Get data](get-data.md?id=get-data)
-  - [Edit this](edit-this.md?id=edit-this)
+  - [GIS Experts](gis-expert.md?id=options-for-gis-experts)
+  - [IVectorActor](ivectoractor.md?id=custom-logic-on-vector-data)
+  - [LandscapingInfos](landscapinginfos.md?id=landscapinginfos-actor)
+  - [Troubleshooting](troubleshooting.md?id=troubleshooting)
   - [Changelog](changelog.md?id=changelog)

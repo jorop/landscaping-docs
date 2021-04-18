@@ -10,6 +10,8 @@ This feature helps to populate tiled landscapes with procedural foliage. It load
 
 In order for this feature to work, one has to prepare a [Procedural Foliage Spawner](https://docs.unrealengine.com/en-US/BuildingWorlds/OpenWorldTools/ProceduralFoliage/QuickStart/index.html). A `Procedural Foliage Spawner` is mandatory for creating automated plants and trees and also rocks and stones and you name it on the tiled landscape with Landscaping.
 
+![Open World Automation](_media/ue4_landscaping_openworld.jpg)
+
 ## Options
 
 ### Foliage Spawner

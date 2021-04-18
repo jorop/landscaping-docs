@@ -10,16 +10,17 @@ After you installed the plugin from the marketplace, you have to activate the pl
 4) Unreal Engine asks you for a restart
 5) After Unreal Engine has restarted, you should see the Landscaping Icon in the toolbar:
 
-![Toolbar with Landscaping](_media/toolbar_with_landscaping.jpg)
+![Toolbar with Landscaping](_media/ue4_toolbar_with_landscaping.jpg)
 
 ## Import Heightmap
 
-1) Download the example heightmap [example.tiff](https://cloud.ludicdrive.com/example.tiff), or use another GeoTiff file.
+1) Download the example heightmap [WellingtonPartNZ.tif](_media/WellingtonPartNZ.tif), or use another DTM file.
 2) After clicking on Landscaping on the toolbar, the Landscaping tab pops up:
 
-![Landscaping Tab](_media/landscaping_tab.jpg)
+![Landscaping Tab](_media/ue4_landscaping_tab.jpg)
 
-3) Hit the `Select` button and choose your tiff file
+3) Hit the `Select` button and choose your file
+4) Set `Max desired Tile Size` to at least 4092 meter for the example file above
 4) Then hit the `Import` button and the landscape from the height raster will be transformed into a Unreal Engine landscape within a few seconds
 5) That's it
 
