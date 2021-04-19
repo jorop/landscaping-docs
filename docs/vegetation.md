@@ -36,6 +36,8 @@ Why? Well, if a Foliage Volume gets removed, it cannot be updated anymore.
 
 If everything is unchecked, only Landscape LODs will be created when hitting the `Create` button. Given that LODs are defined.
 
+> Please make sure to unload all Levels of a World Composition (except the Persistent Level) in the Unreal Engine `Levels` tab before hitting `Create`
+
 ## Next step
 
 Before we spawn our plants and trees we can define [LOD Settings](lods.md)!

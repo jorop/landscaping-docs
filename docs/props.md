@@ -17,6 +17,9 @@ Landscaping let you create rivers, streets, railroads etc. from Shapefiles with 
 4) `Start Segment Mesh Scale` and `End Segment Mesh Scale` define how much the spline mesh will be scaled. This properties are only relevant if `Spline Segment Mesh` is selected
 5) `Revert Spline Direction` can be used, if a river is imported and flows upstream. This can happen, if the LINESTRING from the Shapefile is drawn in the wrong direction. There is no way to detect this automatically, because the LINESTRINGS only have no height information.
 6) With `OSM feature class` you can control, what type of features will be instatiated with the Blueprint or Spline. A river should have another Blueprint than a stream and a path another Blueprint than a highway. This dropdown let you select the apropriate feature class of the LINESTRINGS for the Blueprint to instantiate in the Landscape.
+
+> Please make sure to unload all Levels of a World Composition (except the Persistent Level) in the Unreal Engine `Levels` tab before hitting `Import`
+
 7) Hit `Import`
 
 > You can hit the `Import` button multiple times and change the selection in between.
