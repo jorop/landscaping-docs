@@ -16,17 +16,17 @@ Pick a Landscape Material from your content folder. I like the Brushify Landscap
 
 ## Material Layers
 
-A whole bunch of checkboxes will appear. So what is that about? Well, Here we assign the Layers of the Landscape Material to one or multiple landcover types aka landuses. One Material Layer can have one or more landcover types but not vice versa. Notice, that the column of the landcover type gets grayed out, if you assign it to a Material Layer. If a Material Layer has the same name as the landcover type, it will be already selected. It is not mandatory, to select every landuse type nor Material Layer. Weightmaps will only be created for those landuses, which are assigned to a Material Layer. For everything else, the Default Layer is used.
+A whole bunch of checkboxes will appear. So what is that about? Well, here we assign the layers of the Landscape Material to one or multiple landcover types aka landuses. One Material Layer can have one or more landcover types but not vice versa. Notice, that the column of the landcover type gets grayed out, if you assign it to a Material Layer. If a Material Layer has the same name as the landcover type, it will appear already selected. It is not mandatory, to select every landuse type nor Material Layer. Weightmaps will only be created for those landuses, which are assigned to a Material Layer. For everything else, the Default Layer is used.
 
 > All Material Layers in use are generated as weightblended
 
 ## Default Layer
 
-The default layer is used everywhere, on the landscape, if there is no other landuse type assigned. In areas, which have another layer, the default layer has a weight of 10%.
+The Default Layer is used everywhere, on the landscape, if there is no other landuse type assigned. In areas, which have another layer, the Default Layer has a weight of 10%.
 
 ## Wait for it
 
-When pleased with the mapping close the Landscape Material and Weightmaps Window and click the `Import` button in the `Import Landscape` section.
+When pleased with the mapping close the Landscape Material and Weightmaps window and click the `Import` button in the `Import Landscape` section.
 
 > It is possible to import the raster files for heights and the Shapefiles at once or to import the heights, and then import the Shapefiles for landcover afterwards. If there is already a landscape or World Composition in the scene, the Button reads `Update`. Otherwise it reads `Close`. Update will erase the current weightmaps and replace them with the new settings.
 

@@ -8,7 +8,6 @@
   - [Landcover](landcover.md?id=landcover)
   - [Props](props.md?id=props)
   - [Vegetation](vegetation.md?id=vegetation)
-  - [LODs](lods.md?id=lods)
 
 - Everything else
 

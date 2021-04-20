@@ -31,7 +31,7 @@ Tiles will have this width max. The unit here is meter.
 
 Per default, OSM projection [EPSG:3857](https://epsg.io/3857) is used. If you want to keep the original projection of your raster file, uncheck `Use OSM Projection`.
 
-> Landscaping can handle every projection and converts it automatically. But it is highly recommended to use OSM projection. If the original raster does not use meter as unit, the result can be unsatisfying or the plugin may even crash. If you check `Use OSM Projection` everything will work fine.
+> Landscaping can handle every projection and converts it automatically. But it is highly recommended to use OSM projection. If the original raster does not use meter as unit, the result can be unsatisfying or the Unreal Editor may even crash. If you check `Use OSM Projection` everything will work fine.
 
 It is possible to import raster files with different projections and resolutions and they will be aligned properly. You do not have to worry about it. It is even possible to import GeoTiff, ASCII and HGT files toghether.  
 

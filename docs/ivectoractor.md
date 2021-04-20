@@ -1,6 +1,6 @@
 # Custom Logic on Vector Data
 
-With a C++ class or Blueprint implementing the IVectorActor interface, custom logic on importing LINESTRINGS, POLYGONS and POINTS can be fired off.
+With a C++ class or Blueprint implementing the IVectorActor interface, custom logic on importing LINESTRINGS, POLYGONS and POINTS from a Shapefile can be fired off.
 
 To use your custom Blueprint, select it under `Blueprint` in the `Import Roads, Railtracks, Rivers, etc.` section.
 
