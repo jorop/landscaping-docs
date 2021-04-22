@@ -1,5 +1,5 @@
 # Landscaping <!-- {docsify-ignore} -->
 
-> Recreate real landscapes in Unreal Engine 4
+> Landscapes from GIS data in Unreal Engine 4
 
-[Tell me more](#Welcome)
+[Documentation](#Welcome)
