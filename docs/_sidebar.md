@@ -4,7 +4,7 @@
 
 - Guide
 
-  - [Heights](heights.md?id=let39s-get-high)
+  - [Heights](heights.md?id=heights)
   - [Landcover](landcover.md?id=landcover)
   - [Props](props.md?id=props)
   - [Vegetation](vegetation.md?id=vegetation)

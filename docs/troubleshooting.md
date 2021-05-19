@@ -22,7 +22,7 @@ Due to the transformation of the input data, on areas, where no data is found th
 Anyway - there are 2 options to solve this, if it is a problem for your project:
 
 - The steep edges can easily be fixed within the native Unreal Engine Landscape Mode Sculpting Tools
-- If your input data uses meter as unit, you may uncheck `Use OSM Projection` (not recommended)
+- If your input data uses meter as unit, you may uncheck `Use UTM Projection` (not recommended)
 
 ## Missing Tiles
 
