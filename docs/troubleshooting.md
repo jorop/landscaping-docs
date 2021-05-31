@@ -1,17 +1,17 @@
 # Troubleshooting
 
-
 ## Unreal Engine Editor won't start
 
-If you see this message:
+If you see this message:  
+
 ![UE4 Message](_media/ue4_message.jpg)
 
 Please copy the files and folders from  
-`{Engine Plugin Folder}/Marketplace/Landscaping/Source/ThirdParty/Redist/Win64/`
+`{Engine Plugin Folder}/Marketplace/Landscaping/Source/ThirdParty/Redist/Win64/`  
 to  
 `{Engine Plugin Folder}/Marketplace/Landscaping/Binaries/Win64/`
 
-The Engine Plugin Folder can be found where the Unreal Engine Editor is installed on your system, e.g.  
+The `Engine Plugin Folder` can be found where the Unreal Engine Editor is installed on your system, e.g.  
 `C:/Program Files/Epic Games/UE_4.26/Engine/Plugins`
 
 ## Tiles are far apart in the World Composition Tab
@@ -45,7 +45,3 @@ When importing a Tiled Landscape you will maybe notice, that there are a couple 
 ## Crashes
 
 If the Unreal Editor crashes on import, it may due to corrupted input data. Please send the data to `support@ludicdrive.com` to verify if it is a bug in the plugin or if the input data is to blame. Thank you.
-
-## Accuracy
-
-The `Landscaping Plugin` gives it's best to translate GIS data to Unreal Engine. Still, on bigger areas, the real world and the Unreal Engine Landscape can be significantly off. This can also be the case for weightmaps. It depends heavily on the input data, and cannot be fixed entirely. However, if you come accross such a problem, please read the [GIS Expert](gis-expert.md) section of this documentation. If you still having trouble, please contact `support@ludicdrive.com`. Thank you.
