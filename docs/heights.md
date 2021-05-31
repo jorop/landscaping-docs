@@ -1,4 +1,4 @@
-# Let's get high
+# Heights
 
 Making a huge tiled landscape is as easy as making a single landscape.
 
@@ -14,11 +14,11 @@ There is only one thing to consider:
 
 ## Options
 
-The Landscaping plugin allows you to set the desired tile size and if you wish to convert to OSM projection.  
+The Landscaping plugin allows you to set the desired tile size and if you wish to convert to UTM projection.  
 
 ![Import DTM files](_media/ue4_landscaping_dtm.jpg)
 
-### Use OSM Projection
+### Use UTM Projection
 
 Wether to use OpenStreetMap/Google Maps projection or keep the original projection of the raster file.
 If you do not know, what this means, leave it checked. It's fine. The Landscaping plugin handles everything automatically.
@@ -29,9 +29,9 @@ Tiles will have this width max. The unit here is meter.
 
 ## Projections
 
-Per default, OSM projection [EPSG:3857](https://epsg.io/3857) is used. If you want to keep the original projection of your raster file, uncheck `Use OSM Projection`.
+Per default, UTM projection (will be automatically detected from raster file) is used. If you want to keep the original projection of your raster file, uncheck `Use UTM Projection`.
 
-> Landscaping can handle every projection and converts it automatically. But it is highly recommended to use OSM projection. If the original raster does not use meter as unit, the result can be unsatisfying or the Unreal Editor may even crash. If you check `Use OSM Projection` everything will work fine.
+> Landscaping can handle every projection and converts it automatically. But it is highly recommended to use UTM projection. If the original raster does not use meter as unit, the result can be unsatisfying or the Unreal Editor may even crash. If you check `Use UTM Projection` everything will work fine.
 
 It is possible to import raster files with different projections and resolutions and they will be aligned properly. You do not have to worry about it. It is even possible to import GeoTiff, ASCII and HGT files toghether.  
 
