@@ -13,7 +13,7 @@
 
   - [Get data](get-data.md?id=get-data)
   - [GIS Experts](gis-expert.md?id=options-for-gis-experts)
-  - [IVectorActor](ivectoractor.md?id=custom-logic-on-vector-data)
+  - [Extending Landscaping](landscapingvectorinterface.md?id=custom-logic-on-vector-data)
   - [LandscapingInfos](landscapinginfos.md?id=landscapinginfos-actor)
   - [Troubleshooting](troubleshooting.md?id=troubleshooting)
   - [Changelog](changelog.md?id=changelog)

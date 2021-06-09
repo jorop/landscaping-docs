@@ -14,13 +14,13 @@ After you installed the plugin from the marketplace, you have to activate the pl
 
 ## Import Heightmap
 
-1) Download the example heightmap [WellingtonPartNZ.tif](_media/WellingtonPartNZ.tif), or use another DTM file.
+1) Download example heightmaps [GeoTiffExamples](_media/GeoTiffExamples.zip), or use another DTM file.
 2) After clicking on Landscaping on the toolbar, the Landscaping tab pops up:
 
 ![Landscaping Tab](_media/ue4_landscaping_tab.jpg)
 
 3) Hit the `Select` button and choose your file
-4) Set `Max desired Tile Size` to at least 4092 meter for the example file above
+4) Set `Max desired Tile Size` to at least 2048 meter for one of the example files above
 4) Then hit the `Import` button and the landscape from the height raster will be transformed into a Unreal Engine landscape within a few seconds
 5) That's it
 

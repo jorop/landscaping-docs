@@ -20,7 +20,7 @@ The Landscaping plugin allows you to set the desired tile size and if you wish t
 
 ### Use UTM Projection
 
-Wether to use OpenStreetMap/Google Maps projection or keep the original projection of the raster file.
+Wether to use UTM projection or keep the original projection of the raster file.
 If you do not know, what this means, leave it checked. It's fine. The Landscaping plugin handles everything automatically.
 
 ### Max Desired Tile Size
