@@ -2,7 +2,7 @@
 
 ## Version 2.0
 
-- LandscapintVectorInterface
+- LandscapingVectorInterface
 - 3 new Blueprints
 - Select smaller area on heightdata import
 
