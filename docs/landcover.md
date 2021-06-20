@@ -4,7 +4,7 @@ Applying a Landscape Material and generating weightmaps on the fly. The good thi
 
 ## Get it from the web
 
-Landscaping is designed to work with OpenStreetMap Data Extracts from Geofabrik. [Download](https://download.geofabrik.de/) the Shapefiles from your country and extract the zip-file.
+Landscaping is designed to work with OpenStreetMap Data Extracts from Geofabrik. [Download](https://download.geofabrik.de/) the Shapefiles from your country and extract the zip-file. For the example files please download the Shapefiles from `Austria` in Europe.
 
 ## Importing Shapefiles
 
@@ -26,17 +26,15 @@ The Default Layer is used everywhere, on the landscape, if there is no other lan
 
 ## Wait for it
 
-When pleased with the mapping close the Landscape Material and Weightmaps window and click the `Import` button in the `Import Landscape` section.
+When pleased with the mapping hit the `Replace` Button. It will erase the current weightmaps and replace them with the new settings.
 
-> It is possible to import the raster files for heights and the Shapefiles at once or to import the heights, and then import the Shapefiles for landcover afterwards. If there is already a landscape or World Composition in the scene, the Button reads `Update`. Otherwise it reads `Close`. Update will erase the current weightmaps and replace them with the new settings.
-
-Depending on the extent of the landscape and wether it is tiled or not, it will take several minutes to hours until all calculations are finished and you can see the result. Grass, forest ground, riverbeds and maybe beaches?
+Depending on the extent of the landscape and wether it is tiled or not, it will take several minutes to hours until all calculations are finished and you can see the result.
 
 ![Landscape Material and Weightmaps](_media/ue4_landscaping_weightmaps.jpg)
 
 ## Notes on runtime
 
-The generation of weightmaps can take time. Roughly it takes 10 seconds per km² per distinct landuse area. If the landscape is huge and has many distinct areas, this adds up. For example, an area in the alps with ~ 220 km² and moderate distinct areas took about 39 minutes to calculate. Another test with a ~ 650 km² world and a lot of small distinct areas took a little more than 3 hours and 30 minutes to finish. Of course it depends on the machine you are using, mainly on the number of cores of your CPU. So, if you plan to generate huge worlds, please consider this. All tests where performed with a AMD Ryzen 3 2600 CPU with 32 GB RAM.
+The generation of weightmaps can take time. Roughly it takes 10 seconds per km² per distinct landuse area. If the landscape is huge and has many distinct areas, this adds up. For example, an area in the alps with ~ 220 km² and moderate distinct areas took about 39 minutes to calculate. Another test with a ~ 650 km² world and a lot of small distinct areas took a little more than 3 hours and 30 minutes to finish. Of course it depends on the machine you are using, mainly on the number of cores of your CPU. So, if you plan to generate huge worlds, please consider this. All tests where performed with a AMD Ryzen 3 2600 CPU with 32 GB RAM. Still, this is a lot faster than every other method and it is very accurate.
 
 ## Next steps
 
