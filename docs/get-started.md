@@ -20,9 +20,7 @@ After you installed the plugin from the marketplace, you have to activate the pl
 ![Landscaping Tab](_media/ue4_landscaping_tab.jpg)
 
 3) Hit the `Select` button and choose your file
-4) Set `Max desired Tile Size` to at least 2048 meter for one of the example files above
 4) Then hit the `Import` button and the landscape from the height raster will be transformed into a Unreal Engine landscape within a few seconds
-5) That's it
 
 ## Next steps
 

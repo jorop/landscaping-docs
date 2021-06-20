@@ -9,37 +9,39 @@ Depending on the [Max Desired Tile Size](#max-desired-tile-size), the tiles for 
 > A tiled landscape can be created from a single file or from multiple files
 
 The controlling factor is the [Max Desired Tile Size](#max-desired-tile-size).  
-There is only one thing to consider:
-> The file size of a single file can be 2 GB max
+There is only two thing to consider:
+> The file size of a single file can be 2 GB max.
+> Your system memory must keep up with the size of the landscape. About 20 GB RAM are needed per 1000 km².
 
 ## Options
 
-The Landscaping plugin allows you to set the desired tile size and if you wish to convert to UTM projection.  
+The Landscaping plugin allows you to set the desired tile size limit the area to import and specify auxiliary files to fill no data sections.
 
 ![Import DTM files](_media/ue4_landscaping_dtm.jpg)
 
-### Use UTM Projection
+## Import Area (optional)
 
-Wether to use UTM projection or keep the original projection of the raster file.
-If you do not know, what this means, leave it checked. It's fine. The Landscaping plugin handles everything automatically.
+Here it is possible to limit the area to import. To get an idea what is imported please use: [Mapbox](https://docs.mapbox.com/playground/static/) and select bounding box in the Parameters on the left hand side. Input the Latitudes and Longitudes according to the values in the `Options for DTM Import` Dialog.
+
+![Import DTM files](_media/ue4_landscaping_import_area.jpg)
+
+## Fill the gaps (optional)
+
+Due to reprojecting the import data steep edges will appear on the outmost borders of the landscape or open world. To prevent this and if limiting the import area is no option for you, auxiliary files can be provided. They should be of the same resolution and encompass the area which you want to import.
+Try it out with this corresponding set of files for the examples from [Landcover](get-started.md?id=import-heightmap): [AuxiliaryExample](https://cloud.ludicdrive.com/s/Mfx0NyUsZE2PKXQ/download). Download and unzip the file, and select all files in the `Fill the gaps` file selection dialog.
 
 ### Max Desired Tile Size
 
 Tiles will have this width max. The unit here is meter.
 
-## Projections
-
-Per default, UTM projection (will be automatically detected from raster file) is used. If you want to keep the original projection of your raster file, uncheck `Use UTM Projection`.
-
-> Landscaping can handle every projection and converts it automatically. But it is highly recommended to use UTM projection. If the original raster does not use meter as unit, the result can be unsatisfying or the Unreal Editor may even crash. If you check `Use UTM Projection` everything will work fine.
+## General
 
 It is possible to import raster files with different projections and resolutions and they will be aligned properly. You do not have to worry about it. It is even possible to import GeoTiff, ASCII and HGT files toghether.  
 
 > Landscaping can handle overlapping files
 
-Datasets handed over to the `Landscaping Plugin` may even intersect, they will be merged and result in a seamless landscape or World Composition.
-If you need another Projection please look into the [GIS Expert](gis-expert.md?id=projections) section of this documentation.
+Datasets handed over to the `Landscaping Plugin` may intersect, they will be merged and result in a seamless landscape or World Composition.
 
 ## Next Steps
 
-Make the gray checkerd landscape colorful with [Landcover](landcover.md?id=landcover)
+Make the gray checkered landscape colorful with [Landcover](landcover.md?id=landcover)

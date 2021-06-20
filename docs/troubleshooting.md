@@ -14,29 +14,17 @@ to
 The `Engine Plugin Folder` can be found where the Unreal Engine Editor is installed on your system, e.g.  
 `C:/Program Files/Epic Games/UE_4.26/Engine/Plugins`
 
-## Tiles are far apart in the World Composition Tab
-
-Actually, this is just a UI problem, which is easily fixed by loading the Levels of a World Composition in the Levels Tab and save them.
-
-- Open the Levels Tab (Window -> Levels)
-- Select all Levels
-- Right-click -> Load
-- __All levels are now in the right position__
-- Right-click -> Save
-
-This will fix the wrong visualization in the World Composition Tab.
-
 ## Changing Levels
 
 When changing levels, the plugin may not detect the new World which is neccessary to save the metadata. Please close the `Landscaping Tab` and open it again. Thank you.
 
 ## Edges on the outmost border
 
-Due to the transformation of the input data, on areas, where no data is found the height is set to 0. Therefore, steep edges on outher border of the Landscape or World Composition occur. Normally, this is not a problem, because who cares about the end of the world?  
-Anyway - there are 2 options to solve this, if it is a problem for your project:
+Due to the transformation of the input data, on areas, where no data is found the height is set to 0. Therefore, steep edges on outmost borders of the Landscape or World Composition occur. Normally, this is not a problem and does not have any perfomance impacts.  
+If this is a problem there are 2 options to solve this:
 
 - The steep edges can easily be fixed within the native Unreal Engine Landscape Mode Sculpting Tools
-- If your input data uses meter as unit, you may uncheck `Use UTM Projection` (not recommended)
+- Use one of the options in the [DTM Import Options](heights.md?id=options) dialog
 
 ## Missing Tiles
 

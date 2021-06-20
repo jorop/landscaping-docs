@@ -7,14 +7,6 @@ If you are familiar with working with GIS data, this may be useful for you.
 After opening the Landscaping Plugin, a `LandscapingInfos` object is created in the scene. Select it in the World Outliner and have a look in the Details panel.
 In the `Landscaping Expert` foldout, a property named `Root Projection` states the target projection which is used in the current level.
 
-By changing the value of `Root Projection` you can specify another target projection for the resulting Landscape.
-
-> `Root Projection` must be changed before importing DTM files, otherwise it will have no effect or the Shapefiles will not align.
-
-Every projection which is supported by [PROJ](https://proj.org/) can be used.
-
-> Please make sure, that the target projection uses meter as unit. Otherwise the result will be unsatisfying or the Unreal Editor may even crash.
-
 ## Allowed DTM File Types
 
 Landscaping is using [GDAL](https://gdal.org/) under the hood. It is tested to import GeoTiff, ASCII Info and HGT files properly. However, it should work with every driver built in with the GDAL library.
