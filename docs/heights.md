@@ -17,22 +17,35 @@ There is only two thing to consider:
 
 The Landscaping plugin allows you to set the desired tile size limit the area to import and specify auxiliary files to fill no data sections.
 
-![Import DTM files](_media/ue4_landscaping_dtm.jpg)
-
 ## Import Area (optional)
 
-Here it is possible to limit the area to import. To get an idea what is imported please use: [Mapbox](https://docs.mapbox.com/playground/static/) and select bounding box in the Parameters on the left hand side. Input the Latitudes and Longitudes according to the values in the `Options for DTM Import` dialog.
+Here it is possible to limit the area which should be imported. To get an idea what is imported please click on `Show Map`:  
+![Show Map](_media/ue4_landscaping_dtm_huge.jpg)
 
-![Import DTM files](_media/ue4_landscaping_import_area.jpg)
+A browser window opens and shows the area which encompasses the heightdata files:  
+![Import DTM files](_media/ue4_landscaping_dtm_map.jpg)
+
+Select edit on the right side and drag the rectangle corners until the desired import area is covered:
+![Import DTM files](_media/ue4_landscaping_dtm_map2.jpg)
+
+> The import area has to be smaller than the original area!
+
+After clicking save, the map centers on the new area. Select the coordinates in the adress bar of the browser and copy them (Ctrl+C):
+![Import DTM files](_media/ue4_landscaping_dtm_map3.jpg)
+
+Back in Unreal Engine Editor paste the coordinates (Ctrl+V) in the `Corners as BBox` text input and hit `Enter`:
+![Limit Import Area](_media/ue4_landscaping_dtm_limit_area.jpg)
+
+The info text should now show the new extent of the area and only this part of the heightdata will be imported.
 
 ## Fill the gaps (optional)
 
-Due to reprojecting the import data steep edges will appear on the outmost borders of the landscape or open world. To prevent this and if limiting the import area is no option for you, auxiliary files can be provided. They should be of the same resolution and encompass the area which you want to import.
-Try it out with this corresponding set of files for the examples from [Get Started](get-started.md?id=import-heightmap): [AuxiliaryExample](https://cloud.ludicdrive.com/s/Mfx0NyUsZE2PKXQ/download). Download and unzip the file, and select all files in the `Fill the gaps` file selection dialog.
+Due to reprojecting the import data steep edges will appear on the outmost borders of the landscape or open world if import area is not limited. To prevent this and if limiting the import area is no option for you, auxiliary files can be provided. They should be of the same resolution and encompass the area which you want to import.
+Try it out with this corresponding set of files for the [examples](get-started.md?id=import-heightmap) from `Get Started`: [AuxiliaryExample](https://cloud.ludicdrive.com/s/Mfx0NyUsZE2PKXQ/download). Download and unzip the file, and select all files in the `Fill the gaps` file selection dialog.
 
 ### Max Desired Tile Size
 
-Tiles will have this width max. The unit here is meter.
+Tiles will have this width max. The unit here is meter. If the tile size is bigger than the extents, only a single landscape (not a world composition) is imported.
 
 ## General
 
