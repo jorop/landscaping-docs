@@ -4,22 +4,25 @@ Landscaping supports raster data in various common formats and vector data in ES
 
 ## Raster Data
 
-Landscaping can handle any GeoTiff rasterfile with height data (aka Digital Terrain Model, DTM or Digital Elevation Model, DEM) as well as HGT file format (SRTM1 and SRTM3 data) and ASCII Grid files.
-Projection, pixelscale or resolution does not matter.
-ASCII Grid files have to have a *.prj file associated which is normally the case if you download it somewhere.
+Landscaping can handle any GeoTiff rasterfile with height data (aka Digital Terrain Model, DTM or Digital Elevation Model, DEM) as well as HGT file format (SRTM1 and SRTM3 data) and ASCII Grid files.  
+Projection, pixelscale or resolution does not matter.  
+ASCII Grid files have to have a *.prj file associated which is normally the case if you download it somewhere.  
 For HGT files the filename must comply to the format NXXWYYY[.optional].hgt which is also normally the case. So please make sure the HGT filename confirms to this convention.
 
 Sources for DTM files are for example:
 
+- [OpenDEM](https://www.opendem.info/opendemsearcher.html)
 - [NASA Earth Explorer](https://earthexplorer.usgs.gov/)
 - [Viewfinder Panoramas](http://www.viewfinderpanoramas.org/Coverage%20map%20viewfinderpanoramas_org3.htm)
 - [OpenTopography](https://portal.opentopography.org/raster?opentopoID=OTSRTM.082015.4326.1)
 
 Better resolutions will also create more detailed landscapes in Unreal Engine 4. __Search the web for the open data portal of your desired country to get better resolutions.__
 
-> Please make sure you understand the data you are trying to import. Downloading a random file and trying to import it without knowing what to expect will hardly lead to success. Read the description of the heightdata file on the website where you are downloading it and think about how big the landscape will be. E.g. importing a 10500 x 8600 pixel GeoTiff with a resolution of 8 meter per pixel will result in a 5780 km² landscape. You can limit the import area in the [DTM Import Options](heights.md?id=options). Importing huge areas might exhaust your system memory and Unreal Engine will crash. Unreal Engine 4 needs about 20 GB RAM per 1000 km².
+> In general resolution from 0.5 meter per pixel until 10 meter per pixel will generate smooth terrains. The less meter per pixel the better.
 
-It is always a good idea to have a look at the data before importing. [QGIS](https://qgis.org/) is a free tool which can be used to see how the data looks like before importing it.
+> Please make sure you understand the data you are trying to import. Read the description of the heightdata file on the website where you are downloading it and think about how big the landscape will be. E.g. importing a 10500 x 8600 pixel GeoTiff with a resolution of 8 meter per pixel will result in a 5780 km² landscape. You can limit the import area in the [DTM Import Options](heights.md?id=options). Importing huge areas might exhaust your system memory and Unreal Engine will crash. Unreal Engine 4 needs about 20 GB RAM per 1000 km².
+
+It is possible to have a look at the data before importing. [QGIS](https://qgis.org/) is a free tool which can be used to see how the data looks like before importing it.
 
 ## Vector Data
 

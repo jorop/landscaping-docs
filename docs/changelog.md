@@ -1,5 +1,11 @@
 # Changelog
 
+Changelog for the documentation see: [The Landscaping Docs on Github](https://github.com/jorop/landscaping-docs)
+
+## Version 2.2
+
+- Select area with map (external link)
+
 ## Version 2.1
 
 - Heightdata import options dialog
