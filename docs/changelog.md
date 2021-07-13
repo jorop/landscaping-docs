@@ -2,6 +2,15 @@
 
 Changelog for the documentation see: [The Landscaping Docs on Github](https://github.com/jorop/landscaping-docs)
 
+## Version 2.4
+
+- Support landscape below sea level (bathymetry)
+
+## Version 2.3
+
+- Faster reprojection of DTM files
+- Show import options also after import
+
 ## Version 2.2
 
 - Select area with map (external link)
