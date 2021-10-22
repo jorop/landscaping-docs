@@ -6,6 +6,8 @@ Landscaping let you create rivers, streets, railroads etc. from Shapefiles with 
 
 ## Generate from Mesh or Blueprint
 
+> Please unload all tiles before proceeding
+
 1) Select a file with LINESTRINGS (see [Get Data](get-data.md?id=vector-data))
 2) Define what should be generated along the lines of the imported Shapefile:  
     a. Select at least a `Spline Segment Mesh` or  

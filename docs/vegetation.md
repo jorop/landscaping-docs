@@ -14,6 +14,8 @@ In order for this feature to work, one has to prepare a [Procedural Foliage Spaw
 
 ## Options
 
+> Please unload all tiles before proceeding
+
 ### Foliage Spawner
 
 Assign a Procedural Foliage Spawner here.
