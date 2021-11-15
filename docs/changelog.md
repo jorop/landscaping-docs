@@ -2,6 +2,19 @@
 
 Changelog for the documentation see: [The Landscaping Docs on Github](https://github.com/jorop/landscaping-docs)
 
+## Version 2.7
+
+- Export PNG for reimport in UE4 and UE5
+- Choose resampling algorithm of DTM files
+
+## Version 2.6
+
+- Scale landscape to other scale than real world scale
+
+## Version 2.5
+
+- Support making Blueprints from all Vectordata at once
+
 ## Version 2.4
 
 - Support landscape below sea level (bathymetry)
