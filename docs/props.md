@@ -26,8 +26,9 @@ Landscaping let you create rivers, streets, railroads etc. from Shapefiles with 
 3) `Offset from Ground` specifies how much space will be between the surface of the Landscape and the point of the spline or instantiated Bluprint/Actor
 4) `Start Segment Mesh Scale` and `End Segment Mesh Scale` is the scale factor applied to the spline mesh width.
 5) `Revert Spline Direction` can be used, if a river is imported and flows upstream. This can happen, if the shape from the Shapefile is drawn in the wrong direction. When [Draw Vector Data Debug](gis-expert.md?id=draw-vector-data-debug) is enabled, you can zoom in and see an arrow on the first segment of the shape, indicating the direction.
-6) With `OSM feature class` you can control, what type of features will be instatiated with the Blueprint or Spline. A river should have another Blueprint than a stream and a path another Blueprint than a highway. This dropdown let you select the apropriate feature class of the shape for the Blueprint which should be instantiated on the Landscape.
+6) `Crop to bounds` controls if the shapefiles should be cropped to the bounds of the Landscape or World Composition. This is especially relevant when importing shapefiles independently without prior import of DTM with the Landscaping plugin.
+7) With `OSM feature class` you can control, what type of features will be instatiated with the Blueprint or Spline when using shapefiles from geofabrik.de. A river should have another Blueprint than a stream and a path another Blueprint than a highway. This dropdown let you select the apropriate feature class of the shape for the Blueprint which should be instantiated on the Landscape. On other shapefiles than from geofabrik.de this will default to `ALL`.
 
 > Please make sure to unload all Levels of a World Composition (except the Persistent Level) in the Unreal Engine `Levels` tab before hitting `Import`
 
-7) Hit `Import`
+8) Hit `Import`
