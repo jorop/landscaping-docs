@@ -2,6 +2,16 @@
 
 Changelog for the documentation see: [The Landscaping Docs on Github](https://github.com/jorop/landscaping-docs)
 
+## Version 2.9
+
+- independent Shapefile import
+- plugin usable in UE5
+
+## Version 2.8
+
+- Export txt with scale info alongside PNG
+- upsampling of DTM data
+
 ## Version 2.7
 
 - Export PNG for reimport in UE4 and UE5

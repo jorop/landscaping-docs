@@ -1,6 +1,6 @@
 # Get Data
 
-Landscaping supports raster data in various common formats and vector data in ESRI Shapefile format. The Shapefiles have to come with annotations which meet the specs of [geofabrik.de](https://download.geofabrik.de/).
+Landscaping supports raster data in various common formats and vector data in ESRI Shapefile format. The Shapefiles for weightmaps have to come with annotations which meet the specs of [geofabrik.de](https://download.geofabrik.de/). Shapefiles for spline based or other Actors do not necessarily need to be from geofabrik.de
 
 ## Raster Data
 
@@ -15,6 +15,7 @@ Sources for DTM files are for example:
 - [NASA Earth Explorer](https://earthexplorer.usgs.gov/)
 - [Viewfinder Panoramas](http://www.viewfinderpanoramas.org/Coverage%20map%20viewfinderpanoramas_org3.htm)
 - [OpenTopography](https://portal.opentopography.org/raster?opentopoID=OTSRTM.082015.4326.1)
+- [USGS](https://www.sciencebase.gov/catalog/item/4f552e93e4b018de15819c51)
 
 Better resolutions will also create more detailed landscapes in Unreal Engine 4. __Search the web for the open data portal of your desired country to get better resolutions.__
 
@@ -26,7 +27,8 @@ It is possible to have a look at the data before importing. [QGIS](https://qgis.
 
 ## Vector Data
 
-While it is possible to import any Shapefile through Landscaping into Unreal Engine 4, the plugin is designed to work with [geofabrik.de](https://download.geofabrik.de/) annotated Shapefiles. It will allow you to generate weightmaps, spline based Actors and any other Actor.
+While it is possible to import any Shapefile through Landscaping into Unreal Engine 4, the plugin is designed to work with [geofabrik.de](https://download.geofabrik.de/) annotated Shapefiles. It will allow you to generate weightmaps, spline based Actors and any other Actor. For weightmaps, it will need the Shapefiles from geofabrik.de.  
+__For spline based or other Actors any Shapefile can be used, and are often a better fit, because the shapes from geofabrik usually contain too much data and result in twingled splines.__
 
 After you downloaded the Shapefiles from geofabrik and unzipped the folder a collection of different aspects of the country can be found splitted into many files.
 
@@ -38,14 +40,7 @@ For weightmap generation following files are relevant:
 - gis_osm_natural_a_free_1.shp
 - gis_osm_water_a_free_1.shp
 
-All this files contain POLYGONS, which is necessary to derive weightmaps.
+All this files contain POLYGONS, which is necessary to derive weightmaps. The 'a' in the filename stands for area - please make sure only select this kind of files for weightmap generation!
 Optionally, gis_osm_buildings_a_free_1.shp can also be used for weightmap generation, but not in conjunction with gis_osm_landuse_a_free_1.shp. However, using gis_osm_buildings_a_free_1.shp is not recommended for bigger landscapes (> 10 km²) because the runtime to generate the appropriate weightmaps will increase a lot.
 
-For spline based Actors, following files are appropriate:
-
-- gis_osm_railways_a_free_1.shp
-- gis_osm_roads_a_free_1.shp
-- gis_osm_waterways_a_free_1.shp
-
-All this files contain LINESTRINGS, which is necessary to generate rivers, roads, etc.
-Optionally, gis_osm_buildings_a_free_1.shp can also be used to procedurally generate buildings. For this purpose, one has to implement the interface [LandscapingVectorInterface](landscapingvectorinterface.md) in a Blueprint or in C++ with custom logic.
+For spline based Actors, all shapefiles will work. To setup custom logic for generating Actors, see [LandscapingVectorInterface](landscapingvectorinterface.md) to implement the interface in a Blueprint or in C++.

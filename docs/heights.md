@@ -25,7 +25,7 @@ Here it is possible to limit the area which should be imported. To get an idea w
 A browser window opens and shows the area which encompasses the heightdata files:  
 ![Import DTM files](_media/ue4_landscaping_dtm_map.jpg)
 
-Select edit on the right side and drag the rectangle corners until the desired import area is covered:
+Select edit on the toolbar on the right side and drag the rectangle corners until the desired import area is covered:
 ![Import DTM files](_media/ue4_landscaping_dtm_map2.jpg)
 
 > The import area has to be smaller than the original area!
@@ -46,6 +46,34 @@ Try it out with this corresponding set of files for the [examples](get-started.m
 ### Max Desired Tile Size
 
 Tiles will have this width max. The unit here is meter. If the tile size is bigger than the extents, only a single landscape (not a world composition) is imported.
+
+## Upsampling
+
+If the input DTM is of low resulution, this option gives you the possibility to make the resulting surface of the landscape smoother. It will result in smoother terrain if the input data is up to 30 meter per pixel. However, if the input data has more then 30 meter per pixel, the output will very likley not be very detailed even with upsampling. If a detailed landscape is wanted, also the input data has to contain details e.g. a resolution of 5 meter or even better 1 meter.
+
+### Upsample checkbox
+
+Wheter to upsample the input data or not. Check it if you want to upsample the input data.
+
+### Data resample algorithm
+
+Select one of 6 resample algorithms. Default is __Bilinear__ and in most cases that's the one which gives the best results. The option leverages algorithms from [gdal](https://gdal.org/programs/gdal_translate.html).
+
+`nearest` applies a nearest neighbour (simple sampling) resampler.  
+`bilinear` applies a bilinear convolution kernel.  
+`cubic` applies a cubic convolution kernel.  
+`cubicspline` applies a B-Spline convolution kernel.  
+`lanczos` applies a Lanczos windowed sinc convolution kernel.  
+`average` computes the average of all non-NODATA contributing pixels. This is a weighted average taking into account properly the weight of source pixels not contributing fully to the target pixel.  
+`mode` selects the value which appears most often of all the sampled points.
+
+### Desired Meter per Pixel
+
+Upsample the inputdata to target this value.
+
+## Only convert to PNGs
+
+Instead of creating a Unreal Engine Landscape or World Composition, only output the heightmaps to pngs. These PNGs can be imported again into unreal as World Composition or even as World Partition (UE5). In the same folder alongside the PNGs, a `LandscapingInfos.txt` is created. Please use the scale info in the text-file on reimport into Unreal Engine, Y-Axis is not flipped. Only `Landscaping Scale X,Y`, `Landscaping Scale Z` and `Flip Tile Y Coordinate` are relevant when reimporting the PNG heightmaps.
 
 ## General
 

@@ -5,7 +5,7 @@ With a C++ class or Blueprint implementing the `LandscapingVectorInterface`, cus
 The `Landscaping Plugin` will instantiate the Blueprint at the first point of the LINESTRING, POLYGON or POINT and will call `OnVectorData` which can be implemented as `OnVectorData_Event` in the Blueprint. `OnVectorData` will give you a struct of `FVectorData`:
 
 - TArray < FVector > Points -> Points, which make up the shape
-- FString FeatureClass -> OSM feature class (may be empty if other shapefiles than from geofabrik.de are loaded)
+- FString FeatureClass -> OSM feature class (may be empty if other Shapefiles than from geofabrik.de are loaded)
 - FString Name -> Name of the shape (may be empty)
 - FString GeometryName -> Type of the shape, e.g. LINESTRING, POLYGON or POINT
 - bool bShow -> used for internal debugging purposes only
