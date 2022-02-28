@@ -14,7 +14,7 @@ After you installed the plugin from the marketplace, you have to activate the pl
 
 ## Import Heightmap
 
-1) Download example heightmaps [GeoTiffExamples](_media/GeoTiffExamples.zip), or use another DTM file.
+1) Download example heightmaps [GeoTiffExamples](https://cloud.ludicdrive.com/s/4HQPy8phBTxEL4z/download), or use another DTM file.
 2) After clicking on Landscaping on the toolbar, the Landscaping tab pops up:
 
 ![Landscaping Tab](_media/ue4_landscaping_tab.jpg)
