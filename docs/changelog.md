@@ -2,6 +2,15 @@
 
 Changelog for the documentation see: [The Landscaping Docs on Github](https://github.com/jorop/landscaping-docs)
 
+## Version 3.0
+
+- support for UE5 World Partition
+
+## Version 2.10
+
+- fixed scaling issue for vector data
+- support for UE5 Preview 1
+
 ## Version 2.9
 
 - independent Shapefile import

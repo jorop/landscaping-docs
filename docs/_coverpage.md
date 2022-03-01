@@ -1,5 +1,5 @@
 # Landscaping <!-- {docsify-ignore} -->
 
-> Landscapes from GIS data in Unreal Engine 4
+> Landscapes from GIS data in Unreal Engine
 
 [Documentation](#Welcome)
