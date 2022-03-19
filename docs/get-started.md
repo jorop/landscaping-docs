@@ -8,7 +8,7 @@ After you installed the plugin from the marketplace, you have to activate the pl
 2) Scroll down until you find 'Landscape' and select it
 3) On the 'Landscaping' plugin check the checkbox next to 'Enabled'
 4) Unreal Engine asks you for a restart
-5) After Unreal Engine has restarted, you should see the Landscaping Icon in the toolbar:
+5) After Unreal Engine has restarted, you should see the Landscaping Icon in the toolbar (in UE5 it is under the Window Menu):
 
 ![Toolbar with Landscaping](_media/ue4_toolbar_with_landscaping.jpg)
 

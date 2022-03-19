@@ -1,6 +1,6 @@
 # Vegetation
 
-Leverage Unreal Engines Procedural Foliage Tool to let it grow.
+Leverage Unreal Engines Procedural Foliage Tool to let it grow. __Only available for Unreal Engine 4__
 
 ## Automation
 

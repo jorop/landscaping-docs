@@ -10,6 +10,8 @@ Changelog for the documentation see: [The Landscaping Docs on Github](https://gi
 - feature: quick assign Landscape Material on heightdata import
 - bugfix: postition of landscape bounds
 - bugfix: saving data in LandscapingInfos Actor in UE5
+- change: remove `Fill the gaps` section in DTM Import Options
+- change: remove `Close` button in DTM Import Options
 
 ## Version 3.0
 

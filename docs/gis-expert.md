@@ -2,7 +2,6 @@
 
 If you are familiar with working with GIS data, this may be useful for you.
 
-
 ## Version Number
 
 Current Version of the Landscaping plugin.
@@ -36,15 +35,15 @@ The scale of a single Landscape can of course always be changed through Unreal E
 
 ## Vector Data Scale
 
-Like Raster Data Scale, the points of the Shapefile can be scaled independently. The `Override Vector Data Scale` let's you specify at which scale the Vector Data should be imported.
+Like Raster Data Scale, the points of the Shapefile can be scaled independently. The `Vector Data Scale` let's you specify at which scale the Vector Data should be imported.
 
-> If you set `Override Vector Data Scale` the value of `Override Raster Data Scale` will be ignored for Shapefiles.
+> If you set `Vector Data Scale` the value of `Override Raster Data Scale` will be ignored for Shapefiles.
 
 ## Draw Vector Data Debug
 
 After selecting files in the `Weightmaps and Landscape Material` dialog or in the `Import Roads, Railtracks, Rivers, etc.` section, the vector data is already loaded. To visualize it, check `Draw Vector Data Debug`. It will draw lines over the Landscape to preview, where the vector data from the Shapefile will be imported.
 
-By changing `Override Vector Data Scale` the change of the scale will also be reflected by it.
+By changing `Vector Data Scale` the change of the scale will also be reflected by it.
 
 It is possible to use the Gizmos to move the anchor of the shapefiles. Translation and Scale Gizmo can be used.
 
@@ -56,6 +55,6 @@ Snap the vector point to the ground of the Landscape. This might kill framerate 
 
 To save performance, the update interval of the debug drawing can be controlled here.
 
-## Bounds Delimiter
+## XYOffset
 
-Not used yet.
+Offset of the Bounds. The offset specifies the Origin of any vectordata imported (Shapefiles for Roads etc. or Shapefiles for Weightmaps). Also it moves the vectordata crop area  which is visualized with a dark-orange rectangle.

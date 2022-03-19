@@ -5,17 +5,17 @@ Making a huge tiled landscape is as easy as making a single landscape.
 ## Choosing input files
 
 In order to create a tiled landscape, you can choose one or multiple files in the file selection dialog.  
-Depending on the [Max Desired Tile Size](#max-desired-tile-size), the tiles for the landscape will be created on the fly.  
+Depending on the [Max Desired Tile Size](#max-desired-tile-size), the tiles for the landscape will be created on the fly. In UE5 it is possible to choose [World Partition](#world-partition) and specify the grid size.  
 > A tiled landscape can be created from a single file or from multiple files
 
 The controlling factor is the [Max Desired Tile Size](#max-desired-tile-size).  
 There is only two thing to consider:
 > The file size of a single file can be 2 GB max.  
-> Your system memory must keep up with the size of the landscape. About 20 GB RAM are needed per 1000 km².
+> Your system memory must keep up with the size of the landscape. About 20 GB RAM are needed per 1000 km². This is what Unreal Engine needs. The plugin itself does not need much memory.
 
 ## Options
 
-The Landscaping plugin allows you to set the desired tile size limit the area to import and specify auxiliary files to fill no data sections.
+The Landscaping plugin allows you to set the desired tile size limit the area to import and upsample low resolution data. For downloading heightmaps from Mapbox using the `Landscaping Mapbox` plugin, the import area is specified also here.
 
 ## Import Area (optional)
 
@@ -38,14 +38,24 @@ Back in Unreal Engine Editor paste the coordinates (Ctrl+V) in the `Corners as B
 
 The info text should now show the new extent of the area and only this part of the heightdata will be imported.
 
-## Fill the gaps (optional)
+## Fill the gaps (depricated, not available since release 4.0)
 
 Due to reprojecting the import data steep edges will appear on the outmost borders of the landscape or open world if import area is not limited. To prevent this and if limiting the import area is no option for you, auxiliary files can be provided. They should be of the same resolution and encompass the area which you want to import.
 Try it out with this corresponding set of files for the [examples](get-started.md?id=import-heightmap) from `Get Started`: [AuxiliaryExample](https://cloud.ludicdrive.com/s/Mfx0NyUsZE2PKXQ/download). Download and unzip the file, and select all files in the `Fill the gaps` file selection dialog.
 
-### Max Desired Tile Size
+### World Composition Max Desired Tile Size
 
 Tiles will have this width max. The unit here is meter. If the tile size is bigger than the extents, only a single landscape (not a world composition) is imported.
+
+### Use World Partition
+
+> Only available in Unreal Engine 5
+Check this to create a Landscape / Open World with World Partition (usually you want it).
+
+### World Partition Grid Size
+
+> Only available in Unreal Engine 5
+Grid size for the World Partition Landscape.
 
 ## Upsampling
 
@@ -73,7 +83,12 @@ Upsample the inputdata to target this value.
 
 ## Only convert to PNGs
 
+> Only available in Unreal Engine 4
 Instead of creating a Unreal Engine Landscape or World Composition, only output the heightmaps to pngs. These PNGs can be imported again into unreal as World Composition or even as World Partition (UE5). In the same folder alongside the PNGs, a `LandscapingInfos.txt` is created. Please use the scale info in the text-file on reimport into Unreal Engine, Y-Axis is not flipped. Only `Landscaping Scale X,Y`, `Landscaping Scale Z` and `Flip Tile Y Coordinate` are relevant when reimporting the PNG heightmaps.
+
+## Landscape Material
+
+Assign a Landscape Material which will be applied to the imported Landscape.
 
 ## General
 
