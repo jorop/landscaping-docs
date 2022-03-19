@@ -1,6 +1,13 @@
 # Get Data
 
-Landscaping supports raster data in various common formats and vector data in ESRI Shapefile format. The Shapefiles for weightmaps have to come with annotations which meet the specs of [geofabrik.de](https://download.geofabrik.de/). Shapefiles for spline based or other Actors do not necessarily need to be from geofabrik.de
+Landscaping supports raster data in various common formats and vector data in ESRI Shapefile format. The Shapefiles for weightmaps have to come with annotations which meet the specs of [geofabrik.de](https://download.geofabrik.de/). Shapefiles for spline based or other Actors do not necessarily need to be from geofabrik.de.
+
+## Mapbox
+
+With the extension [Landscaping Mapbox](https://www.unrealengine.com/marketplace/en-US/product/landscaping-mapbox) heightmap tiles from Mapbox can easily be imported.
+Therefore only the extents (bounding box) of the area must be pasted into the [DTM import Options](heights?id=import-area-optional) dialog. The heightmaps will be downloaded automatically and the Landscape / World Composition / World Partition will be created.  
+Please make sure to provide your Mapbox API key in `Project Settings -> Plugins -> Landscaping Mapbox`.  
+Alternativley, you can provide your own Raster Data - see next section.
 
 ## Raster Data
 
@@ -17,7 +24,7 @@ Sources for DTM files are for example:
 - [OpenTopography](https://portal.opentopography.org/raster?opentopoID=OTSRTM.082015.4326.1)
 - [USGS](https://www.sciencebase.gov/catalog/item/4f552e93e4b018de15819c51)
 
-Better resolutions will also create more detailed landscapes in Unreal Engine 4. __Search the web for the open data portal of your desired country to get better resolutions.__
+Better resolutions will also create more detailed landscapes in Unreal Engine. __Search the web for the open data portal of your desired country to get better resolutions.__
 
 > In general resolution from 0.5 meter per pixel until 10 meter per pixel will generate smooth terrains. The less meter per pixel the better.
 

@@ -2,6 +2,15 @@
 
 Changelog for the documentation see: [The Landscaping Docs on Github](https://github.com/jorop/landscaping-docs)
 
+## Version 4.0
+
+- feature: automate Deform Landscape / Paint Layer on Vector import
+- UI: grouping of vectordata import options
+- feature: integrate Landscaping Mapbox plugin for easy heightdata download
+- feature: quick assign Landscape Material on heightdata import
+- bugfix: postition of landscape bounds
+- bugfix: saving data in LandscapingInfos Actor in UE5
+
 ## Version 3.0
 
 - support for UE5 World Partition
