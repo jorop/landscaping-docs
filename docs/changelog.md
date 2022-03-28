@@ -2,6 +2,15 @@
 
 Changelog for the documentation see: [The Landscaping Docs on Github](https://github.com/jorop/landscaping-docs)
 
+## Version 4.2
+
+- change: try create default Cache Directory even when not set by user
+- bugfix: removed saving zero-indexed tile for world composition after import
+
+## Version 4.1
+
+- bugfix: bounds center for vector import
+
 ## Version 4.0
 
 - feature: automate Deform Landscape / Paint Layer on Vector import

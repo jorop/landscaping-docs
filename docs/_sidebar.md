@@ -13,6 +13,7 @@
 - Everything else
 
   - [UE5](ue5.md?id=unreal-engine-5)
+  - [Settings](settings.md=id=settings)
   - [Get data](get-data.md?id=get-data)
   - [GIS Experts](gis-expert.md?id=options-for-gis-experts)
   - [Extending Landscaping](landscapingvectorinterface.md?id=custom-logic-on-vector-data)
