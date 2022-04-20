@@ -2,6 +2,17 @@
 
 Changelog for the documentation see: [The Landscaping Docs on Github](https://github.com/jorop/landscaping-docs)
 
+## Version 5.0
+
+- feature: extend landscape (World Partition)
+- change: World Partition cell unloading while importing larger areas or shapefiles (UE5)
+- bugfix: fixed crash when open file dialog and not selecting file and then import from mapbox (UE5)
+- bugfix: fixed crash when deleting imported spline and then re-open Landscaping Tab (UE5)
+
+## Version 4.3
+
+- change: auto detect world partition and preselect in DTM Import Options
+
 ## Version 4.2
 
 - change: try create default Cache Directory even when not set by user

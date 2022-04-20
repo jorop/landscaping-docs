@@ -17,10 +17,11 @@ Landscaping - Unreal Engine Editor Plugin
 - Supported file formats are GeoTiff, ASCII, HGT, Shapefile
 - No preprocessing of data necessary
 - No limit because of full tiled landscape support (World Composition and World Partition)
-- Create props from every UE4 object and Marketplace content
-- Automate procedural foliage instantiation for World Composition
+- Create props from every Unreal Engine object and Marketplace content
+- Automate procedural foliage instantiation for World Composition (UE4)
 - Works offline without restrictions
 - No build dependencies - only pure Unreal Engine native objects are created
 - Builds for every platform (Windows, Mac, Linux, iOS, Android, XBox, PlayStation, etc.)
 
-[Get it on the UE Marketplace](https://www.unrealengine.com/marketplace/en-US/product/1150fad0ef4e4a75be5743c2c68237d3)
+[Landscaping](https://www.unrealengine.com/marketplace/en-US/product/1150fad0ef4e4a75be5743c2c68237d3)  
+[Landscaping Mapbox](https://www.unrealengine.com/marketplace/en-US/product/6fa6e344d3444d6b9019639b13d114ed)
