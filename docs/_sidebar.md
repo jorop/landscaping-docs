@@ -13,7 +13,7 @@
 - Everything else
 
   - [UE5](ue5.md?id=unreal-engine-5)
-  - [Settings](settings.md=id=settings)
+  - [Settings](settings.md?id=settings)
   - [Get data](get-data.md?id=get-data)
   - [Extending Landscapes](extend_landscape.md?id=extending-landscapes)
   - [GIS Experts](gis-expert.md?id=options-for-gis-experts)
