@@ -22,9 +22,13 @@ Therefore only the extents (bounding box) of the area must be pasted into the [D
 
 Settings for the Plugin can be found under `Project Settings -> Plugins -> Landscaping Mapbox`.
 
+![Mapbox Account](_media/landscaping_mapbox_settings.jpg)
+
 ### API key
 
-The Api key for Mapbox. Please look it up in your mapbox account. Mapbox allows for 750000 free calls on the tiles API, which is probably more than you will ever need for the Landscaping Mapbox plugin. The Landscaping plugin caches the tiles locally, which means reimporting the landscape will not result in additional calls to Mapbox.
+The Api key (Public Access Token) for Mapbox. Please look it up in your mapbox account. Mapbox allows for 750000 free calls on the tiles API, which is probably more than you will ever need for the Landscaping Mapbox plugin. The Landscaping plugin caches the tiles locally, which means reimporting the landscape will not result in additional calls to Mapbox.
+
+![Mapbox Account](_media/landscaping_mapbox_account.jpg)
 
 ### Zoom
 
