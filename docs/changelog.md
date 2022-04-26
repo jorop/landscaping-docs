@@ -2,6 +2,10 @@
 
 Changelog for the documentation see: [The Landscaping Docs on Github](https://github.com/jorop/landscaping-docs)
 
+## Version 5.1
+
+- feature: settings for World Partition Max Landscape Size
+
 ## Version 5.0
 
 - feature: extend landscape (World Partition)
