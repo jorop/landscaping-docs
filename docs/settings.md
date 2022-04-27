@@ -9,7 +9,7 @@ When importing heightdata (DTM files), intermediate files are generated. They ar
 
 > The Cache Directory defaults to `C:/Temp/Landscaping`
 
-## World Partition Max Landscae Size
+## World Partition Max Landscape Size
 
 The maximum size of a created Landscape in World Partition. If the size of a single Landscape exceeds this size, it will be split, and multiple Landscape Actors are created in the level. This is the size of the resulting Landscape in Unreal engine, not the max size or resolution of a source file (like GeoTiff, etc.).
 
