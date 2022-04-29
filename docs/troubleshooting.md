@@ -26,7 +26,11 @@ If one wants to get rid of the steep edges anyway, there are 2 options to solve 
 - The steep edges can be fixed within the native Unreal Engine Landscape Mode Sculpting Tools
 - Use the `Corners as Bounding Box` option in the [DTM Import Options](heights.md?id=options) dialog (Choose area on the map)
 
-## Crash when not saving the level on promt
+## Shapefile has wrong offset after reloading Level
+
+- Set XYOffset in the LandscapingInfos Actor to 0/0/0. The LandscapingInfos Actor can be found in the Outliner.
+
+## Crash when not saving the level on prompt
 
 This is an Unreal Engine bug which will hopefully be resolved in 5.1 - see also [https://issues.unrealengine.com/issue/UE-143891](https://issues.unrealengine.com/issue/UE-143891) - Right now the solution is to save the level when prompted.
 
