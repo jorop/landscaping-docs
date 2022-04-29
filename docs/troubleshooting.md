@@ -30,7 +30,11 @@ If one wants to get rid of the steep edges anyway, there are 2 options to solve 
 
 - Set XYOffset in the LandscapingInfos Actor to 0/0/0. The LandscapingInfos Actor can be found in the Outliner.
 
-## Crash when not saving the level on prompt
+## Artifacts on complex spline deforming Landscape with Paint Layer
+
+When shapes are very complex, artifacts can appear; in that case it is better to import a spline mesh (just assign a cube as `Spline Segment Mesh`) and then in the generated splines hit the `Deform` button in the `Details` tab. If artifacts appear, it can be undone with `Ctrl+Z`. Adjust/delete splines which are twisted or obsolete and hit `Deform` again. The Spline Actor can be deleted after the process. See also: [Video](https://youtu.be/pYNUrNeKF2s?t=557)
+
+## Crash when not saving the Level on prompt
 
 This is an Unreal Engine bug which will hopefully be resolved in 5.1 - see also [https://issues.unrealengine.com/issue/UE-143891](https://issues.unrealengine.com/issue/UE-143891) - Right now the solution is to save the level when prompted.
 
