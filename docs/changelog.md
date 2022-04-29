@@ -2,6 +2,12 @@
 
 Changelog for the documentation see: [The Landscaping Docs on Github](https://github.com/jorop/landscaping-docs)
 
+## Version 5.2
+
+- feature: change Landscape Material's default paint layer on DTM import
+- feature: override z scale of generated landscape on import
+- bugfix: LandscapeVecterInterface stopped after first linestring was created  
+
 ## Version 5.1
 
 - feature: settings for World Partition Max Landscape Size

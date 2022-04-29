@@ -21,14 +21,14 @@ When changing levels, the plugin may not detect the new World which is neccessar
 ## Edges on the outmost border
 
 Due to the transformation of the input data, on areas, where no data is found the height is set to 0. Therefore, steep edges on outmost borders of the Landscape or World Composition occur. Normally, this is not a problem and does not have any perfomance impacts.  
-If this is a problem there are 2 options to solve this:
+If one wants to get rid of the steep edges anyway, there are 2 options to solve this:
 
-- The steep edges can easily be fixed within the native Unreal Engine Landscape Mode Sculpting Tools
-- Use one of the options in the [DTM Import Options](heights.md?id=options) dialog
+- The steep edges can be fixed within the native Unreal Engine Landscape Mode Sculpting Tools
+- Use the `Corners as Bounding Box` option in the [DTM Import Options](heights.md?id=options) dialog (Choose area on the map)
 
-## Missing Tiles
+## Crash when not saving the level on promt
 
-When importing a Tiled Landscape you will maybe notice, that there are a couple of the enumerated Tiles missing. __Good news__: they are not really missing. They just did have no data and where therefore not imported at all. If you need flat tiles with all heights set to 0, you can easily add them within World Composition.
+This is an Unreal Engine bug which will hopefully be resolved in 5.1 - see also [https://issues.unrealengine.com/issue/UE-143891](https://issues.unrealengine.com/issue/UE-143891) - Right now the solution is to save the level when prompted.
 
 ## Crashes
 

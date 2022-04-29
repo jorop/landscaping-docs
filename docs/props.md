@@ -7,7 +7,6 @@ Landscaping let you create rivers, streets, railroads etc. from Shapefiles with 
 ## Generate from Mesh or Blueprint
 
 > If you are working with World Composition: please __unload__ all tiles before proceeding  
-> If you are working with World Partition: please __load__ all grid cells before proceeding  
 
 1) `Select` a Shapefile  
 
@@ -39,7 +38,6 @@ Depending on what is selected in the dropdown, there are 3 different dialogs, bu
 5) `Crop to bounds` controls if the shapefiles should be cropped to the bounds of the Landscape or World Composition or World Partition. This is especially relevant when importing shapefiles independently without prior import of DTM with the Landscaping plugin. If the Landscape is imported through the plugin, the option defaults to true and cannot be changed.
 6) With `OSM feature class` you can control, what type of features will be instatiated with the Blueprint or Spline when using shapefiles from geofabrik.de. A river should have another Blueprint than a stream and a path another Blueprint than a highway. This dropdown let you select the apropriate feature class of the shape for the Blueprint which should be instantiated on the Landscape. On other shapefiles than from geofabrik.de this will default to `ALL`.
 
-> Please make sure to __unload__ all Levels of a World Composition (except the Persistent Level) in the Unreal Engine `Levels` tab before hitting `Import`.  
-> Unreal Engine 5 World Partition: __Load__ all World Partition grid cells before hitting `Import`.  
+> Please make sure to __unload__ all Levels of a World Composition (UE4) (except the Persistent Level) in the Unreal Engine `Levels` tab before hitting `Import`.  
 
 7) Hit `Import`

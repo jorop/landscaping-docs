@@ -9,7 +9,6 @@ Landscaping is designed to work with OpenStreetMap Data Extracts from Geofabrik.
 ## Importing Shapefiles
 
 > If you are working with World Composition: please __unload__ all tiles before proceeding  
-> If you are working with World Partition: please __load__ all grid cells before proceeding
 
 When clicking on the `Open` button next to Landscape Material Settings a new window pops up. Hit the `Select` button and choose `gis_osm_landuse_a_free_1.shp` or multiple files (see [Get Data](get-data.md?id=vector-data)) from the extracted files. It is possible to select several Shapefiles at once. It may take a few seconds until the file is read. After that, choose the Landscape Material in the next step.
 

@@ -8,10 +8,10 @@ In order to create a tiled landscape, you can choose one or multiple files in th
 Depending on the [Max Desired Tile Size](#max-desired-tile-size), the tiles for the landscape will be created on the fly. In UE5 it is possible to choose [World Partition](#world-partition) and specify the grid size.  
 > A tiled landscape can be created from a single file or from multiple files
 
-The controlling factor is the [Max Desired Tile Size](#max-desired-tile-size).  
+The controlling factor is the [Max Desired Tile Size](#max-desired-tile-size). Please note: for `World Partition`, a different value will control the single Landscape Size -> see [Settings](settings.md?id=world-partition-max-landscape-size)
 There is only two thing to consider:
 > The file size of a single file can be 2 GB max.  
-> Your system memory must keep up with the size of the landscape. About 20 GB RAM are needed per 1000 km². This is what Unreal Engine needs. The plugin itself does not need much memory.
+> Your system memory must keep up with the size of the landscape. About 20 GB RAM are needed per 1000 km² (World Partition needs even more). This is what Unreal Engine needs. The plugin itself does not need much memory.
 
 ## Options
 
@@ -33,19 +33,29 @@ Select edit on the toolbar on the right side and drag the rectangle corners unti
 After clicking save, the map centers on the new area. Select the coordinates in the adress bar of the browser and copy them (Ctrl+C):
 ![Import DTM files](_media/ue4_landscaping_dtm_map3.jpg)
 
-Back in Unreal Engine Editor paste the coordinates (Ctrl+V) in the `Corners as BBox` text input and hit `Enter`:
+Back in Unreal Engine Editor paste the coordinates (Ctrl+V) in the `Corners as Bounding Box` text input and hit `Enter`:
 ![Limit Import Area](_media/ue4_landscaping_dtm_limit_area.jpg)
 
 The info text should now show the new extent of the area and only this part of the heightdata will be imported.
+
+## Override Z Scale of generated Landscape(s)
+
+### High Detail Z Scale
+
+The vertical scale will be calculated automatically to perserve the most detail, using the maximum available Unreal Engine Landscape vertical resolution. Defaults to `true`.
+
+### Custom Landscape Z Scale
+
+Use this for areas with low altitude difference to correct wrong slope calculation of Marketplace Landscape Materials (like Brushify or PLE). Defaults to `100`.
 
 ## Fill the gaps (depricated, not available since release 4.0)
 
 Due to reprojecting the import data steep edges will appear on the outmost borders of the landscape or open world if import area is not limited. To prevent this and if limiting the import area is no option for you, auxiliary files can be provided. They should be of the same resolution and encompass the area which you want to import.
 Try it out with this corresponding set of files for the [examples](get-started.md?id=import-heightmap) from `Get Started`: [AuxiliaryExample](https://cloud.ludicdrive.com/s/Mfx0NyUsZE2PKXQ/download). Download and unzip the file, and select all files in the `Fill the gaps` file selection dialog.
 
-### World Composition Max Desired Tile Size
+### Max Desired Tile Size
 
-Tiles will have this width max. The unit here is meter. If the tile size is bigger than the extents, only a single landscape (not a world composition) is imported.
+Tiles will have this width max. The unit here is meter. If the tile size is bigger than the extents of the file (geotiff, etc.), only a single landscape (not a world composition) is imported. Please note: for World Partition, a different value will control the single Landscape Size -> see [Settings](settings.md?id=world-partition-max-landscape-size)
 
 ### Use World Partition
 
