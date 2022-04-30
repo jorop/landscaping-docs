@@ -1,6 +1,6 @@
 # Landcover
 
-Applying a Landscape Material and generating weightmaps on the fly. The good thing about it: no preprocessing of data is needed. We only have to download some Shapefiles.
+Applying a Landscape Material and generating __weightmaps__ on the fly. The good thing about it: no preprocessing of data is needed. We only have to download some Shapefiles.
 
 ## Get it from the web
 
@@ -11,6 +11,8 @@ Landscaping is designed to work with OpenStreetMap Data Extracts from Geofabrik.
 > If you are working with World Composition: please __unload__ all tiles before proceeding  
 
 When clicking on the `Open` button next to Landscape Material Settings a new window pops up. Hit the `Select` button and choose `gis_osm_landuse_a_free_1.shp` or multiple files (see [Get Data](get-data.md?id=vector-data)) from the extracted files. It is possible to select several Shapefiles at once. It may take a few seconds until the file is read. After that, choose the Landscape Material in the next step.
+
+> To reset the input simply close the Landscaping tab and open it again.  
 
 ## Landscape Material
 

@@ -2,6 +2,12 @@
 
 Changelog for the documentation see: [The Landscaping Docs on Github](https://github.com/jorop/landscaping-docs)
 
+## Version 5.3
+
+- feature: Procedural Foliage Spawner automation for UE5
+- bugfix: XYOffset should be same value after re-opening level
+- bugfix: missing interface check when selecting `Actor` in `Import Shapefiles` section could lead to crash
+
 ## Version 5.2
 
 - feature: change Landscape Material's default paint layer on DTM import

@@ -4,6 +4,8 @@ Making a huge tiled landscape is as easy as making a single landscape.
 
 ## Choosing input files
 
+> To reset the input simply close the Landscaping tab and open it again.  
+
 In order to create a tiled landscape, you can choose one or multiple files in the file selection dialog.  
 Depending on the [Max Desired Tile Size](#max-desired-tile-size), the tiles for the landscape will be created on the fly. In UE5 it is possible to choose [World Partition](#world-partition) and specify the grid size.  
 > A tiled landscape can be created from a single file or from multiple files
@@ -11,7 +13,7 @@ Depending on the [Max Desired Tile Size](#max-desired-tile-size), the tiles for 
 The controlling factor is the [Max Desired Tile Size](#max-desired-tile-size). Please note: for `World Partition`, a different value will control the single Landscape Size -> see [Settings](settings.md?id=world-partition-max-landscape-size)
 There is only two thing to consider:
 > The file size of a single file can be 2 GB max.  
-> Your system memory must keep up with the size of the landscape. About 20 GB RAM are needed per 1000 km² (World Partition needs even more). This is what Unreal Engine needs. The plugin itself does not need much memory.
+> Your system memory must keep up with the size of the landscape. About 20 GB RAM are needed per 1000 km² (World Partition needs even more). This is what Unreal Engine needs. The plugin itself does not need much memory.  
 
 ## Options
 
@@ -59,12 +61,16 @@ Tiles will have this width max. The unit here is meter. If the tile size is bigg
 
 ### Use World Partition
 
-> Only available in Unreal Engine 5
-Check this to create a Landscape / Open World with World Partition (usually you want it).
+> Only available in Unreal Engine 5  
+
+Check this to create a Landscape / Open World with World Partition (usually you want it).  
+
+> Please make sure you use the `Empty Open World` Template when enabling World Partition and check `Enable Streaming` in World Settings
 
 ### World Partition Grid Size
 
-> Only available in Unreal Engine 5
+> Only available in Unreal Engine 5  
+
 Grid size for the World Partition Landscape.
 
 ## Upsampling
@@ -93,12 +99,17 @@ Upsample the inputdata to target this value.
 
 ## Only convert to PNGs
 
-> Only available in Unreal Engine 4
+> Only available in Unreal Engine 4  
 Instead of creating a Unreal Engine Landscape or World Composition, only output the heightmaps to pngs. These PNGs can be imported again into unreal as World Composition or even as World Partition (UE5). In the same folder alongside the PNGs, a `LandscapingInfos.txt` is created. Please use the scale info in the text-file on reimport into Unreal Engine, Y-Axis is not flipped. Only `Landscaping Scale X,Y`, `Landscaping Scale Z` and `Flip Tile Y Coordinate` are relevant when reimporting the PNG heightmaps.
 
 ## Landscape Material
 
 Assign a Landscape Material which will be applied to the imported Landscape.
+
+## Default Layer
+
+The Landscape Material's default paint layer, with which the landscape will be filled.  
+> Brushify's first layer makes the Landscape invisible - if you are using Brushify, choose an appropriate layer here.
 
 ## General
 

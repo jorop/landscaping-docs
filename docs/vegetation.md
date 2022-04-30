@@ -1,10 +1,11 @@
 # Vegetation
 
-Leverage Unreal Engines Procedural Foliage Tool to let it grow. __Only available for Unreal Engine 4__
+Leverage Unreal Engines Procedural Foliage Tool to let accelarate foliage creation.
 
 ## Automation
 
-This feature helps to populate tiled landscapes with procedural foliage. It loads every level of the tiled landscape, spawns the foliage and then saves and unloads it.
+This feature helps to populate tiled landscapes with procedural foliage. It loads every level of the tiled landscape, spawns the foliage and then saves and unloads it.  
+> In Unreal Engine 5, because the UE API changed, only the `Procedural Foliage Spawner` is created and it's brush size is set to the bounds of the Landscape. Click `Resimulate` in the Details tab of the `Procedural Foliage Spawner` to populate the Landscape with foliage.
 
 ## Procedural Foliage
 
@@ -32,9 +33,7 @@ This option will update the volumes found in a level.
 
 When checked, will add the Foliage Spawner as new Procedural Foliage Volume.
 
-> Some of the checkboxes will be automatically deselect if another option is checked
-
-Why? Well, if a Foliage Volume gets removed, it cannot be updated anymore.
+> Some of the checkboxes will be automatically deselect if another option is checked  
 
 If everything is unchecked, nothing will happen when hitting the `Create` button.
 

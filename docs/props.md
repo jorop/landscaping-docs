@@ -10,6 +10,7 @@ Landscaping let you create rivers, streets, railroads etc. from Shapefiles with 
 
 1) `Select` a Shapefile  
 
+> To reset the input simply close the Landscaping tab and open it again.  
 > If no Landscape is found in the scene, it is possible to create a dummy landscape with no extents here.  
 > If a Landscape was not imported through the Landscaping plugin, a popup will appear prior to selecting a Shapefile:  
 ![Shapefile Anchor](_media/ue4_landscaping_anchor.jpg)  

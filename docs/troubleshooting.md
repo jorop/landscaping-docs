@@ -34,10 +34,17 @@ If one wants to get rid of the steep edges anyway, there are 2 options to solve 
 
 When shapes are very complex, artifacts can appear; in that case it is better to import a spline mesh (just assign a cube as `Spline Segment Mesh`) and then in the generated splines hit the `Deform` button in the `Details` tab. If artifacts appear, it can be undone with `Ctrl+Z`. Adjust/delete splines which are twisted or obsolete and hit `Deform` again. The Spline Actor can be deleted after the process. See also: [Video](https://youtu.be/pYNUrNeKF2s?t=557)
 
+## World Partition not showing on World Partition Editor tab
+
+[Check Options](heights.md?id=use-world-partition)
+
 ## Crash when not saving the Level on prompt
 
 This is an Unreal Engine bug which will hopefully be resolved in 5.1 - see also [https://issues.unrealengine.com/issue/UE-143891](https://issues.unrealengine.com/issue/UE-143891) - Right now the solution is to save the level when prompted.
 
 ## Crashes
 
-If the Unreal Editor crashes on import, it may due to corrupted input data. Please send the data to `support@ludicdrive.com` to verify if it is a bug in the plugin or if the input data is to blame. Thank you.
+If the Unreal Editor crashes on import, it may due to corrupted input data or the Unreal Engine Editor runs out of memory. Memory issues can happen because:  
+> `World Partition Max Landscape Size` value is too big [Settings](settings.md)  
+> See also: [Choosing input files](heights.md?id=choosing-input-files)  
+If you suspect the input data is faulty, you can send the data to `support@ludicdrive.com` to verify it. Thank you.
