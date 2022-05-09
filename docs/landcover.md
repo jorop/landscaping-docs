@@ -36,6 +36,24 @@ Depending on the extent of the landscape and wether it is tiled or not, it will 
 
 ![Landscape Material and Weightmaps](_media/ue4_landscaping_weightmaps.jpg)
 
+
+## Add fclass to shapefile
+
+If other shapefile used than this from geofabrik.de, it is possible to add an fclass attribute to the shapefile.
+
+### Steps to add fclass attribute to shapefile
+
+Add an attribute to an shapefile, using QGIS:
+1.) Load shapefile in QGIS
+2.) Right click it in Layers Tab and choose `Open Attribute Table`
+3.) Click `Edit` (pencil icon) and then `New Column` (Ctrl+W)
+4.) Fill out with  __Name=fclass, Type=string, Length= 64__
+5.) `Select All` (Ctrl+A)
+6.) Click `Multiediting Mode` (next to pencil icon) and type the value for the attribute (e.g. lake)
+7.) `Save` and close the dialog
+8.) Export the shapefile (right click on layer -> `Export...`)
+Then it will be compatible.
+
 ## Notes on runtime
 
 The generation of weightmaps can take time. Roughly it takes 10 seconds per km² per distinct landuse area. If the landscape is huge and has many distinct areas, this adds up. For example, an area in the alps with ~ 220 km² and moderate distinct areas took about 39 minutes to calculate. Another test with a ~ 650 km² world and a lot of small distinct areas took a little more than 3 hours and 30 minutes to finish. Of course it depends on the machine you are using, mainly on the number of cores of your CPU. So, if you plan to generate huge worlds, please consider this. All tests where performed with a AMD Ryzen 3 2600 CPU with 32 GB RAM. Still, this is a lot faster than every other method and it is very accurate.
