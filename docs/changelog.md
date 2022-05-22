@@ -2,6 +2,17 @@
 
 Changelog for the documentation see: [The Landscaping Docs on Github](https://github.com/jorop/landscaping-docs)
 
+## Version 5.5
+
+- bugfix: paint layer UI partly disabled after opting in
+- bugfix: actors not painting layers on spawn and values not filled in
+- change: actor labels keep original name of blueprint
+- change: auxillary actors are flagged as editor only
+
+## Version 5.4
+
+- feature: change start and end width of spline mesh after creation in details tab
+
 ## Version 5.3
 
 - feature: Procedural Foliage Spawner automation for UE5
