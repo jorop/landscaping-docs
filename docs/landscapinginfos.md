@@ -2,7 +2,7 @@
 
 After opening the `Landscaping Tab` an Actor called `LandscapingInfos` is created in the scene. The Actor can be selected like every Actor in the World Outliner in the Unreal Engine Editor.
 
-In the Details Panel of the Unreal Engine Editor you can see different section belonging to Landscaping. They mainly hold metadata so that the `Landscaping Plugin` can do it's work properly.
+In the Details Panel of the Unreal Engine Editor you can see different section belonging to Landscaping. They mainly hold metadata so that the `Landscaping Plugin` can do it's work properly. It's properties are described in the tooltip (hover with mouse cursor over property name).
 
 > Please do not delete the `LandscapingInfos` Actor as long as you plan to work with the `Landscaping Plugin` in the editor.
 

@@ -2,12 +2,20 @@
 
 Changelog for the documentation see: [The Landscaping Docs on Github](https://github.com/jorop/landscaping-docs)
 
+## Version 5.6
+
+- feature: bake noise into weightmaps (UE5)  
+
 ## Version 5.5
 
+- feature: added 'Use Precise Scale' to allow for float scale instead of integer - please note, this could lead to tiny gaps between landscapes
 - bugfix: paint layer UI partly disabled after opting in
+- bugfix: weightmaps layer mapping checkboxes aligning
 - bugfix: actors not painting layers on spawn and values not filled in
 - change: actor labels keep original name of blueprint
 - change: auxillary actors are flagged as editor only
+- change: landscape scale will be set independently for x and y property (in LandscapingInfos `Override Raster Data Scale` is deprecated in favour of `Override Landscape Scale`)
+- change: added tooltips to LandscapingInfos properties
 
 ## Version 5.4
 

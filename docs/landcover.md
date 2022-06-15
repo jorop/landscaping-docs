@@ -14,9 +14,11 @@ When clicking on the `Open` button next to Landscape Material Settings a new win
 
 > To reset the input simply close the Landscaping tab and open it again.  
 
+![Landscape Material and Weightmaps](_media/ue4_landscaping_weightmaps.jpg)  
+
 ## Landscape Material
 
-Pick a Landscape Material from your content folder. I like the Brushify Landscape Material. But every other Landscape Material is fine as well.
+Pick a Landscape Material from your content folder. Please also see this topic for slopes of Landscape Auto-Materials and Z-Scale: [Override Z Scale of generated landscape](heights.md?id=override-z-scale-of-generated-landscapes)  
 
 ## Material Layers
 
@@ -26,16 +28,21 @@ A whole bunch of checkboxes will appear. So what is that about? Well, here we as
 
 ## Default Layer
 
-The Default Layer is used everywhere, on the landscape, if there is no other landuse type assigned. In areas, which have another layer, the Default Layer has a weight of 10%.
+The Default Layer is used everywhere, on the landscape, if there is no other landuse type assigned.
+
+## Noise Texture
+
+Next to the layer name there are options to assign a noise texture, choose the noise textures color channel and set the minimum weight of the layer in the appropriate landuse type as well as the tiling of the noise texture. The noise texture will create variation blended with the default layer. There are two sample perlin noise textures in the content folder of the plugin.  
+
+See how noise textures work:  
+
+[![Bake noise into Weightmaps](https://img.youtube.com/vi/UpqGl-J4WRo/0.jpg)](https://youtube.com/UpqGl-J4WRo)  
 
 ## Wait for it
 
 When pleased with the mapping hit the `Replace` Button. It will erase the current weightmaps and replace them with the new settings.
 
-Depending on the extent of the landscape and wether it is tiled or not, it will take several minutes to hours until all calculations are finished and you can see the result.
-
-![Landscape Material and Weightmaps](_media/ue4_landscaping_weightmaps.jpg)
-
+Depending on the extent of the landscape and wether it is tiled or not, it will take several minutes (e.g. 100 km2) to hours (e.g. on a 1000 km2 landscape) until all calculations are finished and you can see the result.
 
 ## Add fclass to shapefile
 
