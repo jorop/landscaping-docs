@@ -2,6 +2,10 @@
 
 Changelog for the documentation see: [The Landscaping Docs on Github](https://github.com/jorop/landscaping-docs)
 
+## Version 5.7
+
+- feature: choose CRS mode in settings
+
 ## Version 5.6
 
 - feature: bake noise into weightmaps (UE5)  
