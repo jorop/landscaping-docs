@@ -2,6 +2,14 @@
 
 Changelog for the documentation see: [The Landscaping Docs on Github](https://github.com/jorop/landscaping-docs)
 
+## Version 5.8
+
+- feature: write out LandscapingInfos.txt - a textfile with necessary georeferencing information
+- feature: faster reprojection algo is choosen automatically
+- fix: vector debug preview on weightmap generation matches exactly now even when not using precise scale
+- fix: fixed crash when choosing default layer after changing landscape material
+- fix: fixed crash when open another level during import
+
 ## Version 5.7
 
 - feature: choose CRS mode in settings
