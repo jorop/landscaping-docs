@@ -7,6 +7,7 @@ Please refer to [System Requirements](https://docs.unrealengine.com/5.0/en-US/ha
 ## Bare Landscape Memory Requirements
 
 This table gives a rough overview of the requirements when using Landscaping plugin and World Partition (only the Landscape, without Landscape Material, Foliage, etc.) with the whole Landscape loaded and a [World Partition Max Landscape Size](settings.md?id=world-partition-max-landscape-size) of 16384:  
+
 | Area         |      RAM    |  recommended |
 |--------------|------------:|-------------:|
 | 100 km²      |    ~ 25 GB  |  32 GB       |
