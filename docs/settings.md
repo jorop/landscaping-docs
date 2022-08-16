@@ -11,10 +11,12 @@ When importing heightdata (DTM files), intermediate files are generated. They ar
 
 ## World Partition Max Landscape Size
 
-The maximum size of a created Landscape in World Partition. If the size of a single Landscape exceeds this size, it will be split, and multiple Landscape Actors are created in the level. This is the size of the resulting Landscape in Unreal engine, not the max size or resolution of a source file (like GeoTiff, etc.).
+The maximum size of a created Landscape in World Partition. If the size of a single Landscape exceeds this size, it will be split, and multiple Landscape Actors are created in the level. This is the size of the resulting Landscape in Unreal engine, not the max size or resolution of a source file (like GeoTiff, etc.). E.g. a value of 32768 will import landscapes with maximum 32 km length or width. 32768 will need at least 128 GB of RAM.
 
 > The World Partition Max Landscape Size defaults to `8192`.  
-> Tip: you can type aritmetic operation into the input box like `8192*2` or `8192/2`
+> Edit Layers can only be activated if the value is `16384` or below.
+
+Tip: you can type aritmetic operations into the input box like `8192*2` or `8192/2`
 
 ## Projection
 

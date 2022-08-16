@@ -13,7 +13,7 @@ Depending on the [Max Desired Tile Size](#max-desired-tile-size), the tiles for 
 The controlling factor is the [Max Desired Tile Size](#max-desired-tile-size). Please note: for `World Partition`, a different value will control the single Landscape Size -> see [Settings](settings.md?id=world-partition-max-landscape-size)
 There is only two thing to consider:
 > The file size of a single file can be 2 GB max.  
-> Your system memory must keep up with the size of the landscape. About 20 GB RAM are needed per 1000 km² (World Partition needs even more). This is what Unreal Engine needs. The plugin itself does not need much memory.  
+> System memory must keep up with the size of the landscape -> see [Max Landscape Size](max-landscape-size.md?id=maximum-landscape-size).
 
 ## Options
 
@@ -73,9 +73,17 @@ Check this to create a Landscape / Open World with World Partition (usually you 
 
 Grid size for the World Partition Landscape.
 
-## Upsampling
+### Smooth Steps
 
-If the input DTM is of low resulution, this option gives you the possibility to make the resulting surface of the landscape smoother. It will result in smoother terrain if the input data is up to 30 meter per pixel. However, if the input data has more then 30 meter per pixel, the output will very likley not be very detailed even with upsampling. If a detailed landscape is wanted, also the input data has to contain details e.g. a resolution of 5 meter or even better 1 meter.
+> Only available in Unreal Engine 5
+
+Apply gaussian blur on the height data before importing the landscape. This will smooth raster data with low resolution.  
+0 means, no smoothing will happen.
+For Mapbox imports the recommended value is 1 for mountain terrain, and 2 for flat terrain.  
+
+## Upsampling (deprecated beta, not available in UE5; superseded by Smooth Steps)
+
+If the input DTM is of low resolution, this option gives you the possibility to make the resulting surface of the landscape smoother. It will result in smoother terrain if the input data is up to 30 meter per pixel. However, if the input data has more then 30 meter per pixel, the output will very likley not be very detailed even with upsampling. If a detailed landscape is wanted, also the input data has to contain details e.g. a resolution of 5 meter or even better 1 meter.
 
 ### Upsample checkbox
 
@@ -97,9 +105,8 @@ Select one of 6 resample algorithms. Default is __Bilinear__ and in most cases t
 
 Upsample the inputdata to target this value.
 
-## Only convert to PNGs
-
-> Only available in Unreal Engine 4  
+## Only convert to PNGs (Only available in Unreal Engine 4)
+  
 Instead of creating a Unreal Engine Landscape or World Composition, only output the heightmaps to pngs. These PNGs can be imported again into unreal as World Composition or even as World Partition (UE5). In the same folder alongside the PNGs, a `LandscapingInfos.txt` is created. Please use the scale info in the text-file on reimport into Unreal Engine, Y-Axis is not flipped. Only `Landscaping Scale X,Y`, `Landscaping Scale Z` and `Flip Tile Y Coordinate` are relevant when reimporting the PNG heightmaps.
 
 ## Landscape Material

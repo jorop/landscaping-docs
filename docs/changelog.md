@@ -2,6 +2,12 @@
 
 Changelog for the documentation see: [The Landscaping Docs on Github](https://github.com/jorop/landscaping-docs)
 
+## Version 5.9
+
+- feature: smooth steps to correct blocky terrain  
+- feature: set scale of actor/blueprint on import  
+- change: removed upsampling (beta) - superseded by smooth steps
+
 ## Version 5.8
 
 - feature: write out LandscapingInfos.txt - a textfile with necessary georeferencing information

@@ -32,7 +32,7 @@ If one wants to get rid of the steep edges anyway, there are 2 options to solve 
 
 ## Artifacts on complex spline deforming Landscape with Paint Layer
 
-When shapes are very complex, artifacts can appear; in that case it is better to import a spline mesh (just assign a cube as `Spline Segment Mesh`) and then in the generated splines hit the `Deform` button in the `Details` tab. If artifacts appear, it can be undone with `Ctrl+Z`. Adjust/delete splines which are twisted or obsolete and hit `Deform` again. The Spline Actor can be deleted after the process. See also: [Video](https://youtu.be/pYNUrNeKF2s?t=557)
+When shapes are very complex, artifacts can appear; To resolve the issue, please choose 1 or 0 for `Subdivisions`. If this does not resolve the issue, it is better to import a spline mesh (just assign a cube as `Spline Segment Mesh`) and then in the generated splines hit the `Deform` button in the `Details` tab. If artifacts appear, it can be undone with `Ctrl+Z`. Adjust/delete splines which are twisted or obsolete and hit `Deform` again. The Spline Actor can be deleted after the process. See also: [Video](https://youtu.be/pYNUrNeKF2s?t=557)
 
 ## World Partition not showing on World Partition Editor tab
 
