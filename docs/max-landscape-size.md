@@ -8,14 +8,14 @@ Please refer to [System Requirements](https://docs.unrealengine.com/5.0/en-US/ha
 
 This table gives a rough overview of the requirements when using Landscaping plugin and World Partition (only the Landscape, without Landscape Material, Foliage, etc.) with the whole Landscape loaded and a [World Partition Max Landscape Size](settings.md?id=world-partition-max-landscape-size) of 16384:  
 
-| Area         |      RAM    |  recommended |
-|--------------|------------:|-------------:|
-| 100 km²      |    ~ 25 GB  |  32 GB       |
-| 250 km²      |    ~ 40 GB  |  64 GB       |
-| 1000 km²     |    ~ 70 GB  |  128 GB      |
-| 2000 km²     |   ~ 120 GB  |  256 GB      |
+| Area         |      RAM    |  recommended | FPS |
+|--------------|------------:|-------------:|----:|
+| 100 km²      |    ~ 25 GB  |  32 GB       | 120 |
+| 250 km²      |    ~ 40 GB  |  64 GB       | 120 |
+| 1000 km²     |    ~ 70 GB  |  128 GB      |  50 |
+| 2000 km²     |   ~ 120 GB  |  256 GB      |  20 |
 
-These values are taken from a machine with 128 GB RAM installed.  
+These values are taken from a machine with 128 GB RAM, 12 Core CPU, RTX 3070Ti.  
 
 The plugin can import larger areas as World Partition than through the native Unreal Landscape Importer by splitting the area into several landscapes. The size of a single Landscape is controlled by [World Partition Max Landscape Size](settings.md?id=world-partition-max-landscape-size).  
 > While increasing the World Partition Max Landscape Size will result in a better runtime performance, it will also need a lot more RAM on creation.  
