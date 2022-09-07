@@ -2,6 +2,16 @@
 
 Changelog for the documentation see: [The Landscaping Docs on Github](https://github.com/jorop/landscaping-docs)
 
+## Version 6.0
+
+- feature: create splines or blueprints from shapefile in batches  
+- feature: opt out to create auxiliary actor when creating actors / blueprints  
+- feature: select spline point type of generated splines on import (e.g. for buildings)  
+- feature: option to align points of a spline horizontally (e.g. for buildings)  
+- feature: Spline Mesh and Auxiliary Actor have an additional option `Snap to Ground` to re-align a shape with the landscape's surface  
+- change: options inside `LandscapingInfos` are now sorted to topics `DTM`, `Shapefile` and `Internal`  
+- change: relative scaling of landscape on import (instead of fixed value)  
+
 ## Version 5.9
 
 - feature: smooth steps to correct blocky terrain  

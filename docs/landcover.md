@@ -67,5 +67,5 @@ The generation of weightmaps can take time. Roughly it takes 10 seconds per km²
 
 ## Next steps
 
-After having the ground set, let's grow some bushes and trees: [Vegetation](vegetation.md?id=vegetation)  
-Or lay a river in the riverbed: [Props](props.md?id=props)
+After having the ground set, let's grow some bushes and trees: [Foliage](vegetation.md?id=vegetation)  
+Or lay a river in the riverbed: [Splines / Actors / Blueprints](props.md?id=props)

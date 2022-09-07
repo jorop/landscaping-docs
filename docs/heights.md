@@ -7,17 +7,19 @@ Making a huge tiled landscape is as easy as making a single landscape.
 > To reset the input simply close the Landscaping tab and open it again.  
 
 In order to create a tiled landscape, you can choose one or multiple files in the file selection dialog.  
-Depending on the [Max Desired Tile Size](#max-desired-tile-size), the tiles for the landscape will be created on the fly. In UE5 it is possible to choose [World Partition](#world-partition) and specify the grid size.  
+In UE5 it is possible to choose [World Partition](#world-partition) and specify the grid size. (UE4: Depending on the `Max Desired Tile Size`, the tiles for the landscape will be created on the fly.)  
+
 > A tiled landscape can be created from a single file or from multiple files
 
-The controlling factor is the [Max Desired Tile Size](#max-desired-tile-size). Please note: for `World Partition`, a different value will control the single Landscape Size -> see [Settings](settings.md?id=world-partition-max-landscape-size)
-There is only two thing to consider:
+For `World Partition`, the settings value will control the size of a single Landscape -> see [Settings](settings.md?id=world-partition-max-landscape-size)
+There are only two things to consider:
 > The file size of a single file can be 2 GB max.  
 > System memory must keep up with the size of the landscape -> see [Max Landscape Size](max-landscape-size.md?id=maximum-landscape-size).
 
 ## Options
 
-The Landscaping plugin allows you to set the desired tile size limit the area to import and upsample low resolution data. For downloading heightmaps from Mapbox using the `Landscaping Mapbox` plugin, the import area is specified also here.
+The Landscaping plugin allows you to set the area to import with the `Corners as Bounding Box` input.  
+For downloading heightmaps from Mapbox using the `Landscaping Mapbox` plugin, the import area is also specified here.
 
 ## Import Area (optional)
 
@@ -30,7 +32,7 @@ A browser window opens and shows the area which encompasses the heightdata files
 Select edit on the toolbar on the right side and drag the rectangle corners until the desired import area is covered:
 ![Import DTM files](_media/ue4_landscaping_dtm_map2.jpg)
 
-> The import area has to be smaller than the original area!
+> When importing DTM files, the import area has to be smaller than the original area!
 
 After clicking save, the map centers on the new area. Select the coordinates in the adress bar of the browser and copy them (Ctrl+C):
 ![Import DTM files](_media/ue4_landscaping_dtm_map3.jpg)
@@ -38,9 +40,9 @@ After clicking save, the map centers on the new area. Select the coordinates in 
 Back in Unreal Engine Editor paste the coordinates (Ctrl+V) in the `Corners as Bounding Box` text input and hit `Enter`:
 ![Limit Import Area](_media/ue4_landscaping_dtm_limit_area.jpg)
 
-The info text should now show the new extent of the area and only this part of the heightdata will be imported.
+The info text should now show the new extent of the area. Only this part of the heightdata will be imported.
 
-## Override Z Scale of generated Landscape(s)
+## Override Z Scale of generated Landscape
 
 ### High Detail Z Scale
 
@@ -49,15 +51,6 @@ The vertical scale will be calculated automatically to perserve the most detail,
 ### Custom Landscape Z Scale
 
 Use this for areas with low altitude difference to correct wrong slope calculation of Marketplace Landscape Materials (like Brushify or PLE). Defaults to `100`.
-
-## Fill the gaps (depricated, not available since release 4.0)
-
-Due to reprojecting the import data steep edges will appear on the outmost borders of the landscape or open world if import area is not limited. To prevent this and if limiting the import area is no option for you, auxiliary files can be provided. They should be of the same resolution and encompass the area which you want to import.
-Try it out with this corresponding set of files for the [examples](get-started.md?id=import-heightmap) from `Get Started`: [AuxiliaryExample](https://cloud.ludicdrive.com/s/Mfx0NyUsZE2PKXQ/download). Download and unzip the file, and select all files in the `Fill the gaps` file selection dialog.
-
-### Max Desired Tile Size
-
-Tiles will have this width max. The unit here is meter. If the tile size is bigger than the extents of the file (geotiff, etc.), only a single landscape (not a world composition) is imported. Please note: for World Partition, a different value will control the single Landscape Size -> see [Settings](settings.md?id=world-partition-max-landscape-size)
 
 ### Use World Partition
 
@@ -81,33 +74,9 @@ Apply gaussian blur on the height data before importing the landscape. This will
 0 means, no smoothing will happen.
 For Mapbox imports the recommended value is 1 for mountain terrain, and 2 for flat terrain.  
 
-## Upsampling (deprecated beta, not available in UE5; superseded by Smooth Steps)
+### Dump LandscapingInfos
 
-If the input DTM is of low resolution, this option gives you the possibility to make the resulting surface of the landscape smoother. It will result in smoother terrain if the input data is up to 30 meter per pixel. However, if the input data has more then 30 meter per pixel, the output will very likley not be very detailed even with upsampling. If a detailed landscape is wanted, also the input data has to contain details e.g. a resolution of 5 meter or even better 1 meter.
-
-### Upsample checkbox
-
-Wheter to upsample the input data or not. Check it if you want to upsample the input data.
-
-### Data resample algorithm
-
-Select one of 6 resample algorithms. Default is __Bilinear__ and in most cases that's the one which gives the best results. The option leverages algorithms from [gdal](https://gdal.org/programs/gdal_translate.html).
-
-`nearest` applies a nearest neighbour (simple sampling) resampler.  
-`bilinear` applies a bilinear convolution kernel.  
-`cubic` applies a cubic convolution kernel.  
-`cubicspline` applies a B-Spline convolution kernel.  
-`lanczos` applies a Lanczos windowed sinc convolution kernel.  
-`average` computes the average of all non-NODATA contributing pixels. This is a weighted average taking into account properly the weight of source pixels not contributing fully to the target pixel.  
-`mode` selects the value which appears most often of all the sampled points.
-
-### Desired Meter per Pixel
-
-Upsample the inputdata to target this value.
-
-## Only convert to PNGs (Only available in Unreal Engine 4)
-  
-Instead of creating a Unreal Engine Landscape or World Composition, only output the heightmaps to pngs. These PNGs can be imported again into unreal as World Composition or even as World Partition (UE5). In the same folder alongside the PNGs, a `LandscapingInfos.txt` is created. Please use the scale info in the text-file on reimport into Unreal Engine, Y-Axis is not flipped. Only `Landscaping Scale X,Y`, `Landscaping Scale Z` and `Flip Tile Y Coordinate` are relevant when reimporting the PNG heightmaps.
+Write metadata to a textfile
 
 ## Landscape Material
 
@@ -130,4 +99,4 @@ Datasets handed over to the `Landscaping Plugin` may intersect, they will be mer
 
 ## Next Steps
 
-Make the gray checkered landscape colorful with [Landcover](landcover.md?id=landcover)
+Make the gray checkered landscape colorful with [Weightmaps / Paint Layers](landcover.md?id=landcover)

@@ -6,15 +6,13 @@ In the Details Panel of the Unreal Engine Editor you can see different section b
 
 > Please do not delete the `LandscapingInfos` Actor as long as you plan to work with the `Landscaping Plugin` in the editor.
 
-For packaging the project, the `LandscapingInfos` is not needed and can be deleted savely.
+The Actor is an Editor Only actor and will therefore automatically __not__ be included when packaging the project.
 
 ## Options in the Landscaping Section (Details Panel)
 
 Select `LandscapingInfos`in the Outliner. Under `Landscaping` following options are provided.
 
-### Imported through Landscaping
-
-Whether the Landscape or World Composition found in the Level is imported through the plugin or not. This is set automatically and shouldn't be changed normally.
+## DTM
 
 ### Allowed DTM File Types
 
@@ -24,38 +22,26 @@ Changing the Allowed DTM file Types allows you to select other DTM files. A list
 
 > There is no guarantee, that other file types work. Trying to import other files than what GDAL supports will crash the Unreal Editor.
 
-### Override Raster Data Scale (UE4)
+### Landscape Scale Factor
 
-DEPRECATED in UE5 - see `Override Landscape Scale` below!  
-
-For special purpouses, if one wishes to create World Composition with a different scale than the real world scale, the Raster Data Scale can be overwritten with `Override Raster Data Scale`.
-Raster Data Scale effects both, the scale of the final Landscape imported from DTM files and the points of the Shapefile.
-
-> The scale of the resulting Landscape has always to be uniform, otherwise the collision will be screwed.
-
-The base `Scale Factor` is only set after import of a Landscape or World Composition.
-The scale of a single Landscape can of course always be changed through Unreal Engines native features.
-
-### Override Landscape Scale
-
-For special purpouses, if one wishes to create World Partition with a different scale than the real world scale, the Landscape Scale can be overwritten with `Override Landscape Scale`.
+For special purpouses, if one wishes to create World Partition with a different scale than the real world scale, the Landscape Scale can be overwritten with `Landscape Scale Factor`.
 Landscape Scale effects both, the scale of the final Landscape imported from DTM files and the points of the Shapefile.
 
-> The scale of the resulting Landscape will took as is -> e.g. if `Override Landscape Scale` is set to 50/50/50 the scale of the landscape will be set to this value.
+> The internal calculated scale of the resulting Landscape will be multiplied with this value. E.g. if the value is set to 0.5 the resulting Landscape size will be halved.  
 
-See `Landscape Scale` below. It will show what Scale will be used after selecting a dataset. Considering this value, `Override Landscape Scale` can set to scale the Landscape proportionally.  
-
-The scale of a single Landscape can of course always be changed through Unreal Engines native features.
+The scale of a single Landscape can of course always be changed through Unreal Engines native features. Changing it with unreal engine native features will however make it necessary to also change `Vector Data Scale` accordingly.  
 
 ### Use Precise Scale
 
 Wheter to use precise scale (float). Default is false. -> Please note using precise scale can lead to gaps between Landscapes. Can be set to true savely if only a single Landscape without World Partition is imported.  
 
+## Shapefile
+
 ### Vector Data Scale
 
 Like Landscape Scale, the points of the Shapefile can be scaled independently. The `Vector Data Scale` let's you specify at which scale the Vector Data should be imported.
 
-> If you set `Vector Data Scale` the value of `Override Landscape Scale` will be ignored for Shapefiles.
+> If you set `Vector Data Scale` the value of `Landscape Scale Factor` will be ignored for shapefiles.
 
 ### Draw Vector Data Debug
 
@@ -75,4 +61,4 @@ To save performance, the update interval of the debug drawing can be controlled 
 
 ### XYOffset
 
-Offset of the Bounds. The offset specifies the Origin of any vectordata imported (Shapefiles for Roads etc. or Shapefiles for Weightmaps). Also it moves the vectordata crop area  which is visualized with a dark-orange rectangle.
+Offset of the Bounds. The offset specifies the Origin of any vectordata imported (shapefiles for Roads etc. or shapefiles for Weightmaps). Also it moves the vectordata crop area  which is visualized with a dark-orange rectangle.

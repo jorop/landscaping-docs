@@ -26,9 +26,11 @@ Sources for DTM files are for example:
 
 Better resolutions will also create more detailed landscapes in Unreal Engine. __Search the web for the open data portal of your desired country to get better resolutions.__
 
-> In general resolution from 0.5 meter per pixel until 10 meter per pixel will generate smooth terrains. The less meter per pixel the better.
+> In general resolution from 0.5 meter per pixel until 5 meter per pixel will generate smooth terrains. The less meter per pixel the better.
 
-> Please make sure you understand the data you are trying to import. Read the description of the heightdata file on the website where you are downloading it and think about how big the landscape will be. E.g. importing a 10500 x 8600 pixel GeoTiff with a resolution of 8 meter per pixel will result in a 5780 km² landscape. You can limit the import area in the [DTM Import Options](heights.md?id=options). Importing huge areas might exhaust your system memory and Unreal Engine will crash. Unreal Engine 4 needs about 20 GB RAM per 1000 km².
+### Important
+
+> Please make sure you understand the data you are trying to import. Read the description of the heightdata file on the website where you are downloading it and think about how big the landscape will be. E.g. importing a 10500 x 8600 pixel GeoTiff with a resolution of 8 meter per pixel will result in a 5780 km² landscape. You can limit the import area in the [DTM Import Options](heights.md?id=options). Importing huge areas might exhaust your system memory and Unreal Engine will crash. Unreal Engine 4 needs about 20 GB RAM per 1000 km². For requirements regarding UE5 see [Max Landscape Size](max-landscape-size.md?id=maximum-landscape-size)  
 
 It is possible to have a look at the data before importing. [QGIS](https://qgis.org/) is a free tool which can be used to see how the data looks like before importing it.
 

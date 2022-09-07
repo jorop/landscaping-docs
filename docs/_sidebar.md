@@ -4,20 +4,26 @@
 
 - Guide
 
-  - [Heights](heights.md?id=heights)
-  - [Landcover](landcover.md?id=landcover)
-  - [Props](props.md?id=props)
-  - [Vegetation](vegetation.md?id=vegetation)
+  - [DTM / Heightmaps](heights.md?id=heights)
+  - [Weightmaps / Paint Layers](landcover.md?id=landcover)
+  - [Splines / Actors / Blueprints](props.md?id=props)
+  - [Foliage](vegetation.md?id=vegetation)
   - [Mapbox](mapbox.md?id=mapbox)
 
-- Everything else
+- Fine tuning
 
-  - [Max Landscape Size](max-landscape-size.md?id=maximum-landscape-size)
   - [Settings](settings.md?id=settings)
-  - [Get data](get-data.md?id=get-data)
+  - [LandscapingInfos Actor](landscapinginfos.md?id=landscapinginfos-actor)
+
+- Special requirements
+
   - [Extending Landscapes](extend_landscape.md?id=extending-landscapes)
-  - [GIS Experts](gis-expert.md?id=options-for-gis-experts)
+  - [Shapefile import only](shp_without_dtm.md?id=shapefile-import-without-prior-dtm-import)
   - [Custom Logic on Import](landscapingvectorinterface.md?id=custom-logic-on-vector-data)
-  - [LandscapingInfos](landscapinginfos.md?id=landscapinginfos-actor)
+
+- General
+
+  - [Get data](get-data.md?id=get-data)
+  - [Max Landscape Size](max-landscape-size.md?id=maximum-landscape-size)
   - [Troubleshooting](troubleshooting.md?id=troubleshooting)
   - [Changelog](changelog.md?id=changelog)

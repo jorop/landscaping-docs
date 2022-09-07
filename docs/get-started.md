@@ -24,6 +24,6 @@ After you installed the plugin from the marketplace, you have to activate the pl
 
 ## Next steps
 
-Explore how easy it is to create tiled landscapes: [Heights](heights.md?id=heights)
+Explore how easy it is to create tiled landscapes: [DTM / Heightmaps](heights.md?id=heights)
 
-Apply a Landscape Material and generate weightmaps on the fly: [Landcover](landcover.md?id=landcover)
+Apply a Landscape Material and generate weightmaps on the fly: [Weightmaps / Paint Layers](landcover.md?id=landcover)
