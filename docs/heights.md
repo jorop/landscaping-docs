@@ -56,7 +56,7 @@ Use this for areas with low altitude difference to correct wrong slope calculati
 
 > Only available in Unreal Engine 5  
 
-Check this to create a Landscape / Open World with World Partition (usually you want it).  
+Check this to create a Landscape / Open World with World Partition (usually you want it). If not using World Partition, the Landscape can be 8192 meters max (x or y direction).  
 
 > Please make sure you use the `Empty Open World` Template when enabling World Partition and check `Enable Streaming` in World Settings
 
