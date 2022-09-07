@@ -4,6 +4,8 @@ Changelog for the documentation see: [The Landscaping Docs on Github](https://gi
 
 ## Version 6.0
 
+### UE5 only
+
 - feature: create splines or blueprints from shapefile in batches  
 - feature: opt out to create auxiliary actor when creating actors / blueprints  
 - feature: select spline point type of generated splines on import (e.g. for buildings)  
@@ -11,6 +13,7 @@ Changelog for the documentation see: [The Landscaping Docs on Github](https://gi
 - feature: Spline Mesh and Auxiliary Actor have an additional option `Snap to Ground` to re-align a shape with the landscape's surface  
 - change: options inside `LandscapingInfos` are now sorted to topics `DTM`, `Shapefile` and `Internal`  
 - change: relative scaling of landscape on import (instead of fixed value)  
+- change: dropped World Composition support
 
 ## Version 5.9
 
