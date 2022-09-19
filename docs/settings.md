@@ -1,7 +1,9 @@
 # Settings
 
 Landscaping does provide settings which are saved per project and can be found in `Project Settings -> Plugins -> Landscaping`.  
-For settings of __Landscaping Mapbox__ see [Landscaping Mapbox](mapbox.md?id=mapbox)
+For settings of __Landscaping Mapbox__ see [Landscaping Mapbox](mapbox.md?id=mapbox)  
+
+![Landscaping Settings](_media/ue5_landscaping_settings.jpg)  
 
 ## Cache Directory
 
@@ -16,7 +18,7 @@ The maximum size of a created Landscape in World Partition. If the size of a sin
 > The World Partition Max Landscape Size defaults to `8192`.  
 > Edit Layers can only be activated if the value is `16384` or below.
 
-Tip: you can type aritmetic operations into the input box like `8192*2` or `8192/2`
+Tip: you can type aritmetic expressions into the input box like `8192*2` or `8192/2`
 
 ## Projection
 
@@ -28,4 +30,11 @@ Defaults to CRS of input data when set to -1
 > IMPORTANT: only easting/northing CRS with unit meter will work.  
 > Uncommon or special purpose CRS will break Shapefile support due to missing transformations.
 
-![Landscaping Settings](_media/ue5_landscaping_settings.jpg)
+## Connect Linestrings
+
+Shapefiles with linestrings to create e.g. spline-based roads or rivers can be auto-connected. The linestrings are connected by name.  
+Set this to `true`, if there are segmented non-branching roads or rivers.  
+Set it to `false` (default), if there are branches.  
+The following map shows a branching river (Tiefenbach) - here linestrings cannot be connected in an meaningful way - therefore the value should be set to `false`. This will result in one spline per river branch.  
+
+![Connect Linestrings](_media/connect_linestrings.jpg)

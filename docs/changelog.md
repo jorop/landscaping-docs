@@ -2,6 +2,14 @@
 
 Changelog for the documentation see: [The Landscaping Docs on Github](https://github.com/jorop/landscaping-docs)
 
+## Version 6.1
+
+### UE5 only
+
+- feature: provide shapefile attributes in `LandscapingVectorInterface`
+- feature: additional setting: connect shapes (linestrings). See settings docs for further details.
+- bugfix: display all shapes when selecting feature class in UI and switching back to `ALL`
+
 ## Version 6.0
 
 ### UE5 only
