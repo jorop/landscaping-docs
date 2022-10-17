@@ -2,6 +2,13 @@
 
 Changelog for the documentation see: [The Landscaping Docs on Github](https://github.com/jorop/landscaping-docs)
 
+## Version 6.2
+
+### UE5 only
+
+- bugfix: shapefile import of points are now working as expected with debug visualization
+- upgrade: compatible with UE 5.1 Preview 1
+
 ## Version 6.1
 
 ### UE5 only
