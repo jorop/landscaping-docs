@@ -1,22 +1,34 @@
 # Mapbox
 
 With the extension [Landscaping Mapbox](https://www.unrealengine.com/marketplace/en-US/product/landscaping-mapbox) heightmap tiles from Mapbox can easily be imported.
-Therefore only the extents (bounding box) of the area must be pasted into the [DTM import Options](heights?id=import-area-optional) dialog. The heightmaps will be downloaded automatically and the Landscape / World Composition / World Partition will be created.  
+Therefore only the extents of the area to import must be selected in the [DTM Import Options](heights?id=import-area-optional) dialog. (In UE4 the extents (bounding box) of the area must be pasted into the [DTM Import Options](heights?id=import-area-optional) dialog).  
+The heightmaps will be downloaded automatically and the Landscape / World Composition / World Partition will be created.  
 
 ## Setup and Import
 
 1. Enable the plugin in the Plugins Tab (`Edit -> Plugins`)
 2. Please make sure to provide your Mapbox API key in `Project Settings -> Plugins -> Landscaping Mapbox`.
-3. Open Landscaping plugin in the Toolbar (UE4) or in the `Window` Menu (UE5)  
+3. Open Landscaping plugin from the Toolbar  
 ![Landscaping Mapbox](_media/ue4_landscaping_dtm_huge.jpg)  
 4. Click on `Options` next to `DTM Import Options`
+
+> In UE5 you can directly select the area in the `DTM Import Options` and do not have to copy-paste the values from the browser  
+
 5. Click on `Show Map` on the top right corner -> a browser window with the map of the world will open
 6. Make a bounding box with the rectangle tool from the left hand side
 7. Copy - Paste the coordinates from the address after the # into the `Corners as bounding box` input field - the approximate area, which will be imported will appear on the top left corner. (Please do not import areas greater than a couple of thousand square kilometers, Unreal Engine needs about 20 GB RAM per 1000 km² landscape).
-8. Close the `Options for DTM Import` dialog
+8. Close the `DTM Import Options` dialog
 9. Hit `Import`
 
 > See also [DTM Import Options](heights?id=import-area-optional)
+
+## Import Satellite data
+
+After heightdata is imported, click on `Add Satellite Image` and a dialog appears asking you to automatically download from mapbox. See also [Satellite](satellite?id=satellite)
+
+## Import Vector Tiles
+
+When importing weightmaps or roads, railtracks, rivers etc. you will be asked if you want to download Vector data from Mapbox after clicking `Select`.
 
 ## Settings
 
@@ -32,4 +44,25 @@ The Api key (Public Access Token) for Mapbox. Please look it up in your mapbox a
 
 ### Zoom
 
-The zoom level of the heightmap tile. Best heightmaps will be delivered with zoom 15, which translates to an accuracy of ~ 2 to 4 meters.
+The zoom level of the heightmap tile. Best heightmaps will be delivered with zoom 14, which translates to an accuracy of ~ 2 to 4 meters.
+
+### Zoom Vector
+
+Zoom for vector tiles.  
+14 is the default value and has world coverage.  
+30 is the heighest, most detailed, but will download a massive amount of data even on small areas.  
+NOTE: If you see areas without vector data in the debug lines view, the zoom level is to high, and mapbox cannot provide data for that area.
+
+### Zoom Satellite
+
+Zoom for satellite images. 16 is the default value and has world coverage, 18 has a resolution of 0.3-0.6 meter almost everywhere.  
+21 is the best (7.5 centimeter, some areas of US, Canada, Europe, and Australia) - but it will download a lot of data even on small areas and will take quite some time.  
+> CAUTION: you might exceed your mapbox free tier when downloading at zoom 18 - 21.
+> Also it only make sense on small areas, because the texture resolution in Unreal Engine is limited with 8k
+NOTE: If you see black areas in the result, the zoom level is to high, and mapbox cannot provide data for that area.  
+
+### Tile Download Warn Limit
+
+Enable a warning message popup before downloading more than a certain number of tiles. E.g. > 1000 tiles to not accidently exeed the free tier of Mapbox.
+Currently the free tier include 750,000 raster tiles (heightmap/satellite) and 200,000 vector tiles per month.
+0 means no warn messages and is the default.

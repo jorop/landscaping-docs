@@ -2,24 +2,34 @@
 
 Changelog for the documentation see: [The Landscaping Docs on Github](https://github.com/jorop/landscaping-docs)
 
-## Version 6.2
+> Since Version 5.0 all changes only apply to UE5
 
-### UE5 only
+## Version 7.0
+
+- feature: import satellite imagery as landscape material, mesh material, decal or vertex color
+- feature: import dtm as mesh
+- feature: integrate map selection into the `DTM Import Options` dialog
+- feature: select landscape / mesh to map satellite data or vector data onto
+- upgrade: gdal 3.5 / proj 7
+- change: use precise scale as default
+
+### Mapbox Version 2.0
+
+- feature: import satellite imagery from Mapbox
+- feature: import vector tiles from Mapbox
+
+## Version 6.2
 
 - bugfix: shapefile import of points are now working as expected with debug visualization
 - upgrade: compatible with UE 5.1 Preview 1
 
 ## Version 6.1
 
-### UE5 only
-
 - feature: provide shapefile attributes in `LandscapingVectorInterface`
 - feature: additional setting: connect shapes (linestrings). See settings docs for further details.
 - bugfix: display all shapes when selecting feature class in UI and switching back to `ALL`
 
 ## Version 6.0
-
-### UE5 only
 
 - feature: create splines or blueprints from shapefile in batches  
 - feature: opt out to create auxiliary actor when creating actors / blueprints  

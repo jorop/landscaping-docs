@@ -6,13 +6,22 @@ If you see this message:
 
 ![UE4 Message](_media/ue4_message.jpg)
 
-Please copy the files and folders from  
+Please copy the files and folders from  µ
 `{Engine Plugin Folder}/Marketplace/Landscaping/Source/ThirdParty/Redist/Win64/`  
 to  
 `{Engine Plugin Folder}/Marketplace/Landscaping/Binaries/Win64/`
 
 The `Engine Plugin Folder` can be found where the Unreal Engine Editor is installed on your system, e.g.  
 `C:/Program Files/Epic Games/UE_4.26/Engine/Plugins`
+
+## Shapefile does not get imported
+
+This bug was introduced in Version 7.0. Please make a copy of the shapefile and select both (original and copy). A fix is already submitted to the Marketplace and will be available soon.
+![Copy shapefile](_media/shapefile-import-fix.jpg)
+
+## Scaling Landscape through LandscapeScaleFactor does not work
+
+This bug was introduced in Version 7.0. A fix is already submitted to the Marketplace and will be available soon.
 
 ## Changing Levels
 

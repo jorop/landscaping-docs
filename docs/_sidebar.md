@@ -6,6 +6,7 @@
 
   - [DTM / Heightmaps](heights.md?id=heights)
   - [Weightmaps / Paint Layers](landcover.md?id=landcover)
+  - [Satellite Imagery](satellite?id=satellite)
   - [Splines / Actors / Blueprints](props.md?id=props)
   - [Foliage](vegetation.md?id=vegetation)
   - [Mapbox](mapbox.md?id=mapbox)

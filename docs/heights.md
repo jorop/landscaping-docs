@@ -2,6 +2,8 @@
 
 Making a huge tiled landscape is as easy as making a single landscape.
 
+> Please make sure that you have enough RAM when importing huge areas!
+
 ## Choosing input files
 
 > To reset the input simply close the Landscaping tab and open it again.  
@@ -11,17 +13,21 @@ In UE5 it is possible to choose [World Partition](#world-partition) and specify 
 
 > A tiled landscape can be created from a single file or from multiple files
 
-For `World Partition`, the settings value will control the size of a single Landscape -> see [Settings](settings.md?id=world-partition-max-landscape-size)
+For `World Partition`, the settings value will control the size of a single Landscape -> see [Settings](settings.md?id=world-partition-max-landscape-size)  
 There are only two things to consider:
 > The file size of a single file can be 2 GB max.  
 > System memory must keep up with the size of the landscape -> see [Max Landscape Size](max-landscape-size.md?id=maximum-landscape-size).
 
 ## Options
 
-The Landscaping plugin allows you to set the area to import with the `Corners as Bounding Box` input.  
-For downloading heightmaps from Mapbox using the `Landscaping Mapbox` plugin, the import area is also specified here.
+The Landscaping plugin allows you to set the area to import with the `Corners as Bounding Box` input or in UE5 directly in the DTM Import Options Dialog.  
+For downloading heightmaps from Mapbox using the `Landscaping Mapbox` plugin, the import area is also specified here by simply select the desired area to import. (Please note, that Mapbox only has data for land areas, not sea areas).
 
 ## Import Area (optional)
+
+> In UE5, you can simply view and/or select the area on the integrated browser, you do not have to copy-paste the bounding box.
+
+![UE5 integrated Map Selection](_media/ue5_integrated_browser.jpg)
 
 Here it is possible to limit the area which should be imported. To get an idea what is imported please click on `Show Map`:  
 ![Show Map](_media/ue4_landscaping_dtm_huge.jpg)
@@ -50,7 +56,19 @@ The vertical scale will be calculated automatically to perserve the most detail,
 
 ### Custom Landscape Z Scale
 
-Use this for areas with low altitude difference to correct wrong slope calculation of Marketplace Landscape Materials (like Brushify or PLE). Defaults to `100`.
+Use this for areas with low altitude difference to correct wrong slope calculation of Marketplace Landscape Materials (like Brushify or PLE). Defaults to `100`. 
+
+### Import as Mesh
+
+> Only available in Unreal Engine 5  
+
+Import as Procedural Mesh instead of Landscape (e.g. for a distance mesh). The Procedural Mesh can afterwards converted to a nanite mesh with a button in the details panel of the Procedural Mesh.
+
+### Force square Landscapes
+
+> Only available in Unreal Engine 5  
+
+Regardles of the selection, force a square landscape. This enables to export/import weightmaps in the native UE Landscape Edit Mode (e.g. for editing weightmaps in another program)
 
 ### Use World Partition
 
@@ -89,7 +107,7 @@ The Landscape Material's default paint layer, with which the landscape will be f
 
 ## General
 
-It is possible to import raster files with different projections and resolutions and they will be aligned properly. You do not have to worry about it. It is even possible to import GeoTiff, ASCII and HGT files toghether.  
+It is possible to import raster files with different projections and resolutions and they will be aligned properly. You do not have to worry about it. It is even possible to import GeoTiff, ASCII and HGT files toghether. However: files with different resolutions (meter per pixel) will be result in seams (where more detailed and less details heightmaps meet).
 
 > Landscaping can handle overlapping files
 
