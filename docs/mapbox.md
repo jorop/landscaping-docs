@@ -4,6 +4,26 @@ With the extension [Landscaping Mapbox](https://www.unrealengine.com/marketplace
 Therefore only the extents of the area to import must be selected in the [DTM Import Options](heights?id=import-area-optional) dialog. (In UE4 the extents (bounding box) of the area must be pasted into the [DTM Import Options](heights?id=import-area-optional) dialog).  
 The heightmaps will be downloaded automatically and the Landscape / World Composition / World Partition will be created.  
 
+## Mapbox Data
+
+### Heightmap data
+
+The heightmap data used is `Mapbox Terrain-DEM v1` or `Mapbox Terrain-RGB v1` - it can be chosen in the Settings.  
+Depending on the area, the highest zoom level is 14 or 15. Despite Mapbox claims that for `Mapbox Terrain-DEM v1` data until zoom level 15 is available, it is only availalbe up to zoom level 14 for most regions. `Mapbox Terrain-DEM v1` will be loaded with double resolution and is therefore from the same quality as ``Mapbox Terrain-RGB v1`.  
+[Mapbox Terrain-DEM v1](https://docs.mapbox.com/data/tilesets/reference/mapbox-terrain-dem-v1/)  
+[Mapbox Terrain-RGB v1](https://docs.mapbox.com/data/tilesets/reference/mapbox-terrain-rgb-v1/)  
+Resolutions for each zoom level can be looked up here: [Zoom Level Reference](https://docs.mapbox.com/help/glossary/zoom-level/)  
+
+### Vector data
+
+Vector data for spline, Actor, Blueprint as well as weightmap generation used is `Mapbox Streets v8`.  
+[Vector Tiles](https://docs.mapbox.com/data/tilesets/reference/mapbox-streets-v8/)
+
+### Satellite data
+
+Satellite data used is `Mapbox Satellite`.  
+[Mapbox Satellite](https://docs.mapbox.com/data/tilesets/reference/mapbox-satellite/)  
+
 ## Setup and Import
 
 1. Enable the plugin in the Plugins Tab (`Edit -> Plugins`)
@@ -44,7 +64,12 @@ The Api key (Public Access Token) for Mapbox. Please look it up in your mapbox a
 
 ### Zoom
 
-The zoom level of the heightmap tile. Best heightmaps will be delivered with zoom 14, which translates to an accuracy of ~ 2 to 4 meters.
+The zoom level of the heightmap tile. Best heightmaps will be delivered with zoom 14, which translates to an accuracy of ~ 2 to 5 meters.
+
+### HeightDataAPI
+
+Query heightdata from `Mapbox Terrain-DEM v1` or `Mapbox Terrain-RGB v1` data.  
+`Mapbox Terrain-DEM v1` is the optimized version but `Mapbox Terrain-RGB v1` offers data until zoom level 15. See [Heightmap Data](mapbox?id=heightmap-data)
 
 ### Zoom Vector
 
@@ -63,6 +88,6 @@ NOTE: If you see black areas in the result, the zoom level is to high, and mapbo
 
 ### Tile Download Warn Limit
 
-Enable a warning message popup before downloading more than a certain number of tiles. E.g. > 1000 tiles to not accidently exeed the free tier of Mapbox.
+Enable a warning message popup before downloading more than a certain number of tiles (e.g. > 1000 tiles), to not accidently exeed the free tier of Mapbox.
 Currently the free tier include 750,000 raster tiles (heightmap/satellite) and 200,000 vector tiles per month.
-0 means no warn messages and is the default.
+A value of 0 means no warn messages and is the default.

@@ -1,7 +1,7 @@
 # Settings
 
 Landscaping does provide settings which are saved per project and can be found in `Project Settings -> Plugins -> Landscaping`.  
-For settings of __Landscaping Mapbox__ see [Landscaping Mapbox](mapbox.md?id=mapbox)  
+For settings of __Landscaping Mapbox__ see [Landscaping Mapbox](mapbox.md?id=settings)  
 
 ![Landscaping Settings](_media/ue5_landscaping_settings.jpg)  
 
@@ -10,6 +10,37 @@ For settings of __Landscaping Mapbox__ see [Landscaping Mapbox](mapbox.md?id=map
 When importing heightdata (DTM files), intermediate files are generated. They are necessary to circumvent the 2 GB import restriction from Unreal Engine. Please make sure it is set to a writable directory. The plugin will try to create the directory, if it does not exist already.
 
 > The Cache Directory defaults to `C:/Temp/Landscaping`
+
+## Projection Mode
+
+Projection mode for imported GIS data. This should be set before importing any data and never changed when working on a map.
+
+### Automatically reproject to appropriate UTM CRS
+
+UTM CRS (Coordinate Reference System) will be determined by the first imported heightmap or shapefile. On Mapbox Imports this will be EPSG:3857. All imported data will then be reprojected to the determined CRS.
+
+### Use CRS of import file or EPSG:3857 on Mapbox import
+
+Import data will not be reprojected to UTM, but the heightmap's or shapefile's CRS will be used. All data imported afterwards will be reprojected to this CRS. Please make sure that the imported data is in meter to get the real scale.
+
+### Use custom CRS specified below
+
+Reproject imported data to the CRS specified under `Projection`.
+
+## Projection
+
+EPSG code of target CRS to use when importing height data.  
+E.g. 3395 for Mercator WGS84.  
+
+> IMPORTANT: only easting/northing CRS with unit meter will work.  
+
+## Enable Large Worlds
+
+This can be used to unload tiles while importing huge areas at once.  
+
+## Allowed DTM File Types
+
+Filetypes recognized for importing DTM files.  
 
 ## World Partition Max Landscape Size
 
@@ -20,15 +51,9 @@ The maximum size of a created Landscape in World Partition. If the size of a sin
 
 Tip: you can type aritmetic expressions into the input box like `8192*2` or `8192/2`
 
-## Projection
+## Resample to First Tile
 
-EPSG code of target CRS to use when importing height data.  
-E.g. 3395 for Mercator WGS84.  
-Defaults to appropriate UTM CRS, when set to 0.
-Defaults to CRS of input data when set to -1
-
-> IMPORTANT: only easting/northing CRS with unit meter will work.  
-> Uncommon or special purpose CRS will break Shapefile support due to missing transformations.
+Will import all imported DTM files (or Mapbox height data) to the resolution of the first imported DTM of the level enabling seamless worlds with no gaps. This might lead to up- or downsampling depending on the first imported DTM.  
 
 ## Connect Linestrings
 
