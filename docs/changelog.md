@@ -4,6 +4,21 @@ Changelog for the documentation see: [The Landscaping Docs on Github](https://gi
 
 > Since Version 5.0 all changes only apply to UE5
 
+## Version 7.2
+
+- feature: Landscape Splines (only UE 5.1)  
+- feature: allow import of ASCII files from spain when appropriate `Custom CRS` is provided in settings  
+- bugfix: engine shutdown on shapefile import  
+- bugfix: bounds calculation in single level  
+
+## Version 7.1
+
+- feature: add collision to mesh on import  
+- feature: georeferencing on nanite meshes  
+- feature: scale of georeferenced actors can be changed after import  
+- change: Save and replace Mesh Button moved to UI  
+- change: additional imports will be resampled to first tile  
+
 ## Version 7.0
 
 - feature: import satellite imagery as landscape material, mesh material, decal or vertex color

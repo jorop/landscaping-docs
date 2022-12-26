@@ -10,7 +10,7 @@ Landscaping let you create rivers, streets, railroads etc. from Shapefiles with 
 
 1) `Select` a Shapefile  (to reset the input simply close the Landscaping tab and open it again)  
 
-2) Define what should be generated along the lines of the imported Shapefile: select `Spline Mesh` or `Actor` or `Paint Layer / Deform Landscape` from the dropdown. then open the dialog with the button right below the dropdown.  
+2) Define what should be generated along the lines of the imported Shapefile: select `Spline Mesh` or `Actor` or `Paint Layer / Deform Landscape` or `Landscape Spline` from the dropdown. then open the dialog with the button right below the dropdown.  
 
 ![Landscaping Props](_media/ue4_landscaping_shapefile_import.jpg)  
 
@@ -20,6 +20,7 @@ Depending on what is selected in the dropdown, there are 3 different dialogs, bu
     `Start Segment Mesh Scale` and `End Segment Mesh Scale` is the scale factor applied to the spline mesh width.  
     `Start Index` can be used to create Splines in chunks - this can be repeated multiple times see also `Max Entities`  
     `Max Entities` is the number of Splines to be created (`0` means all)  
+    > Please see the tool tips on every option to see an explanation what it's for  
     ![Landscaping Splinemesh Options](_media/ue_landscaping_splinemesh_options.jpg)  
     b. __Actor__  
     Select a `Blueprint` or `Actor`. The Blueprint has to have a spline component attached if LINESTRINGS or POLYGONS are processed, or must implement [LandscapingVectorInterface](landscapingvectorinterface.md) - if only POINTS are processed, every actor or blueprint can be selected here.  
@@ -27,10 +28,20 @@ Depending on what is selected in the dropdown, there are 3 different dialogs, bu
     `Create Auxiliary Actor` - whether to create an actor for every spawned Actor / Blueprint with landscape manipulation options  
     `Start Index` can be used to create shapes of the shapefile in chunks - this can be repeated multiple times see also `Max Entities`  
     `Max Entities` is the number of shapes of the shapefile to be created (`0` means all)  
+    > Please see the tool tips on every option to see an explanation what it's for  
     ![Landscaping Actor Options](_media/ue_landscaping_actor_options.jpg)  
     c. __Paint Layer / Deform Landscape__  
-    With this options, the Landscape can be raised or lowered along the spline, also painting a Landscape Material Paint Layer along the spline is supported (uncheck raise and lower heights if you just want to paint a layer). Note, that a spline actor is created and has additional options to perform actions after import. It can be deleted, if no more manipulation of the Landscape is required.
+    With this options, the Landscape can be raised or lowered along the spline, also painting a Landscape Material Paint Layer along the spline is supported (uncheck raise and lower heights if you just want to paint a layer). Note, that a spline actor is created and has additional options to perform actions after import. It can be deleted, if no more manipulation of the Landscape is required.  
+    > Please see the tool tips on every option to see an explanation what it's for  
     ![Landscaping Paint Layer Options](_media/ue_landscaping_paintlayer_options.jpg)  
+    d. __Landscape Spline__  (UE 5.1)  
+    Landscape Spline is a special type of spline actor, which works on Landscape Edit Layers in an non-destructive way. See end of the page on how to enable Edit Layers on a landscape. While Edit Layers will automatically enabled by the Landscaping Plugin when importing Vector data as `Landscape Spline`, it is recommended enable Edit Layers and reserve a Layer for Splines before import.  
+    `Spline Segment Mesh` is the Static Mesh, which will be repeated along the spline.  
+    `Spline Mesh Scale` Scale of the Landscape Spline Mesh  
+    `Start Index` can be used to create Splines in chunks - this can be repeated multiple times see also `Max Entities`  
+    `Max Entities` is the number of Splines to be created (`0` means all)  
+    > Please see the tool tips on every option to see an explanation what it's for  
+    ![Landscaping Splines Options](_media/ue_landscape_splines_options.jpg)  
 
 
 3) `Offset from Ground` specifies how much space will be between the surface of the Landscape and the point of the spline or instantiated Bluprint/Actor
@@ -43,3 +54,11 @@ Depending on what is selected in the dropdown, there are 3 different dialogs, bu
 > Please make sure to __unload__ all Levels of a World Composition (UE4) (except the Persistent Level) in the Unreal Engine `Levels` tab before hitting `Import`.  In UE5 this will be handled automatically.  
 
 7) Hit `Import`
+
+## Landscape Splines
+
+Landscape Splines are supported in UE 5.1 since plugin version 7.2.  
+When creating Landscape Splines from Vector data, it is recommended, to enable Edit Layers on the Landscape, create an Edit Layer and reserve it for Splines before importing.
+
+[![Enable Edit Layers](https://img.youtube.com/vi/Kg46mfKVOs4/0.jpg)](https://www.youtube.com/watch?v=Kg46mfKVOs4)
+
