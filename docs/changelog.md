@@ -4,6 +4,12 @@ Changelog for the documentation see: [The Landscaping Docs on Github](https://gi
 
 > Since Version 5.0 all changes only apply to UE5
 
+## Version 7.3
+
+- feature: update existing Landscape with heightdata from DTM files or Mapbox  
+- feature: fill areas of missing data of a Landscape with data of DTM files or Mapbox  
+- change: removed multiple popup dialogs when importing ASCII files without .prj file  
+
 ## Version 7.2
 
 - feature: Landscape Splines (only UE 5.1)  
