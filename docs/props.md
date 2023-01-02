@@ -58,7 +58,7 @@ Depending on what is selected in the dropdown, there are 3 different dialogs, bu
 ## Landscape Splines
 
 Landscape Splines are supported in UE 5.1 since plugin version 7.2.  
-When creating Landscape Splines from Vector data, it is recommended, to enable Edit Layers on the Landscape, create an Edit Layer and reserve it for Splines before importing.
+When creating Landscape Splines from Vector data, it is recommended, to enable Edit Layers on the Landscape, create an Edit Layer and reserve it for Splines before importing. Please see the following video on how to do this:  
 
 [![Enable Edit Layers](https://img.youtube.com/vi/Kg46mfKVOs4/0.jpg)](https://www.youtube.com/watch?v=Kg46mfKVOs4)
 
