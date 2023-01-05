@@ -11,11 +11,12 @@ This feature helps to populate tiled landscapes with procedural foliage. It load
 
 In order for this feature to work, one has to prepare a [Procedural Foliage Spawner](https://docs.unrealengine.com/en-US/BuildingWorlds/OpenWorldTools/ProceduralFoliage/QuickStart/index.html). A `Procedural Foliage Spawner` is mandatory for creating automated plants and trees and also rocks and stones and you name it on the tiled landscape with Landscaping.
 
-![Open World Automation](_media/ue4_landscaping_openworld.jpg)
+![Open World Automation](_media/ue5_landscaping_openworld.jpg)
 
 ## Options
 
-> Please unload all tiles before proceeding
+> UE4: Please unload all World Composition tiles before proceeding
+> UE5: Please make sure the part of the World Partition you want to spawn foliage is loaded
 
 ### Foliage Spawner
 
@@ -23,7 +24,7 @@ Assign a Procedural Foliage Spawner here.
 
 ### Remove Existing Foliage Volumes
 
-This will remove any Procedural Foliage Volumes.
+This will remove any Procedural Foliage Volumes and all InstancedFoliageActors from the level.
 
 ### Reuse Existing Foliage Volumes
 
@@ -31,10 +32,19 @@ This option will update the volumes found in a level.
 
 ### Add New Foliage Volumes
 
-When checked, will add the Foliage Spawner as new Procedural Foliage Volume.
+When checked, will add the Foliage Spawner as new Procedural Foliage Volumes.
+
+### Use Streaming Proxy Bounds
+
+Will use the bounds of the Landscape Streaming Proxies (in World Partition worlds) instead of the bounds of the Landscapes. The Procedural Foliage Volumes will then be smaller which leads to faster generation of procedural foliage. Could often lead to volumes which do not match but are bigger than the bounds of the Landscape Streaming Proxy.
+
+### Spawn Foliage
+
+Whether to spawn foliage right after creating the Procedural Foliage Volume. Unchecked will only create the Volumes.
 
 > Some of the checkboxes will be automatically deselect if another option is checked  
 
 If everything is unchecked, nothing will happen when hitting the `Create` button.
 
-> Please make sure to unload all Levels of a World Composition (except the Persistent Level) in the Unreal Engine `Levels` tab before hitting `Create`
+> UE4: Please make sure to unload all Levels of a UE4 World Composition (except the Persistent Level) in the Unreal Engine 4 `Levels` tab before hitting `Create`
+> UE5: Please make sure the part of the World Partition you want to spawn foliage is loaded
