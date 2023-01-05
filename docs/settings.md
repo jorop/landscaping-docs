@@ -67,3 +67,7 @@ Set it to `false` (default), if there are branches.
 The following map shows a branching river (Tiefenbach) - here linestrings cannot be connected in an meaningful way - therefore the value should be set to `false`. This will result in one spline per river branch.  
 
 ![Connect Linestrings](_media/connect_linestrings.jpg)
+
+## Video
+
+Youtube video where the settings are explained:  [![Landscaping Settings](https://img.youtube.com/vi/o0cqO6QNUZg/0.jpg)](https://www.youtube.com/watch?v=o0cqO6QNUZg)

@@ -4,8 +4,7 @@ Leverage Unreal Engines Procedural Foliage Tool to let accelarate foliage creati
 
 ## Automation
 
-This feature helps to populate tiled landscapes with procedural foliage. It loads every level of the tiled landscape, spawns the foliage and then saves and unloads it.  
-> In Unreal Engine 5, because the UE API changed, only the `Procedural Foliage Spawner` is created and it's brush size is set to the bounds of the Landscape. Click `Resimulate` in the Details tab of the `Procedural Foliage Spawner` to populate the Landscape with foliage.
+This feature helps to populate World Composition / World Partition worlds with procedural foliage. It loads every World Composition Level, spawns the foliage and then saves and unloads it. For World Partition see [Enable Large Worlds](settings.md?id=enable-large-worlds)
 
 ## Procedural Foliage
 
