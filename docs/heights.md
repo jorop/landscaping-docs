@@ -25,25 +25,25 @@ For downloading heightmaps from Mapbox using the `Landscaping Mapbox` plugin, th
 
 ## Import Area (optional)
 
-> In UE5, you can simply view and/or select the area on the integrated browser, you do not have to copy-paste the bounding box.
+> In UE5 (from plugin version 7.0 on), you can simply view and/or select the area on the integrated browser, you do not have to copy-paste the bounding box.
 
-![UE5 integrated Map Selection](_media/ue5_integrated_browser.jpg)
+![UE5 integrated Map Selection](_media/ue5_integrated_browser.jpg)  
 
+> The following step is only necessary for plugin version lower 7.0 and UE4 users  
 Here it is possible to limit the area which should be imported. To get an idea what is imported please click on `Show Map`:  
-![Show Map](_media/ue4_landscaping_dtm_huge.jpg)
-
+![Show Map](_media/ue4_landscaping_dtm_huge.jpg)  
+> The following step is only necessary for plugin version lower 7.0 and UE4 users  
 A browser window opens and shows the area which encompasses the heightdata files:  
-![Import DTM files](_media/ue4_landscaping_dtm_map.jpg)
-
+![Import DTM files](_media/ue4_landscaping_dtm_map.jpg)  
+> The following step is only necessary for plugin version lower 7.0 and UE4 users  
 Select edit on the toolbar on the right side and drag the rectangle corners until the desired import area is covered:
-![Import DTM files](_media/ue4_landscaping_dtm_map2.jpg)
-
+![Import DTM files](_media/ue4_landscaping_dtm_map2.jpg)  
 > When importing DTM files, the import area has to be smaller than the original area!
-
+> The following step is only necessary for plugin version lower 7.0 and UE4 users  
 After clicking save, the map centers on the new area. Select the coordinates in the adress bar of the browser and copy them (Ctrl+C):
 ![Import DTM files](_media/ue4_landscaping_dtm_map3.jpg)
-
-Back in Unreal Engine Editor paste the coordinates (Ctrl+V) in the `Corners as Bounding Box` text input and hit `Enter`:
+> The following step is only necessary for plugin version lower 7.0 and UE4 users  
+Back in Unreal Engine Editor paste the coordinates (Ctrl+V) in the `Corners as Bounding Box` text input and hit `Enter`:  
 ![Limit Import Area](_media/ue4_landscaping_dtm_limit_area.jpg)
 
 The info text should now show the new extent of the area. Only this part of the heightdata will be imported.
@@ -52,11 +52,11 @@ The info text should now show the new extent of the area. Only this part of the 
 
 ### High Detail Z Scale
 
-The vertical scale will be calculated automatically to perserve the most detail, using the maximum available Unreal Engine Landscape vertical resolution. Defaults to `true`.
+The vertical scale will be calculated automatically to perserve the most detail, using the maximum available Unreal Engine Landscape vertical resolution. Defaults to `true`. This should be set to `false` when extending or updating the heightmaps.  
 
 ### Custom Landscape Z Scale
 
-Use this for areas with low altitude difference to correct wrong slope calculation of Marketplace Landscape Materials (like Brushify or PLE). Defaults to `100`. 
+Use this for areas with low altitude difference or when extending or updating the landscape. Defaults to `100`. For understanding the technical reason for this, please consult [Calculating Heightmap Z Scale](https://docs.unrealengine.com/5.1/en-US/landscape-technical-guide-in-unreal-engine/).  
 
 ### Import as Mesh
 
@@ -91,6 +91,24 @@ Grid size for the World Partition Landscape.
 Apply gaussian blur on the height data before importing the landscape. This will smooth raster data with low resolution.  
 0 means, no smoothing will happen.
 For Mapbox imports the recommended value is 1 for mountain terrain, and 2 for flat terrain.  
+
+## Landscape Update Options
+
+> This only is available in World Partition
+
+### Update Landscape
+
+Wheter to update an already imported area (area must be a Landscape)
+
+### Only fill missing
+
+Only update areas with no data -> Please see the youtube video [![Fill missing heightmap areas](https://img.youtube.com/vi/2kkmY9Hi1qg/0.jpg)](https://www.youtube.com/watch?v=2kkmY9Hi1qg)
+
+> This option is only meaningful, if you try to fill missing data with mapbox, otherwise a faster way to fill missing data is just selecting (`Select DTM Files` button) all heightmap data (geotiff-, ascii- or hgt-files, also mixed is possible) and let them merge on import automatically.
+
+### Minimum height tolarance
+
+The distance between the lowest valid point of an already imported landscape and the bottom flat area (no data area) in centimeter
 
 ### Dump LandscapingInfos
 
