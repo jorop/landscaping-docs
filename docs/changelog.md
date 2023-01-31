@@ -4,6 +4,12 @@ Changelog for the documentation see: [The Landscaping Docs on Github](https://gi
 
 > Since Version 5.0 all changes only apply to UE5
 
+## Version 7.4
+
+- feature: write into data table from blueprint (function name: `InsertDataTableRow`)
+- feature: read Geo Referencing Actor
+- feature (experimental): read raster parallel - this reduces large raster imports but is a little unstable atm
+
 ## Version 7.3
 
 - feature: update existing Landscape with heightdata from DTM files or Mapbox  

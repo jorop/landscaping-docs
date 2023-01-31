@@ -6,6 +6,12 @@ Please refer to [System Requirements](https://docs.unrealengine.com/5.0/en-US/ha
 
 ## Bare Landscape Memory Requirements
 
+Possibilities and limits when importing landscapes in Unreal Engine 5.0
+For UE 5.0 32 km x 32 km is about the limit what can be edited on a up-to-date gaming PC with reasonable frame-rate.
+
+Please note: the values are valid for UE 5.0 with 1 vertex per meter landscape resolution.
+With UE 5.1 due to changed memory management, it is possible to import bigger landscapes.
+
 This table gives a rough overview of the requirements when using Landscaping plugin and World Partition (only the Landscape, without Landscape Material, Foliage, etc.) with the whole Landscape loaded and a [World Partition Max Landscape Size](settings.md?id=world-partition-max-landscape-size) of 16384:  
 
 | Area         |      RAM    |  recommended | FPS |
@@ -16,6 +22,8 @@ This table gives a rough overview of the requirements when using Landscaping plu
 | 2000 km²     |   ~ 120 GB  |  256 GB      |  20 |
 
 These values are taken from a machine with 128 GB RAM, 12 Core CPU, RTX 3070Ti.  
+
+From Landscaping 7.0 on there is also an optimized algorithm to import vast landscapes as World Partition at lower resolutions which look awesome. Which in consequence allowes for bigger import.  
 
 The plugin can import larger areas as World Partition than through the native Unreal Landscape Importer by splitting the area into several landscapes. The size of a single Landscape is controlled by [World Partition Max Landscape Size](settings.md?id=world-partition-max-landscape-size).  
 > While increasing the World Partition Max Landscape Size will result in a better runtime performance, it will also need a lot more RAM on creation.  
