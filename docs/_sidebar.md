@@ -19,7 +19,6 @@
 - Special requirements
 
   - [Extending Landscapes](extend_landscape.md?id=extending-landscapes)
-  - [Shapefile import only](shp_without_dtm.md?id=shapefile-import-without-prior-dtm-import)
   - [Custom Logic on Import](landscapingvectorinterface.md?id=custom-logic-on-vector-data)
 
 - General
