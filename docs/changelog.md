@@ -4,6 +4,18 @@ Changelog for the documentation see: [The Landscaping Docs on Github](https://gi
 
 > Since Version 5.0 all changes only apply to UE5
 
+## Version 7.6
+
+- fix: simple spline actor not visible in build
+- feature: extending area in non-world-partition worlds
+- feature: toggle collision on splines for faster post-edits
+- change: remove landscapinginfos.txt
+
+## Version 7.5
+
+- feature: tiled high res sat images when using decals
+- fix: crash when creating heightmaps with weightmaps enabled
+
 ## Version 7.4
 
 - feature: write into data table from blueprint (function name: `InsertDataTableRow`)

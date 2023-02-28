@@ -1,5 +1,11 @@
 # Troubleshooting
 
+## Spline Actor not visible in build after packaging
+
+The bug is solved in 7.6. If spline actors already created before and present in the level, they can be converted with the button `Create BP` on the spline actor:  
+![Create BP](_media/landscapingsplineactor_createbp.jpg)  
+It is of course possible to selecte multiple Spline Actors and convert them at once.
+
 ## Unreal Engine Editor won't start
 
 If you see this message:  
@@ -12,11 +18,7 @@ to
 `{Engine Plugin Folder}/Marketplace/Landscaping/Binaries/Win64/`
 
 The `Engine Plugin Folder` can be found where the Unreal Engine Editor is installed on your system, e.g.  
-`C:/Program Files/Epic Games/UE_4.26/Engine/Plugins`
-
-## On Shapefile import UE suddenly closes down
-
-In Version 7.0 and 7.1 UE occasionally closes without a whisper when importing shapefiles. Please try to import the shapefile again. The bug will be fixed in version 7.2.
+`C:/Program Files/Epic Games/UE_5.1/Engine/Plugins`
 
 ## Changing Levels
 
@@ -28,7 +30,7 @@ Due to the transformation of the input data, on areas, where no data is found th
 If one wants to get rid of the steep edges anyway, there are 2 options to solve this:
 
 - The steep edges can be fixed within the native Unreal Engine Landscape Mode Sculpting Tools
-- Use the `Corners as Bounding Box` option in the [DTM Import Options](heights.md?id=options) dialog (Choose area on the map)
+- Use the `Corners as Bounding Box` option in the [DTM Import Options](heights.md?id=options) dialog (Choose area on the builtin map)
 
 ## Shapefile has wrong offset after reloading Level
 
@@ -36,11 +38,11 @@ If one wants to get rid of the steep edges anyway, there are 2 options to solve 
 
 ## Artifacts on complex spline deforming Landscape with Paint Layer
 
-When shapes are very complex, artifacts can appear; To resolve the issue, please choose 1 or 0 for `Subdivisions`. If this does not resolve the issue, it is better to import a spline mesh (just assign a cube as `Spline Segment Mesh`) and then in the generated splines hit the `Deform` button in the `Details` tab. If artifacts appear, it can be undone with `Ctrl+Z`. Adjust/delete splines which are twisted or obsolete and hit `Deform` again. The Spline Actor can be deleted after the process. See also: [Video](https://youtu.be/pYNUrNeKF2s?t=557)
+When shapes are very complex, artifacts can appear; To resolve the issue, please choose 1 or 0 for `Subdivisions` on the auxiliary Actor (Editor Only). If this does not resolve the issue, it is better to import a spline mesh (just assign a cube as `Spline Segment Mesh`) and then in the generated splines auxiliary actor hit the `Deform` button in the `Details` tab. If artifacts appear, it can be undone with `Ctrl+Z`. Adjust/delete splines which are twisted or obsolete and hit `Deform` again. The Spline Actor can be deleted after the process. See also: [Video](https://youtu.be/pYNUrNeKF2s?t=557)
 
 ## World Partition not showing on World Partition Editor tab
 
-[Check Options](heights.md?id=use-world-partition)
+This should be resolved in current versions of UE - otherwise please [Check Options](heights.md?id=use-world-partition)
 
 ## Crash when not saving the Level on prompt
 
