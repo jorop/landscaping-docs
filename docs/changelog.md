@@ -4,6 +4,26 @@ Changelog for the documentation see: [The Landscaping Docs on Github](https://gi
 
 > Since Version 5.0 all changes only apply to UE5
 
+## Version 7.9
+
+- removed World Partition check box in DTM Import Options
+- moved `World Partition Max Landscape Size` to DTM Import Options -> `Desired Max Tile Size`
+- moved `Smooth Edges` to DTM Import Options
+- moved `Resample to first Tile` to DTM Import Options
+- update Landscape now also available for non World Partition worlds
+- heightmap range reduced to allow updating heightmaps with `High Detail Z Scale`
+- compatible with UE 5.2 Preview 1
+
+## Version 7.8
+
+- bounds check only performed when bounds are not valid
+- sanitize cache directory
+- check CRS for area value (area has to be between certain amount and not negative)
+
+## Version 7.7
+
+- fix crash on larger Mapbox imports
+
 ## Version 7.6
 
 - fix: simple spline actor not visible in build

@@ -46,11 +46,11 @@ This should be resolved in current versions of UE - otherwise please [Check Opti
 
 ## Crash when not saving the Level on prompt
 
-This is an Unreal Engine bug which will hopefully be resolved in 5.1 - see also [https://issues.unrealengine.com/issue/UE-143891](https://issues.unrealengine.com/issue/UE-143891) - Right now the solution is to save the level when prompted.
+This is an Unreal Engine 5.0 bug which will hopefully be resolved in 5.1 - see also [https://issues.unrealengine.com/issue/UE-143891](https://issues.unrealengine.com/issue/UE-143891) - Right now the solution is to save the level when prompted.
 
 ## Crashes
 
 If the Unreal Editor crashes on import, it may due to corrupted input data or the Unreal Engine Editor runs out of memory. Memory issues can happen because:  
-> `World Partition Max Landscape Size` value is too big [Settings](settings.md)  
+> `Desired Max Landscape Size` value is too big [Settings](settings.md)  
 > See also: [Choosing input files](heights.md?id=choosing-input-files)  
 If you suspect the input data is faulty, you can send the data to `support@ludicdrive.com` to verify it. Thank you.

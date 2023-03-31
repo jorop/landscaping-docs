@@ -13,7 +13,7 @@ In UE5 it is possible to choose [World Partition](#world-partition) and specify 
 
 > A tiled landscape can be created from a single file or from multiple files
 
-For `World Partition`, the settings value will control the size of a single Landscape -> see [Settings](settings.md?id=world-partition-max-landscape-size)  
+For both, `World Partition` and non-World-Partitioned Worlds, the `Desired Max Tile Size` will control the maximum size of a single landscape.  
 There are only two things to consider:
 > The file size of a single file can be 2 GB max.  
 > System memory must keep up with the size of the landscape -> see [Max Landscape Size](max-landscape-size.md?id=maximum-landscape-size).
@@ -70,19 +70,29 @@ Import as Procedural Mesh instead of Landscape (e.g. for a distance mesh). The P
 
 Regardles of the selection, force a square landscape. This enables to export/import weightmaps in the native UE Landscape Edit Mode (e.g. for editing weightmaps in another program)
 
-### Use World Partition
+### Desired Max Landscape Size
 
-> Only available in Unreal Engine 5  
+The maximum size of a created Landscape of World Partition or single Landscape imports in meter. If the size of a single Landscape exceeds this size, it will be split, and multiple Landscape Actors are created in the level. This is the size of the resulting Landscape in Unreal Engine, not the max size or resolution of a source file (like GeoTiff, etc.). E.g. a value of 32768 will import landscapes with maximum 32 km length or width. 32768 will need at least 128 GB of RAM.
 
-Check this to create a Landscape / Open World with World Partition (usually you want it). If not using World Partition, the Landscape can be 8192 meters max (x or y direction).  
+> `Desired Max Landscape Size` defaults to `8192` meter.  
+> Edit Layers can only be activated if the value is `16384` or below.
 
-> Please make sure you use the `Empty Open World` Template when enabling World Partition and check `Enable Streaming` in World Settings
+Tip: you can type aritmetic expressions into the input box like `8192*2` or `8192/2`
 
 ### World Partition Grid Size
 
 > Only available in Unreal Engine 5  
 
-Grid size for the World Partition Landscape.
+Grid size for the World Partition Landscape.  
+
+> Please make sure you use the `Empty Open World` Template when enabling World Partition and check `Enable Streaming` in World Settings.
+
+
+## Resample to First Tile
+
+> Only available in Unreal Engine 5
+
+Will import all imported DTM files (or Mapbox height data) to the resolution of the first imported DTM of the level enabling seamless worlds with no gaps. This might lead to up- or downsampling depending on the first imported DTM.  
 
 ### Smooth Steps
 
@@ -91,6 +101,12 @@ Grid size for the World Partition Landscape.
 Apply gaussian blur on the height data before importing the landscape. This will smooth raster data with low resolution.  
 0 means, no smoothing will happen.
 For Mapbox imports the recommended value is 1 for mountain terrain, and 2 for flat terrain.  
+
+## Smooth Edges
+
+> Only available in Unreal Engine 5
+
+When creating multiple Landscapes from DTM files (or Mapbox) in a level, this __should be disabled__ to have seamless connections on the edges of each Landscape. For a single Landscape this can be enabled savely.  
 
 ## Landscape Update Options
 

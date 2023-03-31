@@ -44,6 +44,7 @@ Filetypes recognized for importing DTM files.
 
 ## World Partition Max Landscape Size
 
+In Version 7.9 this was moved to [DTM Import Options](heights?id=import-area-optional) `Desired Max Tile Size`.  
 The maximum size of a created Landscape of World Partition or single Landscape imports in meter. If the size of a single Landscape exceeds this size, it will be split, and multiple Landscape Actors are created in the level. This is the size of the resulting Landscape in Unreal Engine, not the max size or resolution of a source file (like GeoTiff, etc.). E.g. a value of 32768 will import landscapes with maximum 32 km length or width. 32768 will need at least 128 GB of RAM.
 
 > The World Partition Max Landscape Size defaults to `8192` meter.  
@@ -53,10 +54,12 @@ Tip: you can type aritmetic expressions into the input box like `8192*2` or `819
 
 ## Resample to First Tile
 
+In Version 7.9 this was moved to [DTM Import Options](heights?id=import-area-optional).  
 Will import all imported DTM files (or Mapbox height data) to the resolution of the first imported DTM of the level enabling seamless worlds with no gaps. This might lead to up- or downsampling depending on the first imported DTM.  
 
 ## Smooth Edges
 
+In Version 7.9 this was moved to [DTM Import Options](heights?id=import-area-optional).  
 When creating multiple Landscapes from DTM files (or Mapbox) in a level, this __should be disabled__ to have seamless connections on the edges of each Landscape. For a single Landscape this can be enabled savely.  
 
 ## Connect Linestrings
