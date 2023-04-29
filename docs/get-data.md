@@ -1,17 +1,17 @@
 # Get Data
 
-Landscaping supports raster data in various common formats and vector data in ESRI Shapefile format. The Shapefiles for weightmaps have to come with annotations which meet the specs of [geofabrik.de](https://download.geofabrik.de/). Shapefiles for spline based or other Actors do not necessarily need to be from geofabrik.de.
+Landscaping supports raster data in various common formats (GeoTiff, ASCII, HGT, GeoPackage) and vector data in ESRI Shapefile format and other (see below). The Shapefiles for weightmaps should come with annotations which meet the specs of [geofabrik.de](https://download.geofabrik.de/). Shapefiles for spline based or other Actors do not necessarily need to be from geofabrik.de. These annotations are derived from OpenStreetMap, so other Vector data will work as well. It it does not, please see [Add fclass to shapefile](landcover.md?id=add-fclass-to-shapefile)
 
 ## Mapbox
 
 With the extension [Landscaping Mapbox](https://www.unrealengine.com/marketplace/en-US/product/landscaping-mapbox) heightmap tiles from Mapbox can easily be imported.
-Therefore only the extents (bounding box) of the area must be pasted into the [DTM import Options](heights?id=import-area-optional) dialog. The heightmaps will be downloaded automatically and the Landscape / World Composition / World Partition will be created.  
+Therefore only the extents (bounding box) of the area must be pasted into the [DTM import Options](heights.md?id=import-area-optional) dialog. The heightmaps will be downloaded automatically and the Landscape / World Composition / World Partition will be created.  
 Please make sure to provide your Mapbox API key in `Project Settings -> Plugins -> Landscaping Mapbox`.  
 Alternativley, you can provide your own Raster Data - see next section.
 
 ## Raster Data
 
-Landscaping can handle any GeoTiff rasterfile with height data (aka Digital Terrain Model, DTM or Digital Elevation Model, DEM) as well as HGT file format (SRTM1 and SRTM3 data) and ASCII Grid files.  
+Landscaping can handle any GeoTiff rasterfile with height data (aka Digital Terrain Model, DTM or Digital Elevation Model, DEM) as well as HGT file format (SRTM1 and SRTM3 data), ASCII Grid files and GeoPackage (.gpkg) files with height data.
 Projection, pixelscale or resolution does not matter.  
 ASCII Grid files have to have a *.prj file associated which is normally the case if you download it somewhere.  
 For HGT files the filename must comply to the format NXXWYYY[.optional].hgt which is also normally the case. So please make sure the HGT filename confirms to this convention.
@@ -35,6 +35,13 @@ Better resolutions will also create more detailed landscapes in Unreal Engine. _
 It is possible to have a look at the data before importing. [QGIS](https://qgis.org/) is a free tool which can be used to see how the data looks like before importing it.
 
 ## Vector Data
+
+The plugin supports following vector data types:
+
+- ESRI Shapefile (.shp)
+- GEOJSON (.json,.geojson,.geojsons,.geojsonl)
+- OSM OpenSteetmap (.osm,.osm.pbr)
+- Mapbox Vector data (through Landscaping Mapbox plugin)
 
 While it is possible to import any Shapefile through Landscaping into Unreal Engine 4, the plugin is designed to work with [geofabrik.de](https://download.geofabrik.de/) annotated Shapefiles. It will allow you to generate weightmaps, spline based Actors and any other Actor. For weightmaps, it will need the Shapefiles from geofabrik.de.  
 __For spline based or other Actors any Shapefile can be used, and are often a better fit, because the shapes from geofabrik usually contain too much data and result in twingled splines.__

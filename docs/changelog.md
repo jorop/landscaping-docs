@@ -4,6 +4,20 @@ Changelog for the documentation see: [The Landscaping Docs on Github](https://gi
 
 > Since Version 5.0 all changes only apply to UE5
 
+## Version 7.11
+
+- DTM Filetype Geopackage (.gpkg) supported
+- Vector Filetypes Geopackage(.gpkg), GeoJSON (.json,.geojson,.geojsons,.geojsonl), OpenSteetmap (.osm,.osm.pbr) supported
+- In-memory DTM and Satellite imports
+- Optimized Vector Data loading
+
+## Version 7.10
+
+- fix crash when importing vector data with only the paint layer option
+- choose pixel size in the DTM import options
+- setting to choose memory limit used to resample raster data
+- setting to choose GDAL resampling algorithm
+
 ## Version 7.9
 
 - removed World Partition check box in DTM Import Options
