@@ -33,6 +33,12 @@ Satellite data used is `Mapbox Satellite`.
 4. Click on `Options` next to `DTM Import Options`
 
 > In UE5 you can directly select the area in the `DTM Import Options` and do not have to copy-paste the values from the browser  
+> ![Landscaping Mapbox UE5](_media/ue5_mapbox_dtm_select.jpg)  
+>
+> - Select the filled black rectangle on the left side of the maps UI  
+> - Draw a rectangle what area should be imported
+> - Select the Mapbox Zoom Level
+> - Continue with point 8. below
 
 5. Click on `Show Map` on the top right corner -> a browser window with the map of the world will open
 6. Make a bounding box with the rectangle tool from the left hand side
@@ -64,7 +70,11 @@ The Api key (Public Access Token) for Mapbox. Please look it up in your mapbox a
 
 ### Zoom
 
-The zoom level of the heightmap tile. Best heightmaps will be delivered with zoom 14, which translates to an accuracy of ~ 2 to 5 meters.
+Please see [Mapbox zoom level](https://docs.mapbox.com/help/glossary/zoom-level/) for more information what zoom level fits your use-case.
+
+The zoom level of the heightmap tile.  
+> This value will be overridden by the import UI.  
+Best heightmaps will be delivered with zoom 14, which translates to an accuracy of ~ 2 to 5 meters.
 
 ### HeightDataAPI
 
@@ -74,13 +84,16 @@ Query heightdata from `Mapbox Terrain-DEM v1` or `Mapbox Terrain-RGB v1` data.
 ### Zoom Vector
 
 Zoom for vector tiles.  
+> This value will be overridden by the import UI.  
 14 is the default value and has world coverage.  
 30 is the heighest, most detailed, but will download a massive amount of data even on small areas.  
 NOTE: If you see areas without vector data in the debug lines view, the zoom level is to high, and mapbox cannot provide data for that area.
 
 ### Zoom Satellite
 
-Zoom for satellite images. 16 is the default value and has world coverage, 18 has a resolution of 0.3-0.6 meter almost everywhere.  
+Zoom for satellite images.  
+> This value will be overridden by the import UI.  
+16 is the default value and has world coverage, 18 has a resolution of 0.3-0.6 meter almost everywhere.  
 21 is the best (7.5 centimeter, some areas of US, Canada, Europe, and Australia) - but it will download a lot of data even on small areas and will take quite some time.  
 > CAUTION: you might exceed your mapbox free tier when downloading at zoom 18 - 21.
 > Also it only make sense on small areas, because the texture resolution in Unreal Engine is limited with 8k

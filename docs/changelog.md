@@ -4,6 +4,11 @@ Changelog for the documentation see: [The Landscaping Docs on Github](https://gi
 
 > Since Version 5.0 all changes only apply to UE5
 
+## Version 7.12
+
+- Faster import of satellite data
+- expose Mapbox Zoom Levels in UI
+
 ## Version 7.11
 
 - DTM Filetype Geopackage (.gpkg) supported

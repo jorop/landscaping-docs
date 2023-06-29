@@ -2,13 +2,16 @@
 
 Applying a Landscape Material and generating __weightmaps__ on the fly. The good thing about it: no preprocessing of data is needed. We only have to download some Shapefiles.
 
+> Unreal Engine paints the Landscape Material Layers according to the underlying resolution of the heightmap. The default is 1 vertex per meter (pixel/meter). The import resolution can be adjusted before import in [DTM Options](heights.md?id=custom-raster-pixel-size).
+
 ## Get it from the web
 
-Landscaping is designed to work with OpenStreetMap Data Extracts from Geofabrik. [Download](https://download.geofabrik.de/) the Shapefiles from your country and extract the zip-file. For the example files please download the Shapefiles from `Austria` in Europe.
+Landscaping is designed to work with OpenStreetMap Data Extracts from Geofabrik. Other Shapefiles (also GeoJSON and GeoPackage) will also work with the right annotations (see [Add fclass to shapefile](landcover.md?id=add-fclass-to-shapefile)).  
+[Download](https://download.geofabrik.de/) the Shapefiles from your country and extract the zip-file. For the example files please download the Shapefiles from [Austria](https://download.geofabrik.de/europe/austria.html) in Europe.
 
 ## Importing Shapefiles
 
-> If you are working with World Composition: please __unload__ all tiles before proceeding  
+> If you are working with UE4 World Composition: please __unload__ all tiles before proceeding  
 
 When clicking on the `Open` button next to Landscape Material Settings a new window pops up. Hit the `Select` button and choose `gis_osm_landuse_a_free_1.shp` or multiple files (see [Get Data](get-data.md?id=vector-data)) from the extracted files. If others than the shapefiles from geofabrik.de are chosen, make sure it contains fclass attributes for the assignment later. It is possible to select several Shapefiles at once. It may take a few seconds until the file is read. After that, choose the Landscape Material in the next step.
 
@@ -50,20 +53,20 @@ If other shapefile used than this from geofabrik.de, it is possible to add an fc
 
 ### Steps to add fclass attribute to shapefile
 
-Add an attribute to an shapefile, using QGIS:
-1.) Load shapefile in QGIS
-2.) Right click it in Layers Tab and choose `Open Attribute Table`
-3.) Click `Edit` (pencil icon) and then `New Column` (Ctrl+W)
-4.) Fill out with  __Name=fclass, Type=string, Length= 64__
-5.) `Select All` (Ctrl+A)
-6.) Click `Multiediting Mode` (next to pencil icon) and type the value for the attribute (e.g. lake)
-7.) `Save` and close the dialog
-8.) Export the shapefile (right click on layer -> `Export...`)
+Add an attribute to an shapefile, using QGIS:  
+1.) Load shapefile in QGIS  
+2.) Right click it in Layers Tab and choose `Open Attribute Table`  
+3.) Click `Edit` (pencil icon) and then `New Column` (Ctrl+W)  
+4.) Fill out with  __Name=fclass, Type=string, Length= 64__  
+5.) `Select All` (Ctrl+A)  
+6.) Click `Multiediting Mode` (next to pencil icon) and type the value for the attribute (e.g. lake)  
+7.) `Save` and close the dialog  
+8.) Export the shapefile (right click on layer -> `Export...`)  
 Then it will be compatible.
 
 ## Notes on runtime
 
-The generation of weightmaps can take time. Roughly it takes 10 seconds per km² per distinct landuse area. If the landscape is huge and has many distinct areas, this adds up. For example, an area in the alps with ~ 220 km² and moderate distinct areas took about 39 minutes to calculate. Another test with a ~ 650 km² world and a lot of small distinct areas took a little more than 3 hours and 30 minutes to finish. Of course it depends on the machine you are using, mainly on the number of cores of your CPU. So, if you plan to generate huge worlds, please consider this. All tests where performed with a AMD Ryzen 3 2600 CPU with 32 GB RAM. Still, this is a lot faster than every other method and it is very accurate.
+The generation of weightmaps can take time. Especially if there are a lot of distinctive layers with small areas.
 
 ## Next steps
 

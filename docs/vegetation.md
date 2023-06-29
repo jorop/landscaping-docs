@@ -1,6 +1,7 @@
 # Vegetation
 
-Leverage Unreal Engines Procedural Foliage Tool to let accelarate foliage creation.
+Leverage Unreal Engines Procedural Foliage Tool to let accelarate foliage creation.  
+> Please enable `Procedural Foliage` in `Edit -> Editor Preferences` to use this feature.
 
 ## Automation
 
@@ -8,7 +9,7 @@ This feature helps to populate World Composition / World Partition worlds with p
 
 ## Procedural Foliage
 
-In order for this feature to work, one has to prepare a [Procedural Foliage Spawner](https://docs.unrealengine.com/en-US/BuildingWorlds/OpenWorldTools/ProceduralFoliage/QuickStart/index.html). A `Procedural Foliage Spawner` is mandatory for creating automated plants and trees and also rocks and stones and you name it on the tiled landscape with Landscaping.
+In order for this feature to work, one has to prepare a [Procedural Foliage Spawner](https://docs.unrealengine.com/en-US/BuildingWorlds/OpenWorldTools/ProceduralFoliage/QuickStart/index.html). A `Procedural Foliage Spawner` is mandatory for creating automated plants and trees and also rocks and stones etc. on a landscape with Landscaping.
 
 ![Open World Automation](_media/ue5_landscaping_openworld.jpg)
 
@@ -39,7 +40,8 @@ Will use the bounds of the Landscape Streaming Proxies (in World Partition world
 
 ### Spawn Foliage
 
-Whether to spawn foliage right after creating the Procedural Foliage Volume. Unchecked will only create the Volumes.
+Whether to spawn foliage right after creating the Procedural Foliage Volume. Unchecked will only create the Volumes.  
+Only use this option on smaller areas. For bigger areas, uncheck this and after hitting `Create / Spawn` select the Procedural Foliage Volumes in the Outliner, and click on `Resimulate` in the details panel.  
 
 > Some of the checkboxes will be automatically deselect if another option is checked  
 

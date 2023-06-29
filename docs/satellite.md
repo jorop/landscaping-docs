@@ -8,14 +8,18 @@ Supported filetypes: JPG2000 (*.jp2) and GeoTiff (*.tif;*.tiff) with RGB as R =>
 
 The satellite imagery will be automatically projected and cropped to the size of the landscape or mesh.  
 
-## Import as Decal
+## Satellite Image as Decal
 
-A decal actor will be created and the satellite texture will be projected onto the landscape.
+If set to true, a decal actor will be created and the satellite texture will be projected onto the landscape. (Default).
 
-## Import as Vertex Color
+## Satellite Image as Vertex Color
 
-Only available on mesh landscapes (`LandscapingProcMeshLandscape`). The satellite image will be applied directly onto the mesh (as vertex color). When trying to import satellite imagery as vertex color on a landscape, it will fall back to decal.
+Only available on mesh landscapes (`LandscapingProcMeshLandscape`). If set to true, the satellite image will be applied directly onto the mesh (as vertex color). When trying to import satellite imagery as vertex color on a landscape, it will fall back to decal.
 
-## Default
+## Both `Decal` and `Vertex Color` set to false
 
-If neither decal or vertex color is checked, the satellite imagery will be safed as 8k texture and a material will be created, the texture assigned and the material will be assiged to the Landscape (as Landscape Material) or to the Mesh (as Material).
+If neither decal or vertex color is checked, the satellite imagery will be saved as 8k texture and a material will be created, the texture assigned and the material will be assiged to the Landscape (as Landscape Material) or to the Mesh (as Material).
+
+## Mapbox Zoom Level
+
+Zoom Level for Mapbox Satellite data import. See [Mapbox Documentation](mapbox.md). Only available with Mapbox Extension.

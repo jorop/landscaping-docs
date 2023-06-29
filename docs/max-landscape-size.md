@@ -4,6 +4,11 @@
 
 Please refer to [System Requirements](https://docs.unrealengine.com/5.0/en-US/hardware-and-software-specifications-for-unreal-engine/) for Unreal Engine requirements.
 
+## General
+
+The import process is what needs the RAM, for editing and at runtime, only a fraction of the RAM is needed. Since Landscaping plugin creates UE native Landscapes, this is an underlying requirement from Unreal Engine itself.  
+The memory requirement depends on the resolution of the heightdata to be imported. The lower the resolution, the less memory is required. E.g. with a resolution of 5 meter/pixel a landscape 5² (=25) times bigger can be imported than with a resolution of 1 meter/pixel with the same amount of RAM.
+
 ## Bare Landscape Memory Requirements
 
 Possibilities and limits when importing landscapes in Unreal Engine 5.0

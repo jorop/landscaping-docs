@@ -15,7 +15,7 @@ The `Landscaping Plugin` will instantiate the Blueprint at the first point of th
 - __TMap < FString , FString >__ `StringAttributes` -> string attributes found for this shape in the shapefile
 - __TMap < FString , int >__ `IntegerAttributes` -> integer attributes found for this shape in the shapefile
 - __TMap < FString , int64 >__ `Integer64Attributes` -> 64 bit integer attributes found for this shape in the shapefile
-- __TMap < FString , double >__ `DoubleAttributes` -> float and double attributes found for this shape in the shapefile
+- __TMap < FString , double >__ `DoubleAttributes` -> float and double attributes found for this shape in the shapefile  
 
 After calling `OnVectorData` the plugin will move on to the next shape, instantiating the Blueprint at the first point of the LINESTRING, POLYGON or POINT, call `OnVectorData` like above and so on.
 
@@ -28,6 +28,7 @@ To use your custom Blueprint, select it under `Blueprint` in the `Import Roads, 
 
 ## Shapefile Attributes
 
+> Attributes TMaps are only available for UE5  
 Attributes of a shapefile can be accessed through the `LandscapingVectorInterface` as shown below from `BP_VectorDataExample`:  
 
 ![Example Blueprint](_media/shapefile_attributes.jpg)  

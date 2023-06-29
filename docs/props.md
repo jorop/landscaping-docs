@@ -1,16 +1,17 @@
 # Props
 
-Landscaping let you create rivers, streets, railroads etc. from Shapefiles with Unreal Engine 4 Spline Component. Here, like in the section about landcover, please see [Get Data](get-data.md?id=vector-data) what input files are suitable for this task. Generally, every Shapefile will do.
+Landscaping let you create rivers, streets, railroads etc. from Shapefiles with Unreal Engine Spline Component. Here, like in the section about landcover, please see [Get Data](get-data.md?id=vector-data) what input files are suitable for this task. Generally, every Shapefile (also GeoJSON or GeoPackage with vector data) will do.
 
 > Importing vector data from Shapefiles is meant to lay out a scene quickly. Depending on the quality of the Shapefile, it will or will not get you a final result. Post editing might be needed to adjust the generated splines or Blueprints, especially when generating spline Actors with Shapefiles from geofabrik.de.
 
 ## Generate from Mesh or Blueprint
 
-> If you are working with World Composition: please __unload__ all tiles before proceeding  
+> If you are working with UE4 World Composition: please __unload__ all tiles before proceeding  
 
-1) `Select` a Shapefile  (to reset the input simply close the Landscaping tab and open it again)  
+0) `Mapbox Zoom Level` Zoom Level for Mapbox vector data import. See [Mapbox Documentation](mapbox.md). Only available with Mapbox Extension.
+1) `Select` a Shapefile, GeoJSON, OSM or GeoPackage file  (to reset the input simply close the Landscaping tab and open it again)  
 
-2) Define what should be generated along the lines of the imported Shapefile: select `Spline Mesh` or `Actor` or `Paint Layer / Deform Landscape` or `Landscape Spline` from the dropdown. then open the dialog with the button right below the dropdown.  
+2) Define what should be generated along the lines of the imported Shapefile: select `Spline Mesh` or `Actor` or `Paint Layer / Deform Landscape` or `Landscape Spline` (UE 5.1 onwards) from the dropdown. then open the dialog with the button right below the dropdown.  
 
 ![Landscaping Props](_media/ue4_landscaping_shapefile_import.jpg)  
 
@@ -54,6 +55,27 @@ Depending on what is selected in the dropdown, there are 3 different dialogs, bu
 > Please make sure to __unload__ all Levels of a World Composition (UE4) (except the Persistent Level) in the Unreal Engine `Levels` tab before hitting `Import`.  In UE5 this will be handled automatically.  
 
 7) Hit `Import`
+
+## Post Edit Splines
+
+There are several option on the `Auxiliary Actor` (Actors with (Editor Only) suffix in the Outliner) which help post-editing the splines.  
+![Auxiliary Spline](_media/ue5_auxiliary_spline.jpg)  
+
+### Action Buttons
+
+The parameters on the `Auxiliary Actor` are the same as the options just described on this page. The action buttons help to automate common spline post edits.  
+
+#### Deform Landscape
+
+Deforms the landscape along the spline with the parameters below the buttons. All parameters from __Paint Layer / Deform Landscape__ are taken into account.  
+
+#### Snap To Ground
+
+Snaps the spline to ground with `Offset from Ground` above ground. `Offset from Ground` can also be negative.  
+
+#### Toggle Collision
+
+Use this to improve editor performance (prevent costly collision recalculation).
 
 ## Landscape Splines
 

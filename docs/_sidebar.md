@@ -20,6 +20,7 @@
 
   - [Extending Landscapes](extend_landscape.md?id=extending-landscapes)
   - [Custom Logic on Import](landscapingvectorinterface.md?id=custom-logic-on-vector-data)
+  - [Vectordata / Shapefile only](shp_without_dtm.md?id=vectordata-import-without-prior-dtm-import)
 
 - General
 

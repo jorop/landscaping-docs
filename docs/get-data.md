@@ -43,8 +43,7 @@ The plugin supports following vector data types:
 - OSM OpenSteetmap (.osm,.osm.pbr)
 - Mapbox Vector data (through Landscaping Mapbox plugin)
 
-While it is possible to import any Shapefile through Landscaping into Unreal Engine 4, the plugin is designed to work with [geofabrik.de](https://download.geofabrik.de/) annotated Shapefiles. It will allow you to generate weightmaps, spline based Actors and any other Actor. For weightmaps, it will need the Shapefiles from geofabrik.de.  
-__For spline based or other Actors any Shapefile can be used, and are often a better fit, because the shapes from geofabrik usually contain too much data and result in twingled splines.__
+While it is possible to import any Vector data (Shapefile, GeoJSON, GeoPackage with vector data) through Landscaping into Unreal Engine, the plugin was originally designed to work with [geofabrik.de](https://download.geofabrik.de/) annotated Shapefiles. It will allow you to generate weightmaps, spline based Actors and any other Actor. Please see [Add fclass to shapefile](landcover.md?id=add-fclass-to-shapefile) for how to add annotations to other vector data which is missing these annotations.  
 
 After you downloaded the Shapefiles from geofabrik and unzipped the folder a collection of different aspects of the country can be found splitted into many files.
 
