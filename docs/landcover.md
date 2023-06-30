@@ -9,19 +9,19 @@ Applying a Landscape Material and generating __weightmaps__ on the fly. The good
 Landscaping is designed to work with OpenStreetMap Data Extracts from Geofabrik. Other Shapefiles (also GeoJSON and GeoPackage) will also work with the right annotations (see [Add fclass to shapefile](landcover.md?id=add-fclass-to-shapefile)).  
 [Download](https://download.geofabrik.de/) the Shapefiles from your country and extract the zip-file. For the example files please download the Shapefiles from [Austria](https://download.geofabrik.de/europe/austria.html) in Europe.
 
-## Importing Shapefiles
+## Importing Vectordata
 
 > If you are working with UE4 World Composition: please __unload__ all tiles before proceeding  
 
 When clicking on the `Open` button next to Landscape Material Settings a new window pops up. Hit the `Select` button and choose `gis_osm_landuse_a_free_1.shp` or multiple files (see [Get Data](get-data.md?id=vector-data)) from the extracted files. If others than the shapefiles from geofabrik.de are chosen, make sure it contains fclass attributes for the assignment later. It is possible to select several Shapefiles at once. It may take a few seconds until the file is read. After that, choose the Landscape Material in the next step.
 
-> To reset the input simply close the Landscaping tab and open it again.  
+> In Mapbox, the desired `Mapbox Zoom Level` should be set before select.
 
 ![Landscape Material and Weightmaps](_media/ue4_landscaping_weightmaps.jpg)  
 
 ## Landscape Material
 
-Pick a Landscape Material from your content folder. Please also see this topic for slopes of Landscape Auto-Materials and Z-Scale: [Override Z Scale of generated landscape](heights.md?id=override-z-scale-of-generated-landscapes)  
+Pick a Landscape Material from your content folder.
 
 ## Material Layers
 
