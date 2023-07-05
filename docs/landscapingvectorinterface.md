@@ -33,3 +33,9 @@ Attributes of a shapefile can be accessed through the `LandscapingVectorInterfac
 
 ![Example Blueprint](_media/shapefile_attributes.jpg)  
 
+## Snap to Floor
+
+A blueprint utility function `Snap to floor` is usefull to snap the vector data points to the surface of the landscape.  
+The offset can be positive or negative. It determines the vertical offset from the surface.  
+
+![Example Blueprint](_media/landscaping_snaptofloor.jpg) 

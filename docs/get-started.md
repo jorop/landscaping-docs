@@ -22,6 +22,8 @@ After you installed the plugin from the marketplace, you have to activate the pl
 
 ## Import Heightmap
 
+> Please start with a new empty Level: Go to "File -> New Level -> __Empty Open World__ or __Empty Level__"
+
 1) Download example heightmaps [GeoTiffExamples](https://cloud.ludicdrive.com/s/4HQPy8phBTxEL4z/download), or use another DTM file.
 2) After clicking on Landscaping on the toolbar, the Landscaping tab pops up:
 
