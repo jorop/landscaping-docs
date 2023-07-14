@@ -24,9 +24,24 @@ Sources for DTM files are for example:
 - [OpenTopography](https://portal.opentopography.org/raster?opentopoID=OTSRTM.082015.4326.1)
 - [USGS](https://www.sciencebase.gov/catalog/item/4f552e93e4b018de15819c51)
 
+### Regional Sources
+
+#### Europe
+
+- [Europe - 10 - 50 m/px](https://tinitaly.pi.ingv.it/)  - use the `DTM 10m`, `DTM 20m` or `DTM 50m`
+- [Austria - 10 m/px](https://www.data.gv.at/katalog/en/dataset/dgm#resources)
+- [Austria / Tyrol - 5 m/px](https://data.europa.eu/data/datasets/0454f5f3-1d8c-464e-847d-541901eb021a?locale=de)
+- [Austria / Upper Austria - 0.5 m/px](https://e-gov.ooe.gv.at/at.gv.ooe.ogd2-citi/#/detail/d8f39b43-f52b-4387-9b6d-b93b412a2fc2)
+- [Germany / Bavaria - 1 m/px](https://geodaten.bayern.de/opengeodata/OpenDataDetail.html?pn=dgm1)
+- [Germany / NRW - 1 m/px](https://www.opengeodata.nrw.de/produkte/geobasis/hm/dgm1_xyz/dgm1_xyz/) - they have a [Open Data Downloadclient](https://www.geoportal.nrw/?activetab=map&openDownloadclient=true)
+- [Italy - 10 m/px](https://tinitaly.pi.ingv.it/Download_Area1_1.html)
+- [Switzerland - 0.5 m/px](https://www.swisstopo.admin.ch/de/geodata/height/alti3d.html#download) - use `Cloud Optimized GeoTIFF` option
+
+> This list will be extended in the future - please use your favorite search engine to find data or checkout [OpenDEM](https://www.opendem.info/opendemsearcher.html)
+
 Better resolutions will also create more detailed landscapes in Unreal Engine. __Search the web for the open data portal of your desired country to get better resolutions.__
 
-> In general resolution from 0.5 meter per pixel until 5 meter per pixel will generate smooth terrains. The less meter per pixel the better.
+> Less meter/pixel result in more detailed terrain.
 
 ### Important
 
@@ -41,6 +56,7 @@ The plugin supports following vector data types:
 - ESRI Shapefile (.shp)
 - GEOJSON (.json,.geojson,.geojsons,.geojsonl)
 - OSM OpenSteetmap (.osm,.osm.pbr)
+- GeoPackage (.gpkg, if it has Vector data in it)
 - Mapbox Vector data (through Landscaping Mapbox plugin)
 
 While it is possible to import any Vector data (Shapefile, GeoJSON, GeoPackage with vector data) through Landscaping into Unreal Engine, the plugin was originally designed to work with [geofabrik.de](https://download.geofabrik.de/) annotated Shapefiles. It will allow you to generate weightmaps, spline based Actors and any other Actor. Please see [Add fclass to shapefile](landcover.md?id=add-fclass-to-shapefile) for how to add annotations to other vector data which is missing these annotations.  
