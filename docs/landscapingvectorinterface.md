@@ -35,6 +35,8 @@ Attributes of a shapefile can be accessed through the `LandscapingVectorInterfac
 
 ## Snap to Floor
 
+> The blueprint has to have `EditorUtilityActor` as Parent Class (`Class Settings -> Parent Class`)
+
 A blueprint utility function `Snap to floor` is usefull to snap the vector data points to the surface of the landscape.  
 The offset can be positive or negative. It determines the vertical offset from the surface.  
 

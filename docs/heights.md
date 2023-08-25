@@ -9,7 +9,7 @@ Making a huge tiled landscape is as easy as making a single landscape.
 > To reset the input simply close the Landscaping tab and open it again.  
 
 In order to create a tiled landscape, you can choose one or multiple files in the file selection dialog.  
-In UE5 it is possible to choose [World Partition](#world-partition) and specify the grid size. (UE4: Depending on the `Max Desired Tile Size`, the tiles for the landscape will be created on the fly.)  
+In UE5 it is possible to choose [World Partition](#world-partition) and specify the grid size to segment a Landscape into LandscapeStreamingProxies. Depending on the `Max Desired Tile Size`, the tiles for the landscape will be created on the fly.  
 
 > A tiled landscape can be created from a single file or from multiple files
 
@@ -48,7 +48,11 @@ Back in Unreal Engine Editor paste the coordinates (Ctrl+V) in the `Corners as B
 
 The info text should now show the new extent of the area. Only this part of the heightdata will be imported.
 
-## Override Z Scale of generated Landscape
+## Location and Scale
+
+### Location
+
+The X and Y Location of the Landscape (first Tile, if multiple tiles are generated). The pivot of a Landscape is on the top-left corner. With `Center` the Landscape is positioned, so that it is centered in the UE coordinate system. If X and Y are set to 0, the Landscape will expand from 0 to the bottom and to the right.
 
 ### High Detail Z Scale
 
@@ -58,21 +62,39 @@ The vertical scale will be calculated automatically to perserve the most detail,
 
 Use this for areas with low altitude difference or when extending or updating the landscape. Defaults to `100`. For understanding the technical reason for this, please consult [Calculating Heightmap Z Scale](https://docs.unrealengine.com/5.1/en-US/landscape-technical-guide-in-unreal-engine/).  
 
-### Import as Mesh
+## Landscape Generation Options
 
-> Only available in Unreal Engine 5  
+### Import as Mesh
 
 Import as Procedural Mesh instead of Landscape (e.g. for a distance mesh). The Procedural Mesh can afterwards converted to a nanite mesh with a button in the details panel of the Procedural Mesh.
 
 ### Force square Landscapes
 
-> Only available in Unreal Engine 5  
+Regardles of the selection, force a square landscape. This enables to export/import weightmaps in the native UE Landscape Edit Mode (e.g. for editing weightmaps in another program) This is not affecting the real world scale (blank areas will appear, but no distortion will happen).
 
-Regardles of the selection, force a square landscape. This enables to export/import weightmaps in the native UE Landscape Edit Mode (e.g. for editing weightmaps in another program)
+### Auto calculate Landscape
 
-### Desired Max Landscape Size
+Calculate Sections and Components of the Landscape to import automatically given the extents of the input file. Uncheck to give custom specs (see properties below). This is not affecting the real world scale.
 
-The maximum size of a created Landscape of World Partition or single Landscape imports in meter. If the size of a single Landscape exceeds this size, it will be split, and multiple Landscape Actors are created in the level. This is the size of the resulting Landscape in Unreal Engine, not the max size or resolution of a source file (like GeoTiff, etc.). E.g. a value of 32768 will import landscapes with maximum 32 km length or width. 32768 will need at least 128 GB of RAM.
+### Section Size
+
+Please see [Landscape Technical Guide](https://docs.unrealengine.com/5.2/en-US/landscape-technical-guide-in-unreal-engine/)
+
+### Sections per Component
+
+Please see [Landscape Technical Guide](https://docs.unrealengine.com/5.2/en-US/landscape-technical-guide-in-unreal-engine/)
+
+### Number of Components
+
+Please see [Landscape Technical Guide](https://docs.unrealengine.com/5.2/en-US/landscape-technical-guide-in-unreal-engine/)
+
+### Landscape Resolution
+
+Shows the expected Landscape Resolution in vertices
+
+### Desired Max Tile Size
+
+The maximum size of a created Landscape of World Partition or single Landscape imports in meter (Landscape or Mesh). If the size of a single Landscape exceeds this size, it will be split, and multiple Landscape Actors are created in the level. This is the size of the resulting Landscape in Unreal Engine, not the max size or resolution of a source file (like GeoTiff, etc.). E.g. a value of 32768 will import landscapes with maximum 32 km length or width. 32768 will need at least 128 GB of RAM.
 
 > `Desired Max Landscape Size` defaults to `8192` meter.  
 > Edit Layers can only be activated if the value is `16384` or below.
@@ -80,8 +102,6 @@ The maximum size of a created Landscape of World Partition or single Landscape i
 Tip: you can type aritmetic expressions into the input box like `8192*2` or `8192/2`
 
 ### World Partition Grid Size
-
-> Only available in Unreal Engine 5  
 
 Grid size for the World Partition Landscape.  
 
@@ -93,21 +113,17 @@ Set the Zoom Level for Mapbox heightdata imports (see [Mapbox Documentation](map
 
 ### Use native Raster Pixel Size
 
-Use the pixel size from the imported heightmap
+Use the pixel size from the imported heightmap. Uncheck to use custom Raster Pixel Size below.
 
 ### Custom Raster Pixel Size
 
-Set a custom pixel size for the imported heightmap. The heightmap will be resampled to this pixel size (meter/pixel) before import.
+Set a custom pixel size for the imported heightmap. The heightmap will be resampled to this pixel size (meter/pixel) before import. Lower values will result in more pixel per meter (more vertices in a Landscape/Mesh).
 
 ### Resample to First Tile
-
-> Only available in Unreal Engine 5
 
 Will import all imported DTM files (or Mapbox height data) to the resolution of the first imported DTM of the level enabling seamless worlds with no gaps. This might lead to up- or downsampling depending on the first imported DTM.  
 
 ### Smooth Steps
-
-> Only available in Unreal Engine 5
 
 Apply gaussian blur on the height data before importing the landscape. This will smooth raster data with low resolution.  
 0 means, no smoothing will happen.
@@ -115,13 +131,10 @@ For Mapbox imports the recommended value is 1 for mountain terrain, and 2 for fl
 
 ## Smooth Edges
 
-> Only available in Unreal Engine 5
-
 When creating multiple Landscapes from DTM files (or Mapbox) in a level, this __should be disabled__ to have seamless connections on the edges of each Landscape. For a single Landscape this can be enabled savely.  
 
 ## Landscape Update Options
 
-> Only available in Unreal Engine 5  
 > This options is only meaningful, if you try to fill missing data with mapbox, otherwise a faster way to fill missing data is just selecting (`Select DTM Files` button) all heightmap data (geotiff-, ascii- or hgt-files, also mixed is possible) and let them merge on import automatically.
 
 ### Update Landscape

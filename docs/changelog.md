@@ -4,6 +4,18 @@ Changelog for the documentation see: [The Landscaping Docs on Github](https://gi
 
 > Since Version 5.0 all changes only apply to UE5
 
+## Version 7.14
+
+- Fix crash if spline component of a spline is named differently than Spline Component
+- Add `Spline Component Name` field to `Options for Actor / Blueprint` to provide a custom Spline Component Name
+- Show selected tiles on the bottom of the tab which indicate on how many tiles operations will be performed
+- Move tips sections to the bottom of the tab
+
+## Version 7.13
+
+- Set Location and Scale in `DTM Import Options` dialog  
+- Choose Sections and Components of a Landscape in `DTM Import Options` dialog
+
 ## Version 7.12
 
 - Faster import of satellite data

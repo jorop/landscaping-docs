@@ -25,6 +25,7 @@ Depending on what is selected in the dropdown, there are 3 different dialogs, bu
     ![Landscaping Splinemesh Options](_media/ue_landscaping_splinemesh_options.jpg)  
     b. __Actor__  
     Select a `Blueprint` or `Actor`. The Blueprint has to have a spline component attached if LINESTRINGS or POLYGONS are processed, or must implement [LandscapingVectorInterface](landscapingvectorinterface.md) - if only POINTS are processed, every actor or blueprint can be selected here.  
+    `Spline Component Name` - set a custom name of the Spline Component of the Blueprint to perform post edit changes  
     `Scale` can be used to set the scale of the spawned Actor / Blueprint  
     `Create Auxiliary Actor` - whether to create an actor for every spawned Actor / Blueprint with landscape manipulation options  
     `Start Index` can be used to create shapes of the shapefile in chunks - this can be repeated multiple times see also `Max Entities`  
