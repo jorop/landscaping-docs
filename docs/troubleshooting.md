@@ -1,10 +1,9 @@
 # Troubleshooting
 
-## Spline Actor not visible in build after packaging
+## Editor is slow after loading Vector data from Mapbox
 
-The bug is solved in 7.6. If spline actors already created before and present in the level, they can be converted with the button `Create BP` on the spline actor:  
-![Create BP](_media/landscapingsplineactor_createbp.jpg)  
-It is of course possible to selecte multiple Spline Actors and convert them at once.
+Fixed in 7.16 (for UE 5.1-5.3)
+Framedrops can be mitigated by unchecking `Draw Vector Data Debug` in the LandscapingInfos Actor.
 
 ## Unreal Engine Editor won't start
 
@@ -46,7 +45,7 @@ This should be resolved in current versions of UE - otherwise please [Check Opti
 
 ## Crash when not saving the Level on prompt
 
-This is an Unreal Engine 5.0 bug which will hopefully be resolved in 5.1 - see also [https://issues.unrealengine.com/issue/UE-143891](https://issues.unrealengine.com/issue/UE-143891) - Right now the solution is to save the level when prompted.
+This is an Unreal Engine 5.0-5.3 bug which will hopefully be resolved in 5.4 - see also [https://issues.unrealengine.com/issue/UE-143891](https://issues.unrealengine.com/issue/UE-143891) - Right now the solution is to save the level when prompted.
 
 ## Crashes
 

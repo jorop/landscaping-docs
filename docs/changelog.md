@@ -2,7 +2,17 @@
 
 Changelog for the documentation see: [The Landscaping Docs on Github](https://github.com/jorop/landscaping-docs)
 
-> Since Version 5.0 all changes only apply to UE5
+> Since Version 5.0 all changes only apply to UE5 or newer
+---
+> Since Version 7.15 all changes only apply to UE 5.1 or newer
+
+## Version 7.16
+
+- Fix performance issue when loading vector data from Mapbox
+
+## Version 7.15
+
+- Fix crash when selecting material in conjunction with DTM file import
 
 ## Version 7.14
 
