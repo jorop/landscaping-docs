@@ -48,6 +48,12 @@ Satellite data used is `Mapbox Satellite`.
 
 > See also [DTM Import Options](heights?id=import-area-optional)
 
+### Notes on blocky terrain from Mapbox
+
+Mapbox does not provide all areas of the world in the same quality. Therefore it might happen that terrain appears blocky due to poor upsampling from Mabpox.  
+The data is processed 'as is', so the blockyness comes from Mapbox itself.
+Solution: lower the `Mapbox Zoom Level` before import.
+
 ## Import Satellite data
 
 After heightdata is imported, click on `Add Satellite Image` and a dialog appears asking you to automatically download from mapbox. See also [Satellite](satellite?id=satellite)

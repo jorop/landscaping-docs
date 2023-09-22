@@ -19,6 +19,12 @@ to
 The `Engine Plugin Folder` can be found where the Unreal Engine Editor is installed on your system, e.g.  
 `C:/Program Files/Epic Games/UE_5.1/Engine/Plugins`
 
+## Mapbox terrain appears blocky
+
+Mapbox does not provide all areas of the world in the same quality. Therefore it might happen that terrain appears blocky due to poor upsampling from Mapbox.  
+The data is processed 'as is', so the blockyness comes from Mapbox itself.
+Solution: lower the `Mapbox Zoom Level` before import.
+
 ## Changing Levels
 
 When changing levels, the plugin may not detect the new World which is neccessary to save the metadata. Please close the `Landscaping Tab` and open it again. Thank you.
