@@ -9,9 +9,10 @@ Landscaping let you create rivers, streets, railroads etc. from Shapefiles with 
 > If you are working with UE4 World Composition: please __unload__ all tiles before proceeding  
 
 0) `Mapbox Zoom Level` Zoom Level for Mapbox vector data import. See [Mapbox Documentation](mapbox.md). Only available with Mapbox Extension.
-1) `Select` a Shapefile, GeoJSON, OSM or GeoPackage file  (to reset the input simply close the Landscaping tab and open it again)  
+1) `Layer Filter` Layer Names to load from file/vector tile. This can be multiple layer names separated by a comma - e.g. `buildings,roads`. Leave empty to load all layers.  
+2) `Select` a Shapefile, GeoJSON, OSM or GeoPackage file  (to reset the input simply close the Landscaping tab and open it again)
 
-2) Define what should be generated along the lines of the imported Shapefile: select `Spline Mesh` or `Actor` or `Paint Layer / Deform Landscape` or `Landscape Spline` (UE 5.1 onwards) from the dropdown. then open the dialog with the button right below the dropdown.  
+3) Define what should be generated along the lines of the imported Shapefile: select `Spline Mesh` or `Actor` or `Paint Layer / Deform Landscape` or `Landscape Spline` (UE 5.1 onwards) from the dropdown. then open the dialog with the button right below the dropdown.  
 
 ![Landscaping Props](_media/ue4_landscaping_shapefile_import.jpg)  
 
@@ -46,16 +47,16 @@ Depending on what is selected in the dropdown, there are 3 different dialogs, bu
     ![Landscaping Splines Options](_media/ue_landscape_splines_options.jpg)  
 
 
-3) `Offset from Ground` specifies how much space will be between the surface of the Landscape and the point of the spline or instantiated Bluprint/Actor
-4) `Revert Spline Direction` can be used, if a river is imported and flows upstream. This can happen, if the shape from the Shapefile is drawn in the wrong direction. When [Draw Vector Data Debug](gis-expert.md?id=draw-vector-data-debug) is enabled, you can zoom in and see an arrow on the first segment of the shape, indicating the direction.
-5) `Crop to bounds` controls if the shapefiles should be cropped to the bounds of the Landscape or World Composition or World Partition. This is especially relevant when importing shapefiles independently without prior import of DTM with the Landscaping plugin. If the Landscape is imported through the plugin, the option defaults to true and cannot be changed.
-6) With `OSM feature class` you can control, what type of features will be instatiated with the Blueprint or Spline when using shapefiles from geofabrik.de. A river should have another Blueprint than a stream and a path another Blueprint than a highway. This dropdown let you select the apropriate feature class of the shape for the Blueprint which should be instantiated on the Landscape. On other shapefiles than from geofabrik.de this will default to `ALL`.  
-7) The dropdown `Spline Point Type` allowes for choosing the the spine point behaviour. For spline based buildings this should be set to `Linear`, for rivers, roads and railtracks, this should be set to `Curve`.  
-8) `Align points horizontally` will make sure, spline points align horizontally. E.g. for procedural spline based buildings. The first point of the shape will snap to the ground with offset from ground taken into account.
+4) `Offset from Ground` specifies how much space will be between the surface of the Landscape and the point of the spline or instantiated Bluprint/Actor
+5) `Revert Spline Direction` can be used, if a river is imported and flows upstream. This can happen, if the shape from the Shapefile is drawn in the wrong direction. When [Draw Vector Data Debug](gis-expert.md?id=draw-vector-data-debug) is enabled, you can zoom in and see an arrow on the first segment of the shape, indicating the direction.
+6) `Crop to bounds` controls if the shapefiles should be cropped to the bounds of the Landscape or World Composition or World Partition. This is especially relevant when importing shapefiles independently without prior import of DTM with the Landscaping plugin. If the Landscape is imported through the plugin, the option defaults to true and cannot be changed.
+7) With `OSM feature class` you can control, what type of features will be instatiated with the Blueprint or Spline when using shapefiles from geofabrik.de. A river should have another Blueprint than a stream and a path another Blueprint than a highway. This dropdown let you select the apropriate feature class of the shape for the Blueprint which should be instantiated on the Landscape. On other shapefiles than from geofabrik.de this will default to `ALL`.  
+8) The dropdown `Spline Point Type` allowes for choosing the the spine point behaviour. For spline based buildings this should be set to `Linear`, for rivers, roads and railtracks, this should be set to `Curve`.  
+9) `Align points horizontally` will make sure, spline points align horizontally. E.g. for procedural spline based buildings. The first point of the shape will snap to the ground with offset from ground taken into account.
 
-> Please make sure to __unload__ all Levels of a World Composition (UE4) (except the Persistent Level) in the Unreal Engine `Levels` tab before hitting `Import`.  In UE5 this will be handled automatically.  
+> Please make sure to __unload__ all Levels of a World Composition (UE4) (except the Persistent Level) in the Unreal Engine `Levels` tab before hitting `Import`.  In UE5 this will be handled automatically - from UE5.1 for World Partition Worlds, please load the cells the vector data is for.  
 
-7) Hit `Import`
+10) Hit `Import`
 
 ## Post Edit Splines
 

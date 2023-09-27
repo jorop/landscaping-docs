@@ -6,6 +6,15 @@ Changelog for the documentation see: [The Landscaping Docs on Github](https://gi
 ---
 > Since Version 7.15 all changes only apply to UE 5.1 or newer
 
+## Version 7.18
+
+- Feature: `Layer Filter` for loading only specific layers from vector data (Shapefiles, GeoJson, Mapbox Vector Tiles, etc.)
+- Fix: error message popup prevents loading vector data from file
+
+## Version 7.17
+
+- Fix: Max Desired Landscape Size disabled
+
 ## Version 7.16
 
 - Fix performance issue when loading vector data from Mapbox
