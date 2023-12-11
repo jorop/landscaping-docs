@@ -18,7 +18,7 @@ Only available on mesh landscapes (`LandscapingProcMeshLandscape`). If set to tr
 
 ## Both `Decal` and `Vertex Color` set to false
 
-If neither decal or vertex color is checked, the satellite imagery will be saved as 8k texture and a material will be created, the texture assigned and the material will be assiged to the Landscape (as Landscape Material) or to the Mesh (as Material).
+If neither decal or vertex color is checked, the satellite imagery will be created as Landscape Material on Landscapes or as as Material on Mesh Terrains.
 
 ## Mapbox Zoom Level
 
