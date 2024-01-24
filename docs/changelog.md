@@ -6,6 +6,11 @@ Changelog for the documentation see: [The Landscaping Docs on Github](https://gi
 ---
 > Since Version 7.15 all changes only apply to UE 5.1 or newer
 
+## Version 7.20
+
+- Fix: auto-select appropriate UTM-CRS on Mapbox import and with setting 'Automatically reproject to appropriate UTM CRS'
+- Fix: osm file format import
+
 ## Version 7.19
 
 - Fix: apply satellite image on mesh terrain
