@@ -6,6 +6,14 @@ Changelog for the documentation see: [The Landscaping Docs on Github](https://gi
 ---
 > Since Version 7.15 all changes only apply to UE 5.1 or newer
 
+## Version 7.21
+
+- Feature: support for UTF8 filepaths
+- Fix: reset of area display when opening DTM options without Mapbox installed
+- Fix: spawning Georeferencing System on the right location when origin is not at 0/0/0
+- Change: remove setting `bEnableLargeWorlds` setting as it is only valid for UE 5.0
+- Change: remove setting `bReadParallel` because it is the default where possible anyway
+
 ## Version 7.20
 
 - Fix: auto-select appropriate UTM-CRS on Mapbox import and with setting 'Automatically reproject to appropriate UTM CRS'
