@@ -12,7 +12,7 @@ If you see this message:
 ![UE4 Message](_media/ue4_message.jpg)
 
 Please copy the files and folders from  µ
-`{Engine Plugin Folder}/Marketplace/Landscaping/Source/ThirdParty/Redist/Win64/`  
+`{Engine Plugin Folder}/Marketplace/Landscaping/Source/Landscaping/ThirdParty/Redist/Win64/`  
 to  
 `{Engine Plugin Folder}/Marketplace/Landscaping/Binaries/Win64/`
 
