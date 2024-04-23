@@ -17,6 +17,8 @@ When importing heightdata (DTM files), intermediate files are generated. They ar
 
 Projection mode for imported GIS data. This should be set before importing any data and never changed when working on a map.
 
+> All data must have a CRS with unit meter. If the CRS has unit degree, the projection mode has to be set to `Automatically reproject to appropriate UTM CRS`
+
 #### Automatically reproject to appropriate UTM CRS
 
 UTM CRS (Coordinate Reference System) will be determined by the first imported heightmap or shapefile. On Mapbox Imports this will be EPSG:3857. All imported data will then be reprojected to the determined CRS.

@@ -1,9 +1,8 @@
 # Troubleshooting
 
-## Editor is slow after loading Vector data from Mapbox
+## DTM import ends with error message 'A problem has occurred'
 
-Fixed in 7.16 (for UE 5.1-5.3)
-Framedrops can be mitigated by unchecking `Draw Vector Data Debug` in the LandscapingInfos Actor.
+Please make sure the DTM has a CRS with unit meter. If the DTM has `EPSG:4326` for instance, please see [here](settings.md?id=projection-mode).
 
 ## Unreal Engine Editor won't start
 
@@ -51,7 +50,7 @@ This should be resolved in current versions of UE - otherwise please [Check Opti
 
 ## Crash when not saving the Level on prompt
 
-This is an Unreal Engine 5.0-5.3 bug which will hopefully be resolved in 5.4 - see also [https://issues.unrealengine.com/issue/UE-143891](https://issues.unrealengine.com/issue/UE-143891) - Right now the solution is to save the level when prompted.
+This is an Unreal Engine 5.0-5.4 bug which will hopefully be resolved in 5.5 - see also [https://issues.unrealengine.com/issue/UE-143891](https://issues.unrealengine.com/issue/UE-143891) - Right now the solution is to save the level when prompted.
 
 ## Crashes
 
