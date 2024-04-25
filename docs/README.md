@@ -25,4 +25,4 @@ Landscaping - Unreal Engine Editor Plugin
 ## Current Version
 
 [Landscaping](https://unrealassetstore.com/product/landscaping): 7.21  
-[Landscaping Mapbox](https://unrealassetstore.com/product/landscaping-mapbox): 2.6
+[Landscaping Mapbox](https://unrealassetstore.com/product/landscaping-mapbox): 2.7
