@@ -1,6 +1,7 @@
 # Welcome
 
 Landscaping - Unreal Engine Editor Plugin  
+> For the documentation of new Lanscaping System see [**Landscaping System Documentation**](https://ludicdrive.github.io/landscaping-system-docs)
 
 ## For whom
 
@@ -9,11 +10,11 @@ Landscaping - Unreal Engine Editor Plugin
 - Architects
 - Visualization Artists
 
-> Completely automated, just drop in the data or use `Landscaping Mapbox` extension to auto-download GIS data from mapbox
+> Completely automated, just drop in the data or use `Landscaping Mapbox` extension to auto-download geospatial data from mapbox
 
 ## Highlights
 
-- Import GIS raster and vector data to create Landscapes or Open Worlds
+- Import geospatial data in raster and vector formats to create Landscapes or Open Worlds
 - Supported file formats are GeoTiff, ASCII, HGT, GeoPackage, Shapefile, GeoJSON
 - No preprocessing of data necessary
 - No limit because of full tiled landscape support (World Composition and World Partition)
@@ -24,5 +25,6 @@ Landscaping - Unreal Engine Editor Plugin
 
 ## Current Version
 
-[Landscaping](https://unrealassetstore.com/product/landscaping): 7.21  
-[Landscaping Mapbox](https://unrealassetstore.com/product/landscaping-mapbox): 2.7
+[Landscaping System](https://unrealassetstore.com/product/landscaping-system) 8.0  
+[Landscaping](https://unrealassetstore.com/product/landscaping): 7.24  -> DEPRECATED, use [Landscaping System](https://unrealassetstore.com/product/landscaping-system) instead  
+[Landscaping Mapbox](https://unrealassetstore.com/product/landscaping-mapbox): 3.1
